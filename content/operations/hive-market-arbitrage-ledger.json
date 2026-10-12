@@ -1,0 +1,123 @@
+{
+  "schema": "aagaard.hive-market-arbitrage-ledger.v1",
+  "recordedAt": "2026-07-22T11:23:34.450Z",
+  "cycle": {
+    "globalStep": 29,
+    "angle": "market-arbitrage"
+  },
+  "capitalPolicy": {
+    "maximumInputSwapHive": "1.00000000",
+    "slippageBps": 50,
+    "minimumWorstCaseFullFillProfitSwapHive": "0.00100000",
+    "minimumWorstCaseEdgeBps": 50,
+    "fleetSelfCrossAllowed": false,
+    "executionRequiresFreshIndependentEvidence": true
+  },
+  "fleetOrderScan": {
+    "observedAt": "2026-07-22T11:22:51.852Z",
+    "accountCount": 6,
+    "complete": true,
+    "openOrderCount": 0,
+    "candidateCount": 0
+  },
+  "fullUniverseScan": {
+    "observedAt": "2026-07-22T11:22:51.822Z",
+    "providerKnowledge": "true",
+    "stateDigest": "sha256:5560bc2f3f7e35aff60a1a990dd5d980162afd22f36cfa187a1c69430e653c96",
+    "certifyingProviders": [
+      "https://herpc.dtools.dev/contracts",
+      "https://herpc.liotes.com/contracts"
+    ],
+    "unavailableProvider": "https://api.hive-engine.com/rpc/contracts HTTP 503",
+    "swapHivePoolCount": 137,
+    "marketMetricCount": 1257,
+    "shortlistedRoutes": 2,
+    "completeBooks": 2,
+    "opportunities": [
+      {
+        "symbol": "GLD",
+        "grossSpotEdgeBpsFloor": 219,
+        "quantity": "4.9388",
+        "expectedInputSwapHive": "0.99500755",
+        "maximumInputSwapHive": "0.99998259",
+        "minimumFullFillProceedsSwapHive": "1.00026420",
+        "expectedProfitSwapHive": "0.00525665",
+        "worstCaseFullFillProfitSwapHive": "0.00028161",
+        "worstCaseEdgeBps": 2,
+        "decision": "refuse",
+        "reason": "The expected spread did not survive the full-fill policy floor: conservative profit was below 0.00100000 SWAP.HIVE and conservative edge was below 50 bps."
+      },
+      {
+        "symbol": "SWAP.GIFU",
+        "grossSpotEdgeBpsFloor": 151,
+        "decision": "refuse",
+        "reason": "The exact bounded round trip was unprofitable after depth, precision, fees, and slippage."
+      }
+    ],
+    "admittedCount": 0
+  },
+  "poolCycleAssay": {
+    "observedAt": "2026-07-22T11:22:51.823Z",
+    "account": "emsenn0",
+    "route": [
+      "DEC",
+      "BEE",
+      "VOUCHER",
+      "DEC"
+    ],
+    "providerKnowledge": "true",
+    "stateDigest": "sha256:a2d39ab613546aa12c9b7eb54557d1713a319aac18d945d66257080b42411817",
+    "certifyingProviderCount": 3,
+    "maximumInputDec": "7.959",
+    "perPoolSlippageBps": 50,
+    "minimumProfitDec": "0.200",
+    "minimumProfitExitWitnessSwapHive": "0.00100124",
+    "decision": "refuse",
+    "reason": "Exhaustive evaluation of all 7,959 DEC integer input units found no positive minimum-output surplus after three pool fees, token precision, slippage, and reserve impact.",
+    "executionAdmissible": false
+  },
+  "method": {
+    "holonomy": "Nonzero spot holonomy is a discovery obstruction only. It does not survive as a capital claim until exact integer route composition is positive.",
+    "fourValuedEvidence": "At least two exact agreeing provider states establish true; contradiction establishes both; insufficient witnesses establish neither. Only true exposes a result.",
+    "exactArithmetic": "Each pool spends only the preceding hop's hard minimum output. The cycle search exhausts a bounded integer-token domain and refuses larger domains rather than assuming floor-rounded unimodality.",
+    "profitRecognition": "An observation or candidate recognizes no revenue. Profit requires a separately authorized, economically complete bundle and reconciliation."
+  },
+  "priorArt": [
+    {
+      "source": "scripts/global-arbitrage-scan.mjs",
+      "adopted": "Rescanned all SWAP.HIVE pools and market metrics through providers."
+    },
+    {
+      "source": "src/core/makerOrders.mts",
+      "adopted": "Certified the complete six-account order set before treating venue depth as external liquidity."
+    },
+    {
+      "source": "src/core/exitTightness.mts",
+      "adopted": "Required a complete displayed DEC exit witness for the initial-token profit floor."
+    },
+    {
+      "source": "src/core/scoreboard.mts",
+      "adopted": "Kept observed spread, capital movement, and settled realized profit distinct."
+    }
+  ],
+  "procurement": {
+    "authoringLot": "urn:aagaard:work-lot:cycle29-three-pool-admission:20260722",
+    "reviewLot": "urn:aagaard:work-lot:cycle29-pool-cycle-review:20260722",
+    "status": "residue",
+    "reason": "Both inference-market calls failed at the A2A RMN carrier boundary; no provider candidate was accepted."
+  },
+  "settlement": {
+    "eventId": "urn:aagaard:market-assay:tadFVf2dJmsdR6CpVA2XjfRX8TuNMo2ynEoDxZ-XDN8",
+    "category": "aagaard.market-assay-event",
+    "tradeBroadcast": false,
+    "credentialAccess": false,
+    "chainMutation": false,
+    "capitalMoved": "0.00000000 SWAP.HIVE",
+    "realizedProfitSwapHive": "0.00000000"
+  },
+  "verification": {
+    "staticCheck": "passed",
+    "testsPassed": 234,
+    "testsFailed": 0
+  }
+}

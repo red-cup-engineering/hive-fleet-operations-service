@@ -1,0 +1,42 @@
+{
+  "kind": "aagaard.strategy-product-concept",
+  "id": "splinterlands-best-next-move-v1",
+  "status": "proof-carrier-built-market-boundary-not-yet-launched",
+  "owner": "561-group/rsc-quiescent/aagaard",
+  "customerPromise": "Return the highest-scoring legal team found in the complete admitted strategy space for one exact, expiring Splinterlands match snapshot.",
+  "request": {
+    "account": "canonical Hive account or anonymous customer identifier",
+    "matchSnapshotDigest": "digest binding format, mana cap, rules, inactive elements, league, and protocol version",
+    "inventorySnapshotDigest": "digest binding owned or explicitly rentable card instances",
+    "objectiveVersion": "versioned scoring and risk model",
+    "expiresAt": "timestamp before the match submission deadline"
+  },
+  "response": {
+    "team": "archon UID, ordered unit UIDs, and ally color",
+    "score": "objective value under the named objective version",
+    "candidateCount": "number of admitted strategies exhaustively evaluated",
+    "legalityWitness": "evidence that the returned team satisfies every supplied constraint",
+    "dominanceWitness": "evidence that no admitted candidate has a higher score",
+    "proofCarrier": "Aagaard.Splinterlands.Recommendation",
+    "expiresAt": "recommendation expiry"
+  },
+  "commercialBoundary": {
+    "launchAccount": "dedicated Hive account to be named only after demand validation",
+    "offerDiscovery": "signed Hive publication or custom_json announcing objective versions and prices",
+    "settlement": "priced boundary receipt; HBD is the preferred initial unit",
+    "delivery": "encrypted direct response or authenticated off-chain response whose digest is anchored on Hive",
+    "custody": "inference-only; the service never receives customer posting or active keys",
+    "execution": "customer-side or separately contracted executor"
+  },
+  "claimsExcluded": [
+    "The recommendation does not promise a battle win.",
+    "Dominance is relative to the supplied snapshot, admitted strategy carrier, and versioned objective.",
+    "Opponent uncertainty and hidden information remain explicit model inputs rather than proof conclusions."
+  ],
+  "nextEvidence": [
+    "Bind the live TypeScript enumerator output to the Lean recommendation carrier.",
+    "Version an expected-value objective from replay and opponent-history data.",
+    "Measure recommendation latency and realized rating or reward lift on michael561.",
+    "Validate willingness to pay before creating or funding a dedicated Hive account."
+  ]
+}

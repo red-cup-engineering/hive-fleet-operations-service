@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "emsenn/schema/micro-enterprise",
+  "$comment": "An autonomous cell facing exactly one user, living or dying by the value it creates there. An enterprise is a region over which the gluing condition is enforced — an interior kept consistent at continuous relaxation cost — and a micro-enterprise is the smallest such region that still constitutes an enterprise. The test is binary, not aspirational: a unit that has been renamed but still draws a budget and answers to a manager is a department. The three settled kinds are read off whose need constitutes the unit's order: market faces an end user directly; node serves another micro-enterprise, its order passing through that internal customer to the end user under the chain-group contract; incubating pursues a user the firm does not yet have. A node package is this cell's compiled body: the language bundle it presents — structures, readings, codecs, conformance — presented as the enterprise that faces the user. The bundle is what the package compiles; the enterprise is how it faces. Hardened from the rendanheyi glossary (xiaowei, jiedian-xiaowei, shichang-xiaowei, fuhua-xiaowei, ling-juli, lianqun-heyue), the kernel-offices note's four lines of a node's kernel, the enterprise-obsmetrographics territory definition ('an enterprise is a region of the complex over which the gluing condition is enforced'), and the Chairperson's ruling of 2026-07-16 seated as the idea node-packages-self-conceptualize-as-language-bundles-presented-as-micro-enterprises.",
+  "type": "object",
+  "required": [
+    "name",
+    "kind",
+    "faces",
+    "bundle"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "What the unit is called, as it is said: 'huidu-guanli', 'obsmetrologia'."
+    },
+    "kind": {
+      "enum": [
+        "market",
+        "node",
+        "incubating"
+      ],
+      "$comment": "Whose need constitutes the unit's order: an end user held directly, an internal customer the order passes through, or a user the firm does not yet have. A unit that fits none of the three is a department wearing the name."
+    },
+    "faces": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "The user the unit faces at zero distance — the party whose being-served the unit can know in the fewest inferential steps. The firm's declared composition faces outward by default: the Semantic Web is the user."
+    },
+    "internal-customer": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "$comment": "For a node kind: the micro-enterprise this unit immediately serves. The internal customer is who the node serves; the end user is who pays it — both statements stand, and the chain-group contract is where they reconcile."
+    },
+    "bundle": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "$comment": "The language presentation this unit's package compiles. Names a language-presentation and must resolve to one. This is the weld the Chairperson ruled: a node package self-conceptualizes as a language bundle presented as this enterprise, so that what the unit derives is read as packets of language that mesh, not as files that happen to sit together."
+    },
+    "package": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "The node package that is this unit's body on disk, as npm names it: '@coesite-operations/huidu-guanli-management-thought-services-section'. Presentation, not identity — the record resolves by id."
+    },
+    "roster": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "Where the unit's offices seat, as a path from the unit's own root. An enterprise is installed from its roster; a unit with no roster of its own is operated, not sovereign, and the submodule-checkout boundary decides which (the-mesh-scope-rule)."
+    },
+    "contracts": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "$comment": "The chain-group contracts this unit is signatory to. Entered voluntarily; no authority can compel membership, and every signatory shares overshoot and shortfall alike."
+    },
+    "x-provenance": {
+      "type": "object"
+    }
+  },
+  "$comment-absences": "No books: value created and value captured are the chief financial officer's register, in separate columns, and a unit that could assert its own value-added would assert a readout. No rights keys: the three rights the unit actually holds — decision, personnel, distribution — are the personnel register's readout, recorded right by right, refusing two-of-three rounded up. No wage key: user-derived pay is computed from the books against the contract, never stored. No health or status: openness and achievement are derived by re-running, here as everywhere."
+}

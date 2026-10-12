@@ -1,0 +1,41 @@
+{
+  "id": "fleet-custodian",
+  "name": "fleet custodian",
+  "kind": "office",
+  "normative-structure": "Whether the Hive wallet fleet's daily arena tick executed as planned, and whether its role keys were used within the boundary the operator configured, is this office's own record — read from tick receipts (dry-run, skipped, propose-only, broadcast, error), never asserted from a plan that only says what a tick intended. Wallets are actors; each capability lane is a game; every tick is an arena reading this office answers for.",
+  "deontic-profile": {
+    "fleet-tick-execution": "duty",
+    "key-custody": "duty",
+    "broadcast-authorization": "deontic-power",
+    "resist-broadcasting-without-a-configured-command": "deontic-immunity",
+    "hive-game-play": "duty",
+    "hive-curation": "duty"
+  },
+  "provides-skill": [
+    "making-a-task",
+    "playing-hive-games",
+    "curating-hive-posts"
+  ],
+  "authority-scope": [
+    "lib/emsenn/services/561-group/services/engineering-services-section/services/computer-engineering-services-section/services/computer-systems-engineering-services-section/services/computer-blockchain-system-services-section/services/hive-engineering-services-section/services/hive-fleet-operations-service/"
+  ],
+  "jurisdiction": "lib/emsenn/services/561-group/services/engineering-services-section/services/computer-engineering-services-section/services/computer-systems-engineering-services-section/services/computer-blockchain-system-services-section/services/hive-engineering-services-section/services/hive-fleet-operations-service/",
+  "part-of": "emsenn",
+  "reports-to": [],
+  "theory-basis": [
+    "Hive protocol's own posting/active key separation — role presence is read from keyRoot at <account>/posting.wif and <account>/active.wif, a real protocol distinction this office's key-custody duty is derived from rather than invented",
+    "the agentic-metro-enterprise idea: a sovereign settlement rooted in informational territory, possessing its own identity, constitution, books, offices, obligations, admissions, capabilities, borders, and means of refusal",
+    "aagaard's own wallets-as-actors framing (README.md): each capability lane is a game, every tick is an arena reading whose plans and executions are witnessed as EAVT rows"
+  ],
+  "unrealized": [
+    "no books pool yet seats this office's own value-created/value-captured columns",
+    "broadcast-authorization is exercised through scripts/hive-broadcast.mjs against local key files at HIVE_KEY_ROOT (default ~/.config/blockchain/hive/<account>/<role>.wif) on cold-red-gate, reached directly or via signer.mjs's HIVE_SIGNER_HOST ssh path — AAGAARD_BROADCAST_COMMAND named an earlier, now-unreferenced broadcast boundary",
+    "per-wallet rules (what an account MUST/MUST NOT do) are not yet this office's own record — they still live as guard code inside each game script (protectedAssets.mjs's Alpha Vial #1831 block, workerbee's 10.00000 signer cap) rather than as evaluable agency rules"
+  ],
+  "founded": "2026-07-17",
+  "x-provenance": {
+    "recorded-by": "claude",
+    "recorded-on": "2026-07-17",
+    "derived-from": "user directive of 2026-07-17: stand up Aagaard as a sovereign state enterprise for Hive and Hive-Engine wallet-fleet operations, adopted onto the existing emsenn/aagaard (aagaard.561.group) repository"
+  }
+}

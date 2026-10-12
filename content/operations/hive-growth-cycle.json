@@ -1,0 +1,31 @@
+{
+  "schema": "aagaard.hive-growth-cycle.v1",
+  "lastCompleted": {
+    "globalStep": 31,
+    "angle": "asset-utility-yield",
+    "status": "completed",
+    "outcome": "Preserved Alpha Vial #1831 unopened, retained the productive ZING stake and WORKERBEE delegation, refused empty reward claims and nonexistent HBD-savings touches, and retained SPI because its productive distributions remain valuable while the current ask fails the principal-loss gate. A new exact planner combined three-provider order depth, fleet self-cross exclusion, a 70 SWAP.HIVE reserve, 150 bps liquid-capital and 200 bps exposure-growth ceilings, complete bid-side exit within 500 bps drawdown, and a 50-percent haircut on the settled EDSI distribution run rate. The admitted one-token EDSI pilot settled for 1.01430025 SWAP.HIVE in transaction 367fc841d6488f9f0fc22ddea72794192648aeda, leaving 70.68131404 SWAP.HIVE. Three Hive, two Hive Engine transaction, and three effect-state witnesses agree; no order remains open. The append-only acquisition event is urn:aagaard:income-token-acquisition:RskMwKsTEBgwtV64dYudrKR8FuB7rKPkZIykEWTOFnA. The post-purchase monitor sees the exact 1.000 EDSI and a complete displayed 1.00400000 SWAP.HIVE exit, but zero beneficiary-bound HIVE distributions, so realized profit remains unproven. Static checks and all 244 tests passed."
+  },
+  "next": {
+    "globalStep": 32,
+    "angle": "product-revenue",
+    "priorArt": [
+      {
+        "source": "src/contract-fleet-observation.mjs",
+        "adopted": "Expose a narrow priced observation across an explicit enterprise boundary without granting wallet authority or writing a customer's plate."
+      },
+      {
+        "source": "src/core/productPilotSettlement.mts",
+        "adopted": "Keep offer publication, audience distribution, paid demand, delivery, and realized revenue as separate exact settlement events."
+      },
+      {
+        "source": "scripts/monitor-exit-tightness-pilot.mjs",
+        "adopted": "Measure real audience and exact paid-interest syntax before spending more distribution attention."
+      },
+      {
+        "source": "src/core/productDistribution.mts",
+        "adopted": "Allocate the next bounded distribution action only when account separation and RC reserve gates remain satisfied."
+      }
+    ]
+  }
+}

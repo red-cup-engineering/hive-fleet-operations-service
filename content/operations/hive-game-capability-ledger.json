@@ -1,0 +1,408 @@
+{
+  "schema": "aagaard.hive-game-capability-ledger.v1",
+  "recordedAt": "2026-07-22T10:58:02.000Z",
+  "account": "michael561",
+  "cycle": {
+    "globalStep": 28,
+    "angle": "games-capability",
+    "splinterlandsFocused": false
+  },
+  "latestCrossGameDecision": {
+    "observedAt": "2026-07-22T10:52:48.834Z",
+    "planner": "scripts/game-opportunity-cycle.mjs",
+    "formulae": {
+      "admission": "A(c)=K_true(c) AND X(c) AND P(c) AND S(c) AND R_known(c) AND (O(c)=none OR RC(c)=ready)",
+      "dominance": "c1>c2 iff lex(admitted,benefit-class,capital-risk-class,mutation-surface,credential-surface,stable-identity) prefers c1",
+      "selection": "selected=max_lex({c | A(c)})",
+      "noScalarization": "SWAP.HIVE, game progress, credentials, and RC are never added into one score"
+    },
+    "ranked": [
+      {
+        "rank": 1,
+        "game": "holozing-wilds",
+        "action": "bounded-no-capture-session",
+        "admittedNow": true,
+        "reason": "zero-Dust and zero-RC capability learning with an exact protected-vial and settlement boundary"
+      },
+      {
+        "rank": 2,
+        "game": "terracore",
+        "action": "claim-raid-exposed-scrap",
+        "admittedNow": false,
+        "reason": "15.40155555 SCRAP had a complete 0.00137073 SWAP.HIVE depth witness, but current RC 137477972 was below the shared 339139544 reserve"
+      },
+      {
+        "rank": 3,
+        "game": "dcrops",
+        "action": "wait",
+        "admittedNow": false,
+        "reason": "the Artichoke is still growing until 2026-07-24T12:30:26.000Z"
+      }
+    ],
+    "decision": "execute-one-holozing-wilds-no-capture-session",
+    "splinterlandsConsidered": false
+  },
+  "holozingWilds": {
+    "officialStatus": {
+      "phase": "public-alpha-testing",
+      "mainGameAssetClaim": false,
+      "resetExpectedBeforeBeta": true,
+      "possibleDurableRewards": [
+        "alpha-testing-badge-title-or-achievement",
+        "discretionary-HIVE-reward-for-useful-bug-or-glitch-reports"
+      ],
+      "source": "https://hive.blog/hive-131131/@holozing/holozingwilds-public-alpha-testing"
+    },
+    "protectedAsset": {
+      "symbol": "ZINGALPHA",
+      "nftId": "1831",
+      "opened": false,
+      "selectedAsStarter": false,
+      "consumed": false,
+      "policy": "permanent-preserve"
+    },
+    "achievementInventory": {
+      "observedAt": "2026-07-22T09:24:07.516Z",
+      "providerAgreement": [
+        "https://herpc.dtools.dev/contracts",
+        "https://herpc.liotes.com/contracts"
+      ],
+      "assets": [
+        {
+          "symbol": "ZINGACHMNT",
+          "nftId": "3714",
+          "name": "2nd Holozing Advent Calendar",
+          "rarity": "Gold",
+          "soulBound": true,
+          "claimed": true
+        },
+        {
+          "symbol": "ZINGACHMNT",
+          "nftId": "4457",
+          "name": "Cakeday Achievement",
+          "rarity": "Regular",
+          "soulBound": true
+        }
+      ],
+      "decision": "Preserve both non-transferable history and capability assets; they cannot supply trading liquidity."
+    },
+    "captureExperiment": {
+      "completedAt": "2026-07-22T07:03:28.895Z",
+      "durationSeconds": 180,
+      "initialDust": "617.91",
+      "finalDust": "604.98",
+      "dustDelta": "-12.93",
+      "wildsDefeated": 5,
+      "healActions": 11,
+      "captureActions": 1,
+      "captureTarget": {
+        "species": "Fal",
+        "level": 1,
+        "hpFraction": "0.053"
+      },
+      "captureCostDust": "21.00",
+      "captureOutcome": "failure",
+      "reserveRetained": true,
+      "healerLevelBefore": 2,
+      "healerLevelAfter": 3,
+      "interpretation": "The failed capture settled exactly. Five defeats earned 8.07 Dust while the capture spent 21 Dust; the session is capability evidence, not treasury loss or profit because alpha progress is resettable and not a main-game asset."
+    },
+    "noCaptureBaseline": {
+      "completedAt": "2026-07-22T07:13:35.927Z",
+      "durationSeconds": 600,
+      "initialDust": "604.98",
+      "finalDust": "779.62",
+      "dustDelta": "+174.64",
+      "wildsDefeated": 28,
+      "healActions": 28,
+      "captureActions": 0,
+      "captureCountersChanged": false,
+      "healerLevelBefore": 3,
+      "healerLevelAfter": 4,
+      "creatureProgressObserved": [
+        "Woolio reached level 5",
+        "Fal reached level 4",
+        "Chirple reached level 6"
+      ],
+      "achievementDust": "120.00",
+      "achievementEvidence": [
+        "Mentor Bronze +60 Dust",
+        "Hunter Bronze +60 Dust"
+      ],
+      "interpretation": "The positive Dust and level deltas prove an effective alpha-testing/farming circuit but are not realized blockchain revenue, a transferable asset, or permanent progress."
+    },
+    "cycle28NoCaptureSession": {
+      "completedAt": "2026-07-22T10:58:01.279Z",
+      "durationSeconds": 300,
+      "initialDust": "779.62",
+      "finalDust": "801.77",
+      "dustDelta": "+22.15",
+      "wildsDefeated": 12,
+      "healActions": 8,
+      "captureActions": 0,
+      "captureCountersChanged": false,
+      "presenceRequired": false,
+      "maximumCell": 8,
+      "freeRecoveryObserved": "Two team wipes recovered after waiting without a Dust-funded revive.",
+      "reconciliation": "authoritative before/after snapshots confirmed",
+      "durableEventId": "urn:aagaard:holozing-wilds-session:7x-24HJpatoViUwU4F88cuZd2hUWDFXuBp3Bw5ihunY",
+      "protectedAlphaVialPreserved": true,
+      "transferableAssetCreated": false,
+      "revenueRecognized": "0.000 HIVE"
+    },
+    "captureModel": {
+      "source": "https://holozing.com/wilds/guide.html#capturing",
+      "chance": "min(0.95, (0.25 + clamp01((0.6-hpFraction)/0.6)*0.6) * clamp(sqrt(spawnPct/20),0.15,1) * (1-averageRarity/100000*0.4) + luckBonus)",
+      "cost": "(15 + 6*level) * zoneMultiplier * evolutionMultiplier Dust",
+      "unknownAtDecision": "average rarity and therefore exact success probability",
+      "failedCaptureEffect": "Dust is spent, the wild flees, and partial healer/creature XP remains"
+    },
+    "operatingPolicy": {
+      "defaultCaptureMax": 0,
+      "captureAdmission": "Use a separately declared bounded test only when roster progression or a specific mechanics probe justifies the resettable Dust spend; never call a capture an investment without a durable tradable asset and price witness.",
+      "healing": "Continue bounded automatic healing because it advances healer capability without spending Dust.",
+      "profitRecognition": "zero until a transferable reward or independently settled HIVE/ZING payment exists",
+      "presenceChallenge": "stop without acknowledgement",
+      "alphaVial": "the operator contains no opening action and must continue selecting no NFT starter"
+    }
+  },
+  "terracore": {
+    "priorAttempt": {
+      "kind": "claim",
+      "raidExposedScrapAtFirstAttempt": "18.05447555",
+      "outcome": "not-broadcast-insufficient-resource-credits",
+      "transactionId": null,
+      "nodeError": "michael561 had about 59.9 million effective RC while the transaction required about 88.0 million RC",
+      "twoNodeAccountHistoryAfterAttempt": "no terracore_claim operation",
+      "postAttemptState": "liquid SCRAP unchanged and in-game stash continued accruing",
+      "automaticRetryAllowed": false
+    },
+    "resourceCreditGate": {
+      "observedAt": "2026-07-22T07:58:45.087Z",
+      "currentRc": "102327959",
+      "maxRc": "5089858976",
+      "priorTransactionRequirementRc": "about 88000000",
+      "formula": "currentRC(t)=min(maxRC,currentMana+(t-lastUpdate)*maxRC/432000)",
+      "decision": "admit one fresh claim because the account had recovered above the prior measured requirement; the expendable RC regenerates while the stash is raid-exposed"
+    },
+    "completedClaim": {
+      "observedAt": "2026-07-22T07:59:31.427Z",
+      "completedAt": "2026-07-22T07:59:43.966Z",
+      "status": "claim-confirmed",
+      "raidExposedScrapBefore": "23.54240148148148",
+      "claimedScrap": "23.54852296",
+      "raidExposedScrapAfter": "0.012588148148148147",
+      "liquidScrapBefore": "135.04535132",
+      "liquidScrapAfter": "158.59387428",
+      "transactionId": "d96e4b726cfcfa970e76083bee2952fb3b73434f",
+      "block": 108350774,
+      "hiveProviderConfirmations": 3,
+      "hiveEngineProviderConfirmations": 2,
+      "durableEventId": "urn:aagaard:terracore-action:Z8YUxcJMgu_eqI7SYFu1u64f2Dbrz4_k6bwyzM32AOI",
+      "preClaimBidBookExitSwapHive": "0.00208262175516",
+      "profitRecognition": "The claimed SCRAP is a liquid inventory movement, not realized profit; no sale or SWAP.HIVE proceeds occurred.",
+      "otherActions": "No battle, purchase, upgrade, opening, transfer, or retry occurred."
+    },
+    "currentDisposition": {
+      "observedAt": "2026-07-22T10:52:57.985Z",
+      "liquidScrap": "158.59387428",
+      "raidExposedScrap": "15.41244592",
+      "completeDepthExitSwapHiveAtRanking": "0.00137073",
+      "currentRc": "137572228",
+      "requiredRc": "339139544",
+      "nextRcEligibleAt": "2026-07-22T15:38:04.935Z",
+      "engineering": 15,
+      "priorEngineeringBurn": {
+        "scrap": "196",
+        "transactionIdPrefix": "d088",
+        "completedAt": "2026-07-22T02:46:54.000Z"
+      },
+      "battleCandidate": "tdmdaddy",
+      "decision": "Wait for the shared two-times-average custom-JSON RC reserve, then freshly re-rank the growing raid-exposed claim against all other opportunities. Do not replay the base-14 engineering upgrade path against an Engineering-15 state.",
+      "badIncumbentAssay": "An execute request with an intentionally nonexistent posting-key path returned resource-credit-wait with credentialAccess=false and chainMutation=false."
+    }
+  },
+  "dcrops": {
+    "status": "wait",
+    "observedAt": "2026-07-22T10:52:50.016Z",
+    "plot": 0,
+    "landNftId": 472218,
+    "seedNftId": 472217,
+    "crop": "Artichoke",
+    "nextEligibleAtUnix": 1784896226,
+    "reason": "crop is still growing",
+    "nextEligibleAt": "2026-07-24T12:30:26.000Z",
+    "resourceCreditDecision": "wait-for-rc-regeneration"
+  },
+  "dcity": {
+    "status": "recovery-ready-not-authorized",
+    "observedAt": "2026-07-22T09:25:18.723Z",
+    "liquidRecovery": {
+      "emsenn0": {
+        "sim": "9338.841",
+        "expectedSwapHive": "0.44730518",
+        "minimumSwapHive": "0.44283212",
+        "slippageBps": 100,
+        "decision": "Do not broadcast: the exact potential authority is not available in local or cold-red-gate credential stores. Never substitute posting authority or another account's key."
+      },
+      "michael561": {
+        "sim": "168.925",
+        "expectedSwapHive": "0.00809161",
+        "minimumSwapHive": "0.00801069",
+        "slippageBps": 100,
+        "decision": "Refuse the dust-sized exit while michael561 resource credits are scarce; retain a reproducible bounded quote."
+      }
+    },
+    "historicalNfts": {
+      "count": 47,
+      "byAccount": {
+        "emsenn0": 32,
+        "michael561": 15
+      },
+      "lockedSim": {
+        "emsenn0": "278.000",
+        "michael561": "300.000",
+        "total": "578.000"
+      },
+      "decision": "Preserve. Unlocking requires irreversible NFT destruction for negligible present recovery, and no such action is admitted without a superior witnessed use."
+    },
+    "chainMutation": false
+  },
+  "hashkings": {
+    "status": "preserve-custody",
+    "observedAt": "2026-07-22T09:10:00.000Z",
+    "account": "emsenn0",
+    "nftCount": 18,
+    "fungibles": {
+      "BUDS": "2.00000000",
+      "HKWATER": "25380.0000",
+      "MOTA": "2.2124"
+    },
+    "reason": "parked game, zero fungible buy orders, no recent NFT comparable sale, and only 0.00000027 SWAP.HIVE of BUDS pool exit value"
+  },
+  "fleetNftInventory": {
+    "schema": "aagaard.fleet-nft-inventory.v1",
+    "status": "certified",
+    "observedAt": "2026-07-22T09:24:07.516Z",
+    "stateDigest": "sha256:4aecb9347102e471788a9034d7992c72798ec513c6a07ca6744d1883407e0ea3",
+    "certifyingProviders": [
+      "https://herpc.dtools.dev/contracts",
+      "https://herpc.liotes.com/contracts"
+    ],
+    "registeredCollectionCount": 152,
+    "ownedInstanceCount": 79,
+    "ownedCollectionCount": 6,
+    "byAccount": {
+      "emsenn0": 55,
+      "michael561": 24
+    },
+    "collections": {
+      "CITY": 47,
+      "DCROPS": 6,
+      "HKFARM": 18,
+      "NFTSR": 5,
+      "ZINGACHMNT": 2,
+      "ZINGALPHA": 1
+    },
+    "emptyExpectedCollection": "STAR",
+    "credentialAccess": false,
+    "chainMutation": false
+  },
+  "risingStar": {
+    "status": "transition-observation-manual-only",
+    "officialTransition": {
+      "source": "https://hive.blog/risingstar/@risingstargame/important-announcement-regarding-the-future-of-rising-star",
+      "observedAt": "2026-07-22T08:07:54.000Z",
+      "facts": [
+        "the current form is shutting down",
+        "Blockchain Gaming is taking over management and intends a community-informed relaunch",
+        "management of STARBITS and STARPRO is transferring",
+        "the announced intent is for existing NFTs to remain usable through the transition"
+      ]
+    },
+    "currentTerms": {
+      "source": "https://risingstargame.com/terms.php",
+      "pageLastUpdated": "2024-10-11",
+      "observedAt": "2026-07-22T08:10:00.000Z",
+      "constraints": [
+        "no bots or clickers",
+        "one account per user",
+        "one account per IP address and physical location",
+        "no VPN or proxy server",
+        "NFTs and STARBITS or STARPRO may be traded but not gifted"
+      ],
+      "operatingDecision": "Aagaard will not build or run a Rising Star mission starter, login loop, clicker, or multi-account circuit. Any play must be manual through the official interface after the pre-existing player identity is established."
+    },
+    "fleetChainInventory": {
+      "accounts": [
+        "sigmund-vexler",
+        "help-fund",
+        "emsenn0",
+        "essiebee",
+        "marshian",
+        "michael561"
+      ],
+      "providersAgreed": true,
+      "hiveEngineProviders": [
+        "https://api.hive-engine.com/rpc/contracts",
+        "https://herpc.dtools.dev/contracts"
+      ],
+      "starbitsBalancesObserved": 0,
+      "starproBalancesObserved": 0,
+      "walletCustodiedStarNftsObserved": 0,
+      "historicalStarbitsOrStarproAccountEventsObserved": 0,
+      "interpretation": "No present fleet custody or account history supports the old 1000 STARBITS configuration hint. In-game database custody remains unproven and is not inferred from configuration."
+    },
+    "rectification": {
+      "retiredSeed": "essiebee configured STARBITS 1000",
+      "mechanism": "planGaming now requires an explicit chain-state token snapshot; missing state produces no game proposal. Rising Star detects only STARBITS or STARPRO and remains approvedForBroadcast false with a manual-only review proposal.",
+      "badIncumbentTest": "A wallet carrying configured token hints but no observed chain state produces zero detected games.",
+      "testsPassed": 36
+    },
+    "authenticatedProbe": {
+      "account": "help-fund",
+      "scope": "read-only login and inventory/terms pages; no mission or asset action",
+      "observed": "level 1 with 0 STARBITS and 0.000000 STARPRO",
+      "uncertainty": "Whether first login instantiated a new empty game record was not exposed by the site. No additional fleet account was logged in after the single-account rule was observed."
+    }
+  },
+  "cycle28Capability": {
+    "crossGameComparator": "src/core/gameOpportunity.mts",
+    "livePlanner": "scripts/game-opportunity-cycle.mjs",
+    "resourceCreditObserver": "src/integrations/hive/rcReserve.adapter.mts",
+    "wildsSettlement": "src/core/holozingWildsSettlement.mts",
+    "rectification": {
+      "positiveObligation": "Every discretionary game custom-JSON action must satisfy the shared two-times-average RC reserve before credential access.",
+      "mechanism": "TerraCore and dCrops now independently observe three-provider RC and operation-cost evidence, suppress FOUR both/neither states, and return a credential-free wait before their key verifier.",
+      "retiredCopy": "Session judgment about whether michael561 has enough RC is replaced by the shared live gate.",
+      "badIncumbentTest": "The fresh TerraCore claim was executable in game state, but a nonexistent key remained unread because 137572228 RC was below 339139544 required RC."
+    },
+    "procurement": {
+      "lot": "urn:aagaard:work-lot:cycle28-cross-game-ranking:20260722",
+      "status": "no-candidate-accepted",
+      "residue": [
+        "initial carrier rejected difficulty above one and non-URN customer identity",
+        "corrected carrier returned Agent Card exposes no interface"
+      ]
+    },
+    "independentReview": {
+      "lot": "urn:aagaard:work-lot:cycle28-game-circuit-review:20260722",
+      "status": "no-candidate-accepted",
+      "residue": "an A2A RMN operation must carry exactly one application/rmn+cbor raw part"
+    },
+    "settlement": {
+      "credentialAccess": "posting key used only for the selected HoloZing authentication",
+      "chainMutation": false,
+      "capitalSpent": "0.000 HIVE and 0.00 Dust",
+      "revenueRecognized": "0.000 HIVE",
+      "transferableAssetsCreated": 0,
+      "alphaVial1831Preserved": true
+    },
+    "verification": {
+      "testsPassed": 228,
+      "testsFailed": 0,
+      "staticCheck": "passed",
+      "jsonCheck": "passed"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "@561-group/aagaard",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "aagaard.561.group — Propolis demo site: Hive frontend with SWARM layer.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emsenn/aagaard.git"
+  },
+  "scripts": {
+    "serve": "node --disable-warning=ExperimentalWarning src/server.ts",
+    "test": "node --test \"src/**/*.test.ts\"",
+    "check": "tsc --noEmit"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./server": "./src/server.ts",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@561-group/propolis": "workspace:*",
+    "@561-group/web-server": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.1",
+    "typescript": "5.9.3"
+  },
+  "sideEffects": false,
+  "561:serve": {
+    "domain": "aagaard.561.group",
+    "serviceName": "aagaard",
+    "kind": "proxy",
+    "port": 18801,
+    "sse": false,
+    "ws": false
+  }
+}

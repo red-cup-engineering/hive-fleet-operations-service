@@ -1,0 +1,29 @@
+{
+  "name": "@emsenn/aagaard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Aagaard wallet-arena operations app; witness-log and notation primitives are now its own (src/core/witness.mts), decoupled from MetroPlat's since-dissolved persistence/notation API.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "check": "tsc --noEmit -p tsconfig.json",
+    "test": "node --test --test-concurrency=1 test/*.test.mts",
+    "serve": "node src/serve.mts"
+  },
+  "exports": {
+    ".": "./src/index.mts",
+    "./serve": "./src/serve.mts",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "sovereign-state-enterprise"
+  ]
+}

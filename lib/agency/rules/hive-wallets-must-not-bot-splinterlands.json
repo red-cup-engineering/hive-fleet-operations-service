@@ -1,0 +1,9 @@
+{
+  "id": "hive-wallets-must-not-bot-splinterlands",
+  "statement": "Hive wallets MUST NOT submit Splinterlands battles, teams or surrenders by automation.",
+  "subject": ["hive:*"],
+  "action": ["hive:custom_json"],
+  "when": { "input.id": { "matches": "^sm_(find_match|submit_team|team_reveal|surrender|battle)" } },
+  "because": "Splinterlands' terms of service forbid bot play.",
+  "x-provenance": { "recorded-by": "claude-opus-5-5", "recorded-on": "2026-09-26", "source": "the fleet guard code these rules restate, surveyed by the game-play automation session" }
+}

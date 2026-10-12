@@ -1,0 +1,19 @@
+{
+  "id": "hive-curation",
+  "name": "curate Hive posts with the fleet",
+  "authority": "emsenn",
+  "work": "hive-curation",
+  "from": "the fleet config's curation block and two public nodes' reading of recent posts",
+  "to": "curation votes cast within each account's mana budget, read back from the chain",
+  "cost": "voting mana and node reads",
+  "otherwise": "the fleet's voting power earns no curation rewards",
+  "claim": "founder",
+  "delegation": true,
+  "skills": [
+    "curating-hive-posts"
+  ],
+  "x-provenance": {
+    "recorded-by": "claude-opus-5-5",
+    "recorded-on": "2026-09-26"
+  }
+}

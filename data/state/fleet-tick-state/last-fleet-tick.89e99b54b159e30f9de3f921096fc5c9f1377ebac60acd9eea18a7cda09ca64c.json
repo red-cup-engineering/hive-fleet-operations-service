@@ -1,0 +1,2662 @@
+{
+  "kind": "aagaard.fleet-tick",
+  "ts": "2026-07-19T05:06:24.232Z",
+  "running": true,
+  "live": true,
+  "enabled": [
+    "voting",
+    "trading",
+    "incentive"
+  ],
+  "accounts": [
+    {
+      "account": "sigmund-vexler",
+      "voting": {
+        "currentMana": "0",
+        "maxMana": "0",
+        "votesPlanned": 0,
+        "votesBroadcast": 0,
+        "votesDryRun": 0,
+        "votesSkipped": 0,
+        "execution": {
+          "broadcast": 0,
+          "dryRun": 0,
+          "skipped": 0,
+          "errors": 0,
+          "receipts": []
+        },
+        "decision": "alpha-hunter waits: power 0 below floor 6500",
+        "radar": {
+          "posts": 0,
+          "mispricingEnergy": 0,
+          "components": 1,
+          "durable": false,
+          "topSinks": []
+        },
+        "intelligence": {
+          "fiedler": 0,
+          "decayHalfLife": null,
+          "cartelCycles": 0,
+          "bridges": 0,
+          "topByExpectedAlpha": []
+        }
+      },
+      "trading": {
+        "mode": "propose-only",
+        "hive": "0.000 HIVE",
+        "hbd": "0.000 HBD",
+        "tradesPlanned": 0,
+        "tradesExecuted": 0,
+        "bundlesPlanned": 0,
+        "bundlesFunded": 0,
+        "bundlesExecuted": 0,
+        "lpPlanned": 0,
+        "lpExecuted": 0,
+        "savingsPlanned": false,
+        "savingsExecuted": false,
+        "execution": {
+          "mode": "propose-only",
+          "tradesExecuted": 0,
+          "bundlesExecuted": 0,
+          "lpExecuted": 0,
+          "savingsExecuted": false,
+          "receipts": []
+        },
+        "allocation": {
+          "funded": [],
+          "totalCost": 0,
+          "totalBenefit": 0,
+          "consideredCount": 0,
+          "fundedCount": 0,
+          "choiceBits": 0,
+          "exact": true
+        },
+        "rigidity": {
+          "entities": 0,
+          "cells": 0,
+          "components": 0,
+          "h1Rank": 0,
+          "loadBearing": false,
+          "bridgeCells": []
+        },
+        "flow": [],
+        "cycleCapacities": [],
+        "screening": []
+      },
+      "incentive": {
+        "offersFound": 0,
+        "nominated": 0,
+        "autoExecuted": 0,
+        "execution": {
+          "broadcast": 0,
+          "dryRun": 0,
+          "skipped": 0,
+          "errors": 0,
+          "receipts": []
+        },
+        "topOffers": []
+      },
+      "posting": {
+        "draftsPrepared": 2,
+        "locked": true
+      },
+      "gaming": {
+        "gamesDetected": 0,
+        "games": [],
+        "locked": true
+      },
+      "arenas": [
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "voting",
+          "game": "curation reward allocation",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "sigmund-vexler",
+              "strategy": {
+                "archetype": "alpha-hunter",
+                "feeds": [
+                  "trending"
+                ],
+                "objective": {
+                  "underrecognition": 1.8,
+                  "communityFit": 0.5,
+                  "conversation": 0.5,
+                  "durability": 1.2,
+                  "bridge": 1.2,
+                  "quality": 1,
+                  "cartelAversion": 1.4
+                },
+                "conviction": 1.35,
+                "votingPowerFloorBps": 6500,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": true,
+              "risk": {
+                "capHiveMilli": 5000,
+                "capSwapHiveMilli": 5000,
+                "capHbdMilli": 5000,
+                "minLiquidHbdMilli": 500,
+                "maxVoteWeightBps": 10000
+              },
+              "tokens": {
+                "DEC": "12.5",
+                "SPS": "3.2"
+              }
+            }
+          ],
+          "moves": [
+            {
+              "actor": "sigmund-vexler",
+              "action": {
+                "pair": [
+                  {
+                    "mark": "aagaard.voting"
+                  },
+                  {
+                    "mark": "wait"
+                  }
+                ]
+              },
+              "target": "mana",
+              "value": {
+                "votingPowerBps": 0
+              },
+              "charge": "potential",
+              "reason": "power 0 below floor 6500"
+            }
+          ],
+          "converged": false,
+          "locked": false,
+          "witnesses": [
+            {
+              "entity": "wallet/sigmund-vexler",
+              "value": {
+                "pair": [
+                  {
+                    "mark": "aagaard.voting"
+                  },
+                  {
+                    "mark": "wait"
+                  }
+                ]
+              },
+              "context": {
+                "arena": "voting",
+                "target": "mana",
+                "charge": "potential",
+                "reason": "power 0 below floor 6500",
+                "value": {
+                  "votingPowerBps": 0
+                }
+              },
+              "at": "2026-07-19T05:06:24.232Z",
+              "digest": "c513d1e4706a4880"
+            }
+          ]
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "trading",
+          "game": "cross-venue capital allocation",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "sigmund-vexler",
+              "strategy": {
+                "archetype": "alpha-hunter",
+                "feeds": [
+                  "trending"
+                ],
+                "objective": {
+                  "underrecognition": 1.8,
+                  "communityFit": 0.5,
+                  "conversation": 0.5,
+                  "durability": 1.2,
+                  "bridge": 1.2,
+                  "quality": 1,
+                  "cartelAversion": 1.4
+                },
+                "conviction": 1.35,
+                "votingPowerFloorBps": 6500,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": true,
+              "risk": {
+                "capHiveMilli": 5000,
+                "capSwapHiveMilli": 5000,
+                "capHbdMilli": 5000,
+                "minLiquidHbdMilli": 500,
+                "maxVoteWeightBps": 10000
+              },
+              "tokens": {
+                "DEC": "12.5",
+                "SPS": "3.2"
+              }
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": false,
+          "witnesses": []
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "incentive",
+          "game": "bounty arbitration",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "sigmund-vexler",
+              "strategy": {
+                "archetype": "alpha-hunter",
+                "feeds": [
+                  "trending"
+                ],
+                "objective": {
+                  "underrecognition": 1.8,
+                  "communityFit": 0.5,
+                  "conversation": 0.5,
+                  "durability": 1.2,
+                  "bridge": 1.2,
+                  "quality": 1,
+                  "cartelAversion": 1.4
+                },
+                "conviction": 1.35,
+                "votingPowerFloorBps": 6500,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": true,
+              "risk": {
+                "capHiveMilli": 5000,
+                "capSwapHiveMilli": 5000,
+                "capHbdMilli": 5000,
+                "minLiquidHbdMilli": 500,
+                "maxVoteWeightBps": 10000
+              },
+              "tokens": {
+                "DEC": "12.5",
+                "SPS": "3.2"
+              }
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": false,
+          "witnesses": []
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "posting",
+          "game": "operator-reviewed publication",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "sigmund-vexler",
+              "strategy": {
+                "archetype": "alpha-hunter",
+                "feeds": [
+                  "trending"
+                ],
+                "objective": {
+                  "underrecognition": 1.8,
+                  "communityFit": 0.5,
+                  "conversation": 0.5,
+                  "durability": 1.2,
+                  "bridge": 1.2,
+                  "quality": 1,
+                  "cartelAversion": 1.4
+                },
+                "conviction": 1.35,
+                "votingPowerFloorBps": 6500,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": true,
+              "risk": {
+                "capHiveMilli": 5000,
+                "capSwapHiveMilli": 5000,
+                "capHbdMilli": 5000,
+                "minLiquidHbdMilli": 500,
+                "maxVoteWeightBps": 10000
+              },
+              "tokens": {
+                "DEC": "12.5",
+                "SPS": "3.2"
+              }
+            }
+          ],
+          "moves": [
+            {
+              "actor": "sigmund-vexler",
+              "action": {
+                "pair": [
+                  {
+                    "mark": "aagaard.posting"
+                  },
+                  {
+                    "mark": "draft"
+                  }
+                ]
+              },
+              "target": "sigmund-vexler operations note",
+              "value": {
+                "drafts": [
+                  {
+                    "id": "sigmund-vexler:operations:2026-07-19",
+                    "title": "sigmund-vexler operations note",
+                    "topic": "operations",
+                    "tags": [
+                      "hive",
+                      "automation",
+                      "aagaard"
+                    ]
+                  },
+                  {
+                    "id": "sigmund-vexler:hive-spectral:2026-07-19",
+                    "title": "The spectral state of Hive - 2026-07-19",
+                    "topic": "hive-spectral",
+                    "tags": [
+                      "hive",
+                      "mathematics",
+                      "spectral",
+                      "analysis",
+                      "curation"
+                    ]
+                  }
+                ]
+              },
+              "charge": "potential",
+              "reason": "posting lane locked"
+            }
+          ],
+          "converged": false,
+          "locked": true,
+          "witnesses": [
+            {
+              "entity": "wallet/sigmund-vexler",
+              "value": {
+                "pair": [
+                  {
+                    "mark": "aagaard.posting"
+                  },
+                  {
+                    "mark": "draft"
+                  }
+                ]
+              },
+              "context": {
+                "arena": "posting",
+                "target": "sigmund-vexler operations note",
+                "charge": "potential",
+                "reason": "posting lane locked",
+                "value": {
+                  "drafts": [
+                    {
+                      "id": "sigmund-vexler:operations:2026-07-19",
+                      "title": "sigmund-vexler operations note",
+                      "topic": "operations",
+                      "tags": [
+                        "hive",
+                        "automation",
+                        "aagaard"
+                      ]
+                    },
+                    {
+                      "id": "sigmund-vexler:hive-spectral:2026-07-19",
+                      "title": "The spectral state of Hive - 2026-07-19",
+                      "topic": "hive-spectral",
+                      "tags": [
+                        "hive",
+                        "mathematics",
+                        "spectral",
+                        "analysis",
+                        "curation"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "at": "2026-07-19T05:06:24.232Z",
+              "digest": "c33d534f40aae7c1"
+            }
+          ]
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "gaming",
+          "game": "on-chain game routine",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "sigmund-vexler",
+              "strategy": {
+                "archetype": "alpha-hunter",
+                "feeds": [
+                  "trending"
+                ],
+                "objective": {
+                  "underrecognition": 1.8,
+                  "communityFit": 0.5,
+                  "conversation": 0.5,
+                  "durability": 1.2,
+                  "bridge": 1.2,
+                  "quality": 1,
+                  "cartelAversion": 1.4
+                },
+                "conviction": 1.35,
+                "votingPowerFloorBps": 6500,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": true,
+              "risk": {
+                "capHiveMilli": 5000,
+                "capSwapHiveMilli": 5000,
+                "capHbdMilli": 5000,
+                "minLiquidHbdMilli": 500,
+                "maxVoteWeightBps": 10000
+              },
+              "tokens": {
+                "DEC": "12.5",
+                "SPS": "3.2"
+              }
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": true,
+          "witnesses": []
+        }
+      ]
+    },
+    {
+      "account": "help-fund",
+      "voting": {
+        "currentMana": "0",
+        "maxMana": "0",
+        "votesPlanned": 0,
+        "votesBroadcast": 0,
+        "votesDryRun": 0,
+        "votesSkipped": 0,
+        "execution": {
+          "broadcast": 0,
+          "dryRun": 0,
+          "skipped": 0,
+          "errors": 0,
+          "receipts": []
+        },
+        "decision": "patron-steward waits: power 0 below floor 8000",
+        "radar": {
+          "posts": 0,
+          "mispricingEnergy": 0,
+          "components": 1,
+          "durable": false,
+          "topSinks": []
+        },
+        "intelligence": {
+          "fiedler": 0,
+          "decayHalfLife": null,
+          "cartelCycles": 0,
+          "bridges": 0,
+          "topByExpectedAlpha": []
+        }
+      },
+      "trading": {
+        "mode": "propose-only",
+        "hive": "0.000 HIVE",
+        "hbd": "0.000 HBD",
+        "tradesPlanned": 0,
+        "tradesExecuted": 0,
+        "bundlesPlanned": 0,
+        "bundlesFunded": 0,
+        "bundlesExecuted": 0,
+        "lpPlanned": 0,
+        "lpExecuted": 0,
+        "savingsPlanned": false,
+        "savingsExecuted": false,
+        "execution": {
+          "mode": "propose-only",
+          "tradesExecuted": 0,
+          "bundlesExecuted": 0,
+          "lpExecuted": 0,
+          "savingsExecuted": false,
+          "receipts": []
+        },
+        "allocation": {
+          "funded": [],
+          "totalCost": 0,
+          "totalBenefit": 0,
+          "consideredCount": 0,
+          "fundedCount": 0,
+          "choiceBits": 0,
+          "exact": true
+        },
+        "rigidity": {
+          "entities": 0,
+          "cells": 0,
+          "components": 0,
+          "h1Rank": 0,
+          "loadBearing": false,
+          "bridgeCells": []
+        },
+        "flow": [],
+        "cycleCapacities": [],
+        "screening": []
+      },
+      "incentive": {
+        "offersFound": 0,
+        "nominated": 0,
+        "autoExecuted": 0,
+        "execution": {
+          "broadcast": 0,
+          "dryRun": 0,
+          "skipped": 0,
+          "errors": 0,
+          "receipts": []
+        },
+        "topOffers": []
+      },
+      "posting": {
+        "draftsPrepared": 2,
+        "locked": true
+      },
+      "gaming": {
+        "gamesDetected": 0,
+        "games": [],
+        "locked": true
+      },
+      "arenas": [
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "voting",
+          "game": "curation reward allocation",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "help-fund",
+              "strategy": {
+                "archetype": "patron-steward",
+                "feeds": [
+                  "hive-167922",
+                  "finance",
+                  "dev"
+                ],
+                "objective": {
+                  "underrecognition": 1,
+                  "communityFit": 1.6,
+                  "conversation": 1.1,
+                  "durability": 1.2,
+                  "bridge": 0.6,
+                  "quality": 1.3,
+                  "cartelAversion": 1
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": true,
+              "risk": {
+                "capHiveMilli": 5000,
+                "capSwapHiveMilli": 5000,
+                "capHbdMilli": 5000,
+                "minLiquidHbdMilli": 500,
+                "maxVoteWeightBps": 10000
+              },
+              "tokens": {
+                "SIM": "50"
+              }
+            }
+          ],
+          "moves": [
+            {
+              "actor": "help-fund",
+              "action": {
+                "pair": [
+                  {
+                    "mark": "aagaard.voting"
+                  },
+                  {
+                    "mark": "wait"
+                  }
+                ]
+              },
+              "target": "mana",
+              "value": {
+                "votingPowerBps": 0
+              },
+              "charge": "potential",
+              "reason": "power 0 below floor 8000"
+            }
+          ],
+          "converged": false,
+          "locked": false,
+          "witnesses": [
+            {
+              "entity": "wallet/help-fund",
+              "value": {
+                "pair": [
+                  {
+                    "mark": "aagaard.voting"
+                  },
+                  {
+                    "mark": "wait"
+                  }
+                ]
+              },
+              "context": {
+                "arena": "voting",
+                "target": "mana",
+                "charge": "potential",
+                "reason": "power 0 below floor 8000",
+                "value": {
+                  "votingPowerBps": 0
+                }
+              },
+              "at": "2026-07-19T05:06:24.232Z",
+              "digest": "ceb462cc4d63d64c"
+            }
+          ]
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "trading",
+          "game": "cross-venue capital allocation",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "help-fund",
+              "strategy": {
+                "archetype": "patron-steward",
+                "feeds": [
+                  "hive-167922",
+                  "finance",
+                  "dev"
+                ],
+                "objective": {
+                  "underrecognition": 1,
+                  "communityFit": 1.6,
+                  "conversation": 1.1,
+                  "durability": 1.2,
+                  "bridge": 0.6,
+                  "quality": 1.3,
+                  "cartelAversion": 1
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": true,
+              "risk": {
+                "capHiveMilli": 5000,
+                "capSwapHiveMilli": 5000,
+                "capHbdMilli": 5000,
+                "minLiquidHbdMilli": 500,
+                "maxVoteWeightBps": 10000
+              },
+              "tokens": {
+                "SIM": "50"
+              }
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": false,
+          "witnesses": []
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "incentive",
+          "game": "bounty arbitration",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "help-fund",
+              "strategy": {
+                "archetype": "patron-steward",
+                "feeds": [
+                  "hive-167922",
+                  "finance",
+                  "dev"
+                ],
+                "objective": {
+                  "underrecognition": 1,
+                  "communityFit": 1.6,
+                  "conversation": 1.1,
+                  "durability": 1.2,
+                  "bridge": 0.6,
+                  "quality": 1.3,
+                  "cartelAversion": 1
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": true,
+              "risk": {
+                "capHiveMilli": 5000,
+                "capSwapHiveMilli": 5000,
+                "capHbdMilli": 5000,
+                "minLiquidHbdMilli": 500,
+                "maxVoteWeightBps": 10000
+              },
+              "tokens": {
+                "SIM": "50"
+              }
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": false,
+          "witnesses": []
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "posting",
+          "game": "operator-reviewed publication",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "help-fund",
+              "strategy": {
+                "archetype": "patron-steward",
+                "feeds": [
+                  "hive-167922",
+                  "finance",
+                  "dev"
+                ],
+                "objective": {
+                  "underrecognition": 1,
+                  "communityFit": 1.6,
+                  "conversation": 1.1,
+                  "durability": 1.2,
+                  "bridge": 0.6,
+                  "quality": 1.3,
+                  "cartelAversion": 1
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": true,
+              "risk": {
+                "capHiveMilli": 5000,
+                "capSwapHiveMilli": 5000,
+                "capHbdMilli": 5000,
+                "minLiquidHbdMilli": 500,
+                "maxVoteWeightBps": 10000
+              },
+              "tokens": {
+                "SIM": "50"
+              }
+            }
+          ],
+          "moves": [
+            {
+              "actor": "help-fund",
+              "action": {
+                "pair": [
+                  {
+                    "mark": "aagaard.posting"
+                  },
+                  {
+                    "mark": "draft"
+                  }
+                ]
+              },
+              "target": "help-fund operations note",
+              "value": {
+                "drafts": [
+                  {
+                    "id": "help-fund:operations:2026-07-19",
+                    "title": "help-fund operations note",
+                    "topic": "operations",
+                    "tags": [
+                      "hive",
+                      "automation",
+                      "aagaard"
+                    ]
+                  },
+                  {
+                    "id": "help-fund:he-liquidity:2026-07-19",
+                    "title": "Hive-Engine liquidity report - 2026-07-19",
+                    "topic": "he-liquidity",
+                    "tags": [
+                      "hive-engine",
+                      "liquidity",
+                      "defi",
+                      "analysis",
+                      "hive"
+                    ]
+                  }
+                ]
+              },
+              "charge": "potential",
+              "reason": "posting lane locked"
+            }
+          ],
+          "converged": false,
+          "locked": true,
+          "witnesses": [
+            {
+              "entity": "wallet/help-fund",
+              "value": {
+                "pair": [
+                  {
+                    "mark": "aagaard.posting"
+                  },
+                  {
+                    "mark": "draft"
+                  }
+                ]
+              },
+              "context": {
+                "arena": "posting",
+                "target": "help-fund operations note",
+                "charge": "potential",
+                "reason": "posting lane locked",
+                "value": {
+                  "drafts": [
+                    {
+                      "id": "help-fund:operations:2026-07-19",
+                      "title": "help-fund operations note",
+                      "topic": "operations",
+                      "tags": [
+                        "hive",
+                        "automation",
+                        "aagaard"
+                      ]
+                    },
+                    {
+                      "id": "help-fund:he-liquidity:2026-07-19",
+                      "title": "Hive-Engine liquidity report - 2026-07-19",
+                      "topic": "he-liquidity",
+                      "tags": [
+                        "hive-engine",
+                        "liquidity",
+                        "defi",
+                        "analysis",
+                        "hive"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "at": "2026-07-19T05:06:24.232Z",
+              "digest": "d067d3be9662e4ce"
+            }
+          ]
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "gaming",
+          "game": "on-chain game routine",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "help-fund",
+              "strategy": {
+                "archetype": "patron-steward",
+                "feeds": [
+                  "hive-167922",
+                  "finance",
+                  "dev"
+                ],
+                "objective": {
+                  "underrecognition": 1,
+                  "communityFit": 1.6,
+                  "conversation": 1.1,
+                  "durability": 1.2,
+                  "bridge": 0.6,
+                  "quality": 1.3,
+                  "cartelAversion": 1
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": true,
+              "risk": {
+                "capHiveMilli": 5000,
+                "capSwapHiveMilli": 5000,
+                "capHbdMilli": 5000,
+                "minLiquidHbdMilli": 500,
+                "maxVoteWeightBps": 10000
+              },
+              "tokens": {
+                "SIM": "50"
+              }
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": true,
+          "witnesses": []
+        }
+      ]
+    },
+    {
+      "account": "emsenn0",
+      "voting": {
+        "currentMana": "0",
+        "maxMana": "0",
+        "votesPlanned": 0,
+        "votesBroadcast": 0,
+        "votesDryRun": 0,
+        "votesSkipped": 0,
+        "execution": {
+          "broadcast": 0,
+          "dryRun": 0,
+          "skipped": 0,
+          "errors": 0,
+          "receipts": []
+        },
+        "decision": "curator waits: power 0 below floor 8000",
+        "radar": {
+          "posts": 0,
+          "mispricingEnergy": 0,
+          "components": 1,
+          "durable": false,
+          "topSinks": []
+        },
+        "intelligence": {
+          "fiedler": 0,
+          "decayHalfLife": null,
+          "cartelCycles": 0,
+          "bridges": 0,
+          "topByExpectedAlpha": []
+        }
+      },
+      "trading": {
+        "mode": "propose-only",
+        "hive": "0.000 HIVE",
+        "hbd": "0.000 HBD",
+        "tradesPlanned": 0,
+        "tradesExecuted": 0,
+        "bundlesPlanned": 0,
+        "bundlesFunded": 0,
+        "bundlesExecuted": 0,
+        "lpPlanned": 0,
+        "lpExecuted": 0,
+        "savingsPlanned": false,
+        "savingsExecuted": false,
+        "execution": {
+          "mode": "propose-only",
+          "tradesExecuted": 0,
+          "bundlesExecuted": 0,
+          "lpExecuted": 0,
+          "savingsExecuted": false,
+          "receipts": []
+        },
+        "allocation": {
+          "funded": [],
+          "totalCost": 0,
+          "totalBenefit": 0,
+          "consideredCount": 0,
+          "fundedCount": 0,
+          "choiceBits": 0,
+          "exact": true
+        },
+        "rigidity": {
+          "entities": 0,
+          "cells": 0,
+          "components": 0,
+          "h1Rank": 0,
+          "loadBearing": false,
+          "bridgeCells": []
+        },
+        "flow": [],
+        "cycleCapacities": [],
+        "screening": []
+      },
+      "incentive": {
+        "offersFound": 0,
+        "nominated": 0,
+        "autoExecuted": 0,
+        "execution": {
+          "broadcast": 0,
+          "dryRun": 0,
+          "skipped": 0,
+          "errors": 0,
+          "receipts": []
+        },
+        "topOffers": []
+      },
+      "posting": {
+        "draftsPrepared": 1,
+        "locked": true
+      },
+      "gaming": {
+        "gamesDetected": 0,
+        "games": [],
+        "locked": true
+      },
+      "arenas": [
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "voting",
+          "game": "curation reward allocation",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "emsenn0",
+              "strategy": {
+                "archetype": "curator",
+                "feeds": [
+                  "following",
+                  "trending"
+                ],
+                "objective": {
+                  "underrecognition": 1,
+                  "communityFit": 1,
+                  "conversation": 1,
+                  "durability": 1,
+                  "bridge": 1,
+                  "quality": 1,
+                  "cartelAversion": 1
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": false,
+              "risk": {
+                "capHiveMilli": 1000,
+                "capSwapHiveMilli": 1000,
+                "capHbdMilli": 1000,
+                "minLiquidHbdMilli": 1000,
+                "maxVoteWeightBps": 5000
+              },
+              "tokens": {}
+            }
+          ],
+          "moves": [
+            {
+              "actor": "emsenn0",
+              "action": {
+                "pair": [
+                  {
+                    "mark": "aagaard.voting"
+                  },
+                  {
+                    "mark": "wait"
+                  }
+                ]
+              },
+              "target": "mana",
+              "value": {
+                "votingPowerBps": 0
+              },
+              "charge": "potential",
+              "reason": "power 0 below floor 8000"
+            }
+          ],
+          "converged": false,
+          "locked": false,
+          "witnesses": [
+            {
+              "entity": "wallet/emsenn0",
+              "value": {
+                "pair": [
+                  {
+                    "mark": "aagaard.voting"
+                  },
+                  {
+                    "mark": "wait"
+                  }
+                ]
+              },
+              "context": {
+                "arena": "voting",
+                "target": "mana",
+                "charge": "potential",
+                "reason": "power 0 below floor 8000",
+                "value": {
+                  "votingPowerBps": 0
+                }
+              },
+              "at": "2026-07-19T05:06:24.232Z",
+              "digest": "4d53a355c09e45d9"
+            }
+          ]
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "trading",
+          "game": "cross-venue capital allocation",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "emsenn0",
+              "strategy": {
+                "archetype": "curator",
+                "feeds": [
+                  "following",
+                  "trending"
+                ],
+                "objective": {
+                  "underrecognition": 1,
+                  "communityFit": 1,
+                  "conversation": 1,
+                  "durability": 1,
+                  "bridge": 1,
+                  "quality": 1,
+                  "cartelAversion": 1
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": false,
+              "risk": {
+                "capHiveMilli": 1000,
+                "capSwapHiveMilli": 1000,
+                "capHbdMilli": 1000,
+                "minLiquidHbdMilli": 1000,
+                "maxVoteWeightBps": 5000
+              },
+              "tokens": {}
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": false,
+          "witnesses": []
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "incentive",
+          "game": "bounty arbitration",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "emsenn0",
+              "strategy": {
+                "archetype": "curator",
+                "feeds": [
+                  "following",
+                  "trending"
+                ],
+                "objective": {
+                  "underrecognition": 1,
+                  "communityFit": 1,
+                  "conversation": 1,
+                  "durability": 1,
+                  "bridge": 1,
+                  "quality": 1,
+                  "cartelAversion": 1
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": false,
+              "risk": {
+                "capHiveMilli": 1000,
+                "capSwapHiveMilli": 1000,
+                "capHbdMilli": 1000,
+                "minLiquidHbdMilli": 1000,
+                "maxVoteWeightBps": 5000
+              },
+              "tokens": {}
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": false,
+          "witnesses": []
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "posting",
+          "game": "operator-reviewed publication",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "emsenn0",
+              "strategy": {
+                "archetype": "curator",
+                "feeds": [
+                  "following",
+                  "trending"
+                ],
+                "objective": {
+                  "underrecognition": 1,
+                  "communityFit": 1,
+                  "conversation": 1,
+                  "durability": 1,
+                  "bridge": 1,
+                  "quality": 1,
+                  "cartelAversion": 1
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": false,
+              "risk": {
+                "capHiveMilli": 1000,
+                "capSwapHiveMilli": 1000,
+                "capHbdMilli": 1000,
+                "minLiquidHbdMilli": 1000,
+                "maxVoteWeightBps": 5000
+              },
+              "tokens": {}
+            }
+          ],
+          "moves": [
+            {
+              "actor": "emsenn0",
+              "action": {
+                "pair": [
+                  {
+                    "mark": "aagaard.posting"
+                  },
+                  {
+                    "mark": "draft"
+                  }
+                ]
+              },
+              "target": "emsenn0 operations note",
+              "value": {
+                "drafts": [
+                  {
+                    "id": "emsenn0:operations:2026-07-19",
+                    "title": "emsenn0 operations note",
+                    "topic": "operations",
+                    "tags": [
+                      "hive",
+                      "automation",
+                      "aagaard"
+                    ]
+                  }
+                ]
+              },
+              "charge": "potential",
+              "reason": "posting lane locked"
+            }
+          ],
+          "converged": false,
+          "locked": true,
+          "witnesses": [
+            {
+              "entity": "wallet/emsenn0",
+              "value": {
+                "pair": [
+                  {
+                    "mark": "aagaard.posting"
+                  },
+                  {
+                    "mark": "draft"
+                  }
+                ]
+              },
+              "context": {
+                "arena": "posting",
+                "target": "emsenn0 operations note",
+                "charge": "potential",
+                "reason": "posting lane locked",
+                "value": {
+                  "drafts": [
+                    {
+                      "id": "emsenn0:operations:2026-07-19",
+                      "title": "emsenn0 operations note",
+                      "topic": "operations",
+                      "tags": [
+                        "hive",
+                        "automation",
+                        "aagaard"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "at": "2026-07-19T05:06:24.232Z",
+              "digest": "7e475884724ffbba"
+            }
+          ]
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "gaming",
+          "game": "on-chain game routine",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "emsenn0",
+              "strategy": {
+                "archetype": "curator",
+                "feeds": [
+                  "following",
+                  "trending"
+                ],
+                "objective": {
+                  "underrecognition": 1,
+                  "communityFit": 1,
+                  "conversation": 1,
+                  "durability": 1,
+                  "bridge": 1,
+                  "quality": 1,
+                  "cartelAversion": 1
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": false,
+              "risk": {
+                "capHiveMilli": 1000,
+                "capSwapHiveMilli": 1000,
+                "capHbdMilli": 1000,
+                "minLiquidHbdMilli": 1000,
+                "maxVoteWeightBps": 5000
+              },
+              "tokens": {}
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": true,
+          "witnesses": []
+        }
+      ]
+    },
+    {
+      "account": "essiebee",
+      "voting": {
+        "currentMana": "0",
+        "maxMana": "0",
+        "votesPlanned": 0,
+        "votesBroadcast": 0,
+        "votesDryRun": 0,
+        "votesSkipped": 0,
+        "execution": {
+          "broadcast": 0,
+          "dryRun": 0,
+          "skipped": 0,
+          "errors": 0,
+          "receipts": []
+        },
+        "decision": "gardener waits: power 0 below floor 8000",
+        "radar": {
+          "posts": 0,
+          "mispricingEnergy": 0,
+          "components": 1,
+          "durable": false,
+          "topSinks": []
+        },
+        "intelligence": {
+          "fiedler": 0,
+          "decayHalfLife": null,
+          "cartelCycles": 0,
+          "bridges": 0,
+          "topByExpectedAlpha": []
+        }
+      },
+      "trading": {
+        "mode": "propose-only",
+        "hive": "0.000 HIVE",
+        "hbd": "0.000 HBD",
+        "tradesPlanned": 0,
+        "tradesExecuted": 0,
+        "bundlesPlanned": 0,
+        "bundlesFunded": 0,
+        "bundlesExecuted": 0,
+        "lpPlanned": 0,
+        "lpExecuted": 0,
+        "savingsPlanned": false,
+        "savingsExecuted": false,
+        "execution": {
+          "mode": "propose-only",
+          "tradesExecuted": 0,
+          "bundlesExecuted": 0,
+          "lpExecuted": 0,
+          "savingsExecuted": false,
+          "receipts": []
+        },
+        "allocation": {
+          "funded": [],
+          "totalCost": 0,
+          "totalBenefit": 0,
+          "consideredCount": 0,
+          "fundedCount": 0,
+          "choiceBits": 0,
+          "exact": true
+        },
+        "rigidity": {
+          "entities": 0,
+          "cells": 0,
+          "components": 0,
+          "h1Rank": 0,
+          "loadBearing": false,
+          "bridgeCells": []
+        },
+        "flow": [],
+        "cycleCapacities": [],
+        "screening": []
+      },
+      "incentive": {
+        "offersFound": 0,
+        "nominated": 0,
+        "autoExecuted": 0,
+        "execution": {
+          "broadcast": 0,
+          "dryRun": 0,
+          "skipped": 0,
+          "errors": 0,
+          "receipts": []
+        },
+        "topOffers": []
+      },
+      "posting": {
+        "draftsPrepared": 1,
+        "locked": true
+      },
+      "gaming": {
+        "gamesDetected": 0,
+        "games": [],
+        "locked": true
+      },
+      "arenas": [
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "voting",
+          "game": "curation reward allocation",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "essiebee",
+              "strategy": {
+                "archetype": "gardener",
+                "feeds": [
+                  "gaming",
+                  "hive-140217"
+                ],
+                "objective": {
+                  "underrecognition": 0.9,
+                  "communityFit": 1.7,
+                  "conversation": 1.4,
+                  "durability": 1,
+                  "bridge": 0.5,
+                  "quality": 1.1,
+                  "cartelAversion": 0.8
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": false,
+              "risk": {
+                "capHiveMilli": 1000,
+                "capSwapHiveMilli": 1000,
+                "capHbdMilli": 1000,
+                "minLiquidHbdMilli": 1000,
+                "maxVoteWeightBps": 5000
+              },
+              "tokens": {
+                "STARBITS": "1000"
+              }
+            }
+          ],
+          "moves": [
+            {
+              "actor": "essiebee",
+              "action": {
+                "pair": [
+                  {
+                    "mark": "aagaard.voting"
+                  },
+                  {
+                    "mark": "wait"
+                  }
+                ]
+              },
+              "target": "mana",
+              "value": {
+                "votingPowerBps": 0
+              },
+              "charge": "potential",
+              "reason": "power 0 below floor 8000"
+            }
+          ],
+          "converged": false,
+          "locked": false,
+          "witnesses": [
+            {
+              "entity": "wallet/essiebee",
+              "value": {
+                "pair": [
+                  {
+                    "mark": "aagaard.voting"
+                  },
+                  {
+                    "mark": "wait"
+                  }
+                ]
+              },
+              "context": {
+                "arena": "voting",
+                "target": "mana",
+                "charge": "potential",
+                "reason": "power 0 below floor 8000",
+                "value": {
+                  "votingPowerBps": 0
+                }
+              },
+              "at": "2026-07-19T05:06:24.232Z",
+              "digest": "6e7c937a4648f20d"
+            }
+          ]
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "trading",
+          "game": "cross-venue capital allocation",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "essiebee",
+              "strategy": {
+                "archetype": "gardener",
+                "feeds": [
+                  "gaming",
+                  "hive-140217"
+                ],
+                "objective": {
+                  "underrecognition": 0.9,
+                  "communityFit": 1.7,
+                  "conversation": 1.4,
+                  "durability": 1,
+                  "bridge": 0.5,
+                  "quality": 1.1,
+                  "cartelAversion": 0.8
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": false,
+              "risk": {
+                "capHiveMilli": 1000,
+                "capSwapHiveMilli": 1000,
+                "capHbdMilli": 1000,
+                "minLiquidHbdMilli": 1000,
+                "maxVoteWeightBps": 5000
+              },
+              "tokens": {
+                "STARBITS": "1000"
+              }
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": false,
+          "witnesses": []
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "incentive",
+          "game": "bounty arbitration",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "essiebee",
+              "strategy": {
+                "archetype": "gardener",
+                "feeds": [
+                  "gaming",
+                  "hive-140217"
+                ],
+                "objective": {
+                  "underrecognition": 0.9,
+                  "communityFit": 1.7,
+                  "conversation": 1.4,
+                  "durability": 1,
+                  "bridge": 0.5,
+                  "quality": 1.1,
+                  "cartelAversion": 0.8
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": false,
+              "risk": {
+                "capHiveMilli": 1000,
+                "capSwapHiveMilli": 1000,
+                "capHbdMilli": 1000,
+                "minLiquidHbdMilli": 1000,
+                "maxVoteWeightBps": 5000
+              },
+              "tokens": {
+                "STARBITS": "1000"
+              }
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": false,
+          "witnesses": []
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "posting",
+          "game": "operator-reviewed publication",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "essiebee",
+              "strategy": {
+                "archetype": "gardener",
+                "feeds": [
+                  "gaming",
+                  "hive-140217"
+                ],
+                "objective": {
+                  "underrecognition": 0.9,
+                  "communityFit": 1.7,
+                  "conversation": 1.4,
+                  "durability": 1,
+                  "bridge": 0.5,
+                  "quality": 1.1,
+                  "cartelAversion": 0.8
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": false,
+              "risk": {
+                "capHiveMilli": 1000,
+                "capSwapHiveMilli": 1000,
+                "capHbdMilli": 1000,
+                "minLiquidHbdMilli": 1000,
+                "maxVoteWeightBps": 5000
+              },
+              "tokens": {
+                "STARBITS": "1000"
+              }
+            }
+          ],
+          "moves": [
+            {
+              "actor": "essiebee",
+              "action": {
+                "pair": [
+                  {
+                    "mark": "aagaard.posting"
+                  },
+                  {
+                    "mark": "draft"
+                  }
+                ]
+              },
+              "target": "essiebee operations note",
+              "value": {
+                "drafts": [
+                  {
+                    "id": "essiebee:operations:2026-07-19",
+                    "title": "essiebee operations note",
+                    "topic": "operations",
+                    "tags": [
+                      "hive",
+                      "automation",
+                      "aagaard"
+                    ]
+                  }
+                ]
+              },
+              "charge": "potential",
+              "reason": "posting lane locked"
+            }
+          ],
+          "converged": false,
+          "locked": true,
+          "witnesses": [
+            {
+              "entity": "wallet/essiebee",
+              "value": {
+                "pair": [
+                  {
+                    "mark": "aagaard.posting"
+                  },
+                  {
+                    "mark": "draft"
+                  }
+                ]
+              },
+              "context": {
+                "arena": "posting",
+                "target": "essiebee operations note",
+                "charge": "potential",
+                "reason": "posting lane locked",
+                "value": {
+                  "drafts": [
+                    {
+                      "id": "essiebee:operations:2026-07-19",
+                      "title": "essiebee operations note",
+                      "topic": "operations",
+                      "tags": [
+                        "hive",
+                        "automation",
+                        "aagaard"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "at": "2026-07-19T05:06:24.232Z",
+              "digest": "6766101a36ab9d06"
+            }
+          ]
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "gaming",
+          "game": "on-chain game routine",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "essiebee",
+              "strategy": {
+                "archetype": "gardener",
+                "feeds": [
+                  "gaming",
+                  "hive-140217"
+                ],
+                "objective": {
+                  "underrecognition": 0.9,
+                  "communityFit": 1.7,
+                  "conversation": 1.4,
+                  "durability": 1,
+                  "bridge": 0.5,
+                  "quality": 1.1,
+                  "cartelAversion": 0.8
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": false,
+              "risk": {
+                "capHiveMilli": 1000,
+                "capSwapHiveMilli": 1000,
+                "capHbdMilli": 1000,
+                "minLiquidHbdMilli": 1000,
+                "maxVoteWeightBps": 5000
+              },
+              "tokens": {
+                "STARBITS": "1000"
+              }
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": true,
+          "witnesses": []
+        }
+      ]
+    },
+    {
+      "account": "marshian",
+      "voting": {
+        "currentMana": "0",
+        "maxMana": "0",
+        "votesPlanned": 0,
+        "votesBroadcast": 0,
+        "votesDryRun": 0,
+        "votesSkipped": 0,
+        "execution": {
+          "broadcast": 0,
+          "dryRun": 0,
+          "skipped": 0,
+          "errors": 0,
+          "receipts": []
+        },
+        "decision": "scout waits: power 0 below floor 8000",
+        "radar": {
+          "posts": 0,
+          "mispricingEnergy": 0,
+          "components": 1,
+          "durable": false,
+          "topSinks": []
+        },
+        "intelligence": {
+          "fiedler": 0,
+          "decayHalfLife": null,
+          "cartelCycles": 0,
+          "bridges": 0,
+          "topByExpectedAlpha": []
+        }
+      },
+      "trading": {
+        "mode": "propose-only",
+        "hive": "0.000 HIVE",
+        "hbd": "0.000 HBD",
+        "tradesPlanned": 0,
+        "tradesExecuted": 0,
+        "bundlesPlanned": 0,
+        "bundlesFunded": 0,
+        "bundlesExecuted": 0,
+        "lpPlanned": 0,
+        "lpExecuted": 0,
+        "savingsPlanned": false,
+        "savingsExecuted": false,
+        "execution": {
+          "mode": "propose-only",
+          "tradesExecuted": 0,
+          "bundlesExecuted": 0,
+          "lpExecuted": 0,
+          "savingsExecuted": false,
+          "receipts": []
+        },
+        "allocation": {
+          "funded": [],
+          "totalCost": 0,
+          "totalBenefit": 0,
+          "consideredCount": 0,
+          "fundedCount": 0,
+          "choiceBits": 0,
+          "exact": true
+        },
+        "rigidity": {
+          "entities": 0,
+          "cells": 0,
+          "components": 0,
+          "h1Rank": 0,
+          "loadBearing": false,
+          "bridgeCells": []
+        },
+        "flow": [],
+        "cycleCapacities": [],
+        "screening": []
+      },
+      "incentive": {
+        "offersFound": 0,
+        "nominated": 0,
+        "autoExecuted": 0,
+        "execution": {
+          "broadcast": 0,
+          "dryRun": 0,
+          "skipped": 0,
+          "errors": 0,
+          "receipts": []
+        },
+        "topOffers": []
+      },
+      "posting": {
+        "draftsPrepared": 1,
+        "locked": true
+      },
+      "gaming": {
+        "gamesDetected": 0,
+        "games": [],
+        "locked": true
+      },
+      "arenas": [
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "voting",
+          "game": "curation reward allocation",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "marshian",
+              "strategy": {
+                "archetype": "scout",
+                "feeds": [
+                  "art",
+                  "writing",
+                  "photography"
+                ],
+                "objective": {
+                  "underrecognition": 1.4,
+                  "communityFit": 0.8,
+                  "conversation": 1,
+                  "durability": 0.8,
+                  "bridge": 1.8,
+                  "quality": 1,
+                  "cartelAversion": 1
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": false,
+              "risk": {
+                "capHiveMilli": 1000,
+                "capSwapHiveMilli": 1000,
+                "capHbdMilli": 1000,
+                "minLiquidHbdMilli": 1000,
+                "maxVoteWeightBps": 5000
+              },
+              "tokens": {}
+            }
+          ],
+          "moves": [
+            {
+              "actor": "marshian",
+              "action": {
+                "pair": [
+                  {
+                    "mark": "aagaard.voting"
+                  },
+                  {
+                    "mark": "wait"
+                  }
+                ]
+              },
+              "target": "mana",
+              "value": {
+                "votingPowerBps": 0
+              },
+              "charge": "potential",
+              "reason": "power 0 below floor 8000"
+            }
+          ],
+          "converged": false,
+          "locked": false,
+          "witnesses": [
+            {
+              "entity": "wallet/marshian",
+              "value": {
+                "pair": [
+                  {
+                    "mark": "aagaard.voting"
+                  },
+                  {
+                    "mark": "wait"
+                  }
+                ]
+              },
+              "context": {
+                "arena": "voting",
+                "target": "mana",
+                "charge": "potential",
+                "reason": "power 0 below floor 8000",
+                "value": {
+                  "votingPowerBps": 0
+                }
+              },
+              "at": "2026-07-19T05:06:24.232Z",
+              "digest": "519cfbbda20a9aa2"
+            }
+          ]
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "trading",
+          "game": "cross-venue capital allocation",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "marshian",
+              "strategy": {
+                "archetype": "scout",
+                "feeds": [
+                  "art",
+                  "writing",
+                  "photography"
+                ],
+                "objective": {
+                  "underrecognition": 1.4,
+                  "communityFit": 0.8,
+                  "conversation": 1,
+                  "durability": 0.8,
+                  "bridge": 1.8,
+                  "quality": 1,
+                  "cartelAversion": 1
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": false,
+              "risk": {
+                "capHiveMilli": 1000,
+                "capSwapHiveMilli": 1000,
+                "capHbdMilli": 1000,
+                "minLiquidHbdMilli": 1000,
+                "maxVoteWeightBps": 5000
+              },
+              "tokens": {}
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": false,
+          "witnesses": []
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "incentive",
+          "game": "bounty arbitration",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "marshian",
+              "strategy": {
+                "archetype": "scout",
+                "feeds": [
+                  "art",
+                  "writing",
+                  "photography"
+                ],
+                "objective": {
+                  "underrecognition": 1.4,
+                  "communityFit": 0.8,
+                  "conversation": 1,
+                  "durability": 0.8,
+                  "bridge": 1.8,
+                  "quality": 1,
+                  "cartelAversion": 1
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": false,
+              "risk": {
+                "capHiveMilli": 1000,
+                "capSwapHiveMilli": 1000,
+                "capHbdMilli": 1000,
+                "minLiquidHbdMilli": 1000,
+                "maxVoteWeightBps": 5000
+              },
+              "tokens": {}
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": false,
+          "witnesses": []
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "posting",
+          "game": "operator-reviewed publication",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "marshian",
+              "strategy": {
+                "archetype": "scout",
+                "feeds": [
+                  "art",
+                  "writing",
+                  "photography"
+                ],
+                "objective": {
+                  "underrecognition": 1.4,
+                  "communityFit": 0.8,
+                  "conversation": 1,
+                  "durability": 0.8,
+                  "bridge": 1.8,
+                  "quality": 1,
+                  "cartelAversion": 1
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": false,
+              "risk": {
+                "capHiveMilli": 1000,
+                "capSwapHiveMilli": 1000,
+                "capHbdMilli": 1000,
+                "minLiquidHbdMilli": 1000,
+                "maxVoteWeightBps": 5000
+              },
+              "tokens": {}
+            }
+          ],
+          "moves": [
+            {
+              "actor": "marshian",
+              "action": {
+                "pair": [
+                  {
+                    "mark": "aagaard.posting"
+                  },
+                  {
+                    "mark": "draft"
+                  }
+                ]
+              },
+              "target": "marshian operations note",
+              "value": {
+                "drafts": [
+                  {
+                    "id": "marshian:operations:2026-07-19",
+                    "title": "marshian operations note",
+                    "topic": "operations",
+                    "tags": [
+                      "hive",
+                      "automation",
+                      "aagaard"
+                    ]
+                  }
+                ]
+              },
+              "charge": "potential",
+              "reason": "posting lane locked"
+            }
+          ],
+          "converged": false,
+          "locked": true,
+          "witnesses": [
+            {
+              "entity": "wallet/marshian",
+              "value": {
+                "pair": [
+                  {
+                    "mark": "aagaard.posting"
+                  },
+                  {
+                    "mark": "draft"
+                  }
+                ]
+              },
+              "context": {
+                "arena": "posting",
+                "target": "marshian operations note",
+                "charge": "potential",
+                "reason": "posting lane locked",
+                "value": {
+                  "drafts": [
+                    {
+                      "id": "marshian:operations:2026-07-19",
+                      "title": "marshian operations note",
+                      "topic": "operations",
+                      "tags": [
+                        "hive",
+                        "automation",
+                        "aagaard"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "at": "2026-07-19T05:06:24.232Z",
+              "digest": "209912e768bc9c17"
+            }
+          ]
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "gaming",
+          "game": "on-chain game routine",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "marshian",
+              "strategy": {
+                "archetype": "scout",
+                "feeds": [
+                  "art",
+                  "writing",
+                  "photography"
+                ],
+                "objective": {
+                  "underrecognition": 1.4,
+                  "communityFit": 0.8,
+                  "conversation": 1,
+                  "durability": 0.8,
+                  "bridge": 1.8,
+                  "quality": 1,
+                  "cartelAversion": 1
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": false,
+              "risk": {
+                "capHiveMilli": 1000,
+                "capSwapHiveMilli": 1000,
+                "capHbdMilli": 1000,
+                "minLiquidHbdMilli": 1000,
+                "maxVoteWeightBps": 5000
+              },
+              "tokens": {}
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": true,
+          "witnesses": []
+        }
+      ]
+    },
+    {
+      "account": "michael561",
+      "voting": {
+        "currentMana": "0",
+        "maxMana": "0",
+        "votesPlanned": 0,
+        "votesBroadcast": 0,
+        "votesDryRun": 0,
+        "votesSkipped": 0,
+        "execution": {
+          "broadcast": 0,
+          "dryRun": 0,
+          "skipped": 0,
+          "errors": 0,
+          "receipts": []
+        },
+        "decision": "archivist waits: power 0 below floor 8000",
+        "radar": {
+          "posts": 0,
+          "mispricingEnergy": 0,
+          "components": 1,
+          "durable": false,
+          "topSinks": []
+        },
+        "intelligence": {
+          "fiedler": 0,
+          "decayHalfLife": null,
+          "cartelCycles": 0,
+          "bridges": 0,
+          "topByExpectedAlpha": []
+        }
+      },
+      "trading": {
+        "mode": "propose-only",
+        "hive": "0.000 HIVE",
+        "hbd": "0.000 HBD",
+        "tradesPlanned": 0,
+        "tradesExecuted": 0,
+        "bundlesPlanned": 0,
+        "bundlesFunded": 0,
+        "bundlesExecuted": 0,
+        "lpPlanned": 0,
+        "lpExecuted": 0,
+        "savingsPlanned": false,
+        "savingsExecuted": false,
+        "execution": {
+          "mode": "propose-only",
+          "tradesExecuted": 0,
+          "bundlesExecuted": 0,
+          "lpExecuted": 0,
+          "savingsExecuted": false,
+          "receipts": []
+        },
+        "allocation": {
+          "funded": [],
+          "totalCost": 0,
+          "totalBenefit": 0,
+          "consideredCount": 0,
+          "fundedCount": 0,
+          "choiceBits": 0,
+          "exact": true
+        },
+        "rigidity": {
+          "entities": 0,
+          "cells": 0,
+          "components": 0,
+          "h1Rank": 0,
+          "loadBearing": false,
+          "bridgeCells": []
+        },
+        "flow": [],
+        "cycleCapacities": [],
+        "screening": []
+      },
+      "incentive": {
+        "offersFound": 0,
+        "nominated": 0,
+        "autoExecuted": 0,
+        "execution": {
+          "broadcast": 0,
+          "dryRun": 0,
+          "skipped": 0,
+          "errors": 0,
+          "receipts": []
+        },
+        "topOffers": []
+      },
+      "posting": {
+        "draftsPrepared": 1,
+        "locked": true
+      },
+      "gaming": {
+        "gamesDetected": 0,
+        "games": [],
+        "locked": true
+      },
+      "arenas": [
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "voting",
+          "game": "curation reward allocation",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "michael561",
+              "strategy": {
+                "archetype": "archivist",
+                "feeds": [
+                  "following",
+                  "blog:emsenn0"
+                ],
+                "objective": {
+                  "underrecognition": 0.8,
+                  "communityFit": 1,
+                  "conversation": 0.7,
+                  "durability": 1.9,
+                  "bridge": 0.7,
+                  "quality": 1.5,
+                  "cartelAversion": 1.2
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": true,
+              "risk": {
+                "capHiveMilli": 5000,
+                "capSwapHiveMilli": 5000,
+                "capHbdMilli": 5000,
+                "minLiquidHbdMilli": 500,
+                "maxVoteWeightBps": 10000
+              },
+              "tokens": {}
+            }
+          ],
+          "moves": [
+            {
+              "actor": "michael561",
+              "action": {
+                "pair": [
+                  {
+                    "mark": "aagaard.voting"
+                  },
+                  {
+                    "mark": "wait"
+                  }
+                ]
+              },
+              "target": "mana",
+              "value": {
+                "votingPowerBps": 0
+              },
+              "charge": "potential",
+              "reason": "power 0 below floor 8000"
+            }
+          ],
+          "converged": false,
+          "locked": false,
+          "witnesses": [
+            {
+              "entity": "wallet/michael561",
+              "value": {
+                "pair": [
+                  {
+                    "mark": "aagaard.voting"
+                  },
+                  {
+                    "mark": "wait"
+                  }
+                ]
+              },
+              "context": {
+                "arena": "voting",
+                "target": "mana",
+                "charge": "potential",
+                "reason": "power 0 below floor 8000",
+                "value": {
+                  "votingPowerBps": 0
+                }
+              },
+              "at": "2026-07-19T05:06:24.232Z",
+              "digest": "aff1838d650b9386"
+            }
+          ]
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "trading",
+          "game": "cross-venue capital allocation",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "michael561",
+              "strategy": {
+                "archetype": "archivist",
+                "feeds": [
+                  "following",
+                  "blog:emsenn0"
+                ],
+                "objective": {
+                  "underrecognition": 0.8,
+                  "communityFit": 1,
+                  "conversation": 0.7,
+                  "durability": 1.9,
+                  "bridge": 0.7,
+                  "quality": 1.5,
+                  "cartelAversion": 1.2
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": true,
+              "risk": {
+                "capHiveMilli": 5000,
+                "capSwapHiveMilli": 5000,
+                "capHbdMilli": 5000,
+                "minLiquidHbdMilli": 500,
+                "maxVoteWeightBps": 10000
+              },
+              "tokens": {}
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": false,
+          "witnesses": []
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "incentive",
+          "game": "bounty arbitration",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "michael561",
+              "strategy": {
+                "archetype": "archivist",
+                "feeds": [
+                  "following",
+                  "blog:emsenn0"
+                ],
+                "objective": {
+                  "underrecognition": 0.8,
+                  "communityFit": 1,
+                  "conversation": 0.7,
+                  "durability": 1.9,
+                  "bridge": 0.7,
+                  "quality": 1.5,
+                  "cartelAversion": 1.2
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": true,
+              "risk": {
+                "capHiveMilli": 5000,
+                "capSwapHiveMilli": 5000,
+                "capHbdMilli": 5000,
+                "minLiquidHbdMilli": 500,
+                "maxVoteWeightBps": 10000
+              },
+              "tokens": {}
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": false,
+          "witnesses": []
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "posting",
+          "game": "operator-reviewed publication",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "michael561",
+              "strategy": {
+                "archetype": "archivist",
+                "feeds": [
+                  "following",
+                  "blog:emsenn0"
+                ],
+                "objective": {
+                  "underrecognition": 0.8,
+                  "communityFit": 1,
+                  "conversation": 0.7,
+                  "durability": 1.9,
+                  "bridge": 0.7,
+                  "quality": 1.5,
+                  "cartelAversion": 1.2
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": true,
+              "risk": {
+                "capHiveMilli": 5000,
+                "capSwapHiveMilli": 5000,
+                "capHbdMilli": 5000,
+                "minLiquidHbdMilli": 500,
+                "maxVoteWeightBps": 10000
+              },
+              "tokens": {}
+            }
+          ],
+          "moves": [
+            {
+              "actor": "michael561",
+              "action": {
+                "pair": [
+                  {
+                    "mark": "aagaard.posting"
+                  },
+                  {
+                    "mark": "draft"
+                  }
+                ]
+              },
+              "target": "michael561 operations note",
+              "value": {
+                "drafts": [
+                  {
+                    "id": "michael561:operations:2026-07-19",
+                    "title": "michael561 operations note",
+                    "topic": "operations",
+                    "tags": [
+                      "hive",
+                      "automation",
+                      "aagaard"
+                    ]
+                  }
+                ]
+              },
+              "charge": "potential",
+              "reason": "posting lane locked"
+            }
+          ],
+          "converged": false,
+          "locked": true,
+          "witnesses": [
+            {
+              "entity": "wallet/michael561",
+              "value": {
+                "pair": [
+                  {
+                    "mark": "aagaard.posting"
+                  },
+                  {
+                    "mark": "draft"
+                  }
+                ]
+              },
+              "context": {
+                "arena": "posting",
+                "target": "michael561 operations note",
+                "charge": "potential",
+                "reason": "posting lane locked",
+                "value": {
+                  "drafts": [
+                    {
+                      "id": "michael561:operations:2026-07-19",
+                      "title": "michael561 operations note",
+                      "topic": "operations",
+                      "tags": [
+                        "hive",
+                        "automation",
+                        "aagaard"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "at": "2026-07-19T05:06:24.232Z",
+              "digest": "6e9113cea26a7c40"
+            }
+          ]
+        },
+        {
+          "kind": "aagaard.wallet-arena",
+          "name": "gaming",
+          "game": "on-chain game routine",
+          "actors": [
+            {
+              "kind": "aagaard.wallet-actor",
+              "account": "michael561",
+              "strategy": {
+                "archetype": "archivist",
+                "feeds": [
+                  "following",
+                  "blog:emsenn0"
+                ],
+                "objective": {
+                  "underrecognition": 0.8,
+                  "communityFit": 1,
+                  "conversation": 0.7,
+                  "durability": 1.9,
+                  "bridge": 0.7,
+                  "quality": 1.5,
+                  "cartelAversion": 1.2
+                },
+                "conviction": 1.15,
+                "votingPowerFloorBps": 8000,
+                "maxVotesPerTick": 1
+              },
+              "tradingLive": true,
+              "risk": {
+                "capHiveMilli": 5000,
+                "capSwapHiveMilli": 5000,
+                "capHbdMilli": 5000,
+                "minLiquidHbdMilli": 500,
+                "maxVoteWeightBps": 10000
+              },
+              "tokens": {}
+            }
+          ],
+          "moves": [],
+          "converged": false,
+          "locked": true,
+          "witnesses": []
+        }
+      ]
+    }
+  ],
+  "witness": {
+    "rows": 12,
+    "uniqueWitnesses": 12,
+    "duplicateWitnesses": 0
+  }
+}

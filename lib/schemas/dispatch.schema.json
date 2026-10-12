@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "emsenn/schema/dispatch",
+  "$comment": "The hand-off of a task to an office — the record make-a-task.js points at when it says who the task is handed to belongs to the dispatch, never to the record. A dispatch names a task and the office it is handed to, and nothing else of substance: the task carries the goal, the duty carries the obligation, the office carries the answering-for, and the dispatch is only the fact that these were joined. It is handed to an office, never to a person, for the charter's reason exactly: handed to a person it dies with the person. A dispatch is open while the task's goal is unachieved, and openness is a readout, never a field — re-run the goal (make-a-task.js --verify) and the board is the truth. One task, one dispatch: a second dispatch of the same task would be two offices answering for one goal, which is a contradiction to name, not a queue to append to.",
+  "type": "object",
+  "required": [
+    "name",
+    "task",
+    "office"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "What the hand-off is called, as it is said: 'the glossary index task, to the content librarian'."
+    },
+    "task": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "$comment": "The task handed over. Names a task and must resolve to a seated one: a dispatch of a task that seats nowhere hands an office nothing and leaves it answering for it anyway."
+    },
+    "office": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "$comment": "The office the task is handed to. Names an office and must resolve to one — never a person, or the hand-off dies with the person; never a session, or it dies with the context window."
+    },
+    "x-provenance": {
+      "type": "object"
+    }
+  },
+  "$comment-absences": "No status, no open or closed key: openness is derived by re-running the dispatched task's goal, and a dispatch that could assert its own closure would be the worker marking the board instead of the goal marking it. No accepted or acknowledged key: an office bears what its position hands it, and acceptance theater on the record would let a dispatch sit unowned while looking owned. No priority and no queue position: the pool is a board, not a queue, and ordering the work is the incumbent's judgment at the board, not the dispatcher's assertion in the record. No deadline: the allocation and the next checkpoint bound the time, per the charter's rule. No dispatcher beyond provenance: who joined task to office is history, recorded where history is recorded.",
+  "x-source": {
+    "derived-from": "skills/make-a-task.js — 'who the task is handed to belongs to the dispatch, never to the record: a task that named its worker could not be handed to anyone else'; emsenn/schema/task $comment-absences; emsenn/schema/charter — issued to an office, never to a person"
+  },
+  "x-provenance": {
+    "recorded-by": "claude/chief-of-staff",
+    "recorded-on": "2026-07-16"
+  },
+  "title": "dispatch"
+}

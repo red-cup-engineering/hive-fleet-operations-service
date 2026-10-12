@@ -1,0 +1,8 @@
+{
+  "kind": "metroplat.contract",
+  "id": "aagaard-civic-state-report",
+  "provider": "urn:ame:aagaard:civic-state-report",
+  "customer": "urn:ame:turntide-islands:state-of-harmonious-union-reporting-service",
+  "service": "project public economic and political measurements from Aagaard's exact latest fleet tick without credential access or chain mutation",
+  "invariants": ["source-tick-digest-bound", "proposal-is-not-execution", "observation-is-not-custody-title", "no-credential-access", "no-chain-mutation"]
+}

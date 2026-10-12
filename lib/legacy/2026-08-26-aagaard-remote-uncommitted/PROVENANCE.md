@@ -1,0 +1,3 @@
+# Provenance
+
+Snapshot taken 2026-08-26 of the uncommitted and untracked files in cold-red-gate `~/aagaard` (git-clean files omitted; `data/` and `node_modules/` omitted). Contains strategy modules absent from both the remote repo's git history and the local monorepo copy: exactArbitrage, curationSettlement, dervishExperiment (a port of Obsmetrologia's QuantumContextuality/DisclinationLink carrier), makerOrders, strategyArms, terracore and hive-engine integrations, plus matching tests and four dated pre-refactor backup directories. The local monorepo aagaard (this snapshot's grandparent directory) has `proofs/` and `content/` the remote lacks; the two lines were edited in parallel and need deliberate reconciliation, not blind overwrite.

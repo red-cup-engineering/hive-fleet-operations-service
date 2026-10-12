@@ -1,0 +1,88 @@
+{
+  "name": "@aagaard/aagaard",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "solicit-service": "./src/contract-fleet-observation.mjs",
+    "invoke-service": "./src/contract-fleet-observation.mjs"
+  },
+  "description": "Sovereign Hive wallet-fleet operations with typed RMN records, RWIL/RDF history, and no MetroPlat runtime.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "check": "tsc --noEmit -p tsconfig.json && node --check src/law.mjs && node --check src/contract-fleet-observation.mjs && node --check src/collect-colony-activity.mjs && node --check src/core/protectedAssets.mjs && node --check src/core/exitTightnessPilotPost.mjs && node --check scripts/curation-cycle.mjs && node --check scripts/cold-red-gate-curation-broadcast.mjs && node --check scripts/hive-engine-exit-tightness.mjs && node --check scripts/income-token-audit.mjs && node --check scripts/income-token-acquire.mjs && node --check scripts/income-token-acquire-broadcast.mjs && node --check scripts/fleet-nft-inventory.mjs && node --check scripts/market-shadow-scan.mjs && node --check scripts/exact-triangle-assay.mjs && node --check scripts/exact-pool-cycle-assay.mjs && node --check scripts/global-arbitrage-scan.mjs && node --check scripts/game-opportunity-cycle.mjs && node --check scripts/publish-exit-tightness-pilot.mjs && node --check scripts/cold-red-gate-product-pilot-broadcast.mjs && node --check scripts/monitor-exit-tightness-pilot.mjs && node --check scripts/plan-product-pilot-distribution.mjs && node --check scripts/product-pilot-distribute.mjs && node --check scripts/product-rc-delegation.mjs && node --check scripts/holozing-wilds.mjs && node --check scripts/holozing-rewards.mjs && node --check scripts/hashkings-recovery.mjs && node --check scripts/terracore-cycle.mjs && node --check scripts/terracore-engineering-upgrade.mjs && node --check scripts/dcrops-cycle.mjs && node --check scripts/dcity-recovery.mjs && node --check scripts/liquidate-token.mjs && node --check scripts/unstake-token.mjs && node --check scripts/workerbee-yield.mjs && node --check scripts/workerbee-pool-audit.mjs && node --check scripts/hbd-savings-touch.mjs && node --check scripts/hbd-savings-recovery.mjs && node --check scripts/asset-utility-cycle41.mjs && node --check scripts/splinterlands-audit.mjs && node --check scripts/splinterlands-session-probe.mjs && node --check scripts/splinterlands-roster-purchase.mjs && node --check test/contract-fleet-observation.test.mjs && node --check test/colony-activity-pulse.test.mjs",
+    "pretest": "node --check scripts/product-revenue-cycle.mjs && node --check scripts/product-revenue-cycle37.mjs && node --check scripts/product-revenue-cycle42.mjs && node --check scripts/game-capability-cycle.mjs && node --check scripts/game-capability-cycle38.mjs && node --check scripts/game-capability-cycle43.mjs && node --check scripts/market-cycle.mjs && node --check scripts/market-cycle39.mjs && node --check scripts/market-cycle44.mjs && node --check scripts/curation-reward-baseline.mjs && node --check scripts/curation-attention-cycle.mjs && node --check scripts/curation-attention-cycle40.mjs && node --check scripts/curation-attention-cycle45.mjs && node --check scripts/asset-utility-cycle.mjs && node --check scripts/hbd-savings-recovery.mjs && node --check scripts/asset-utility-cycle41.mjs",
+    "test": "node --test --test-concurrency=1 test/*.test.mts test/*.test.mjs",
+    "verify": "npm run check && npm test",
+    "serve": "node src/serve.mts"
+  },
+  "exports": {
+    ".": "./src/index.mts",
+    "./serve": "./src/serve.mts",
+    "./package.json": "./package.json",
+    "./src/collect-colony-activity.mjs": "./src/collect-colony-activity.mjs"
+  },
+  "dependencies": {
+    "@red-cup-engineering/rmn-semantic-conformance": "6.0.0",
+    "@lenticule-science/rwil-rdf-projection-service": "1.0.2",
+    "@agrodao/agrodao": "0.14.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "sovereign-state-enterprise"
+  ],
+  "x-agentic-metro-enterprise": {
+    "node-id": "aagaard",
+    "organizational-kind": "sovereign-state-enterprise",
+    "owners": [
+      "561-group",
+      "rsc-quiescent"
+    ],
+    "membrane": {
+      "law": "lib/",
+      "lasting-instances": "content/",
+      "append-only-instances": "data/"
+    },
+    "admission": "an ActivityStreams solicitation for a read-only Hive fleet custody observation with a named sovereign customer and intended treasury use, followed by acceptance of the exact provider-authored tick digest",
+    "refusal": "credential access, broadcast or asset-movement authority, changed tick bytes, unsupported observation scope, altered consideration, customer writes, or a capability broader than provider-local evidence writes",
+    "operation-catalog": {
+      "solicit-service": {
+        "contract": "ni:///sha-256;BqKv3HX9retTZYRmLW2XiQJ6OfHMXiEwH0dzyelfb3M",
+        "accepts": "ActivityStreams Offer<ServiceSolicitation>",
+        "returns": "ActivityStreams Offer<ExecutableServiceOffer>|Reject",
+        "timeoutMs": 30000
+      },
+      "invoke-service": {
+        "contract": "ni:///sha-256;BqKv3HX9retTZYRmLW2XiQJ6OfHMXiEwH0dzyelfb3M",
+        "accepts": "ActivityStreams Accept<ServiceContract>",
+        "returns": "ActivityStreams Accept<HiveFleetCustodyObservationResult>|Reject",
+        "timeoutMs": 30000
+      }
+    }
+  },
+  "x-semiotic-voxel": {
+    "profile": "org.harmonious-union.semiotic-voxel.v1",
+    "owner": "aagaard",
+    "kind": "actor",
+    "actor": "urn:ame:aagaard",
+    "operations": [
+      "invoke-service",
+      "solicit-service"
+    ],
+    "capabilities": [
+      {
+        "capability": "aagaard",
+        "faces": [
+          "invoke-service",
+          "solicit-service"
+        ]
+      }
+    ],
+    "package": "@aagaard/aagaard"
+  }
+}

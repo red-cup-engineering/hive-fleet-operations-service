@@ -1,0 +1,251 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "emsenn/schema/skill",
+  "title": "Skill",
+  "description": "An invocable procedure, and the unit at which an agent acts on the substrate; admissible only if it declares name, preconditions, body, postconditions, and witness format.",
+  "$comment": "A skill is an invocable procedure, and it is the unit at which an agent acts on the substrate. Its admissibility condition is exact: a skill entity carries predications declaring its name, its preconditions, its body, its postconditions, and its witness format — 'a skill that does not declare these is not admissible, the invocation cannot be checked against its specification.' That is the Hoare triple as a gate, not as prose: pre-invocation the invocation operator checks the preconditions match; post-invocation it checks the postconditions hold. Skills are first-class entities, not registry entries: 'a new skill is added by inserting a skill entity, not by recompiling', and discovery is a substrate traversal of capability predications. A skill sits at the third rung of the formality progression observation -> instinct -> skill -> tool; it is the office's constructor, and constructors are the one component of an office that is universally F3-formal.",
+  "type": "object",
+  "required": [
+    "type",
+    "name",
+    "verb-phrase",
+    "description",
+    "preconditions",
+    "postconditions",
+    "witness",
+    "closure-kind"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "const": "skill"
+    },
+    "name": {
+      "$ref": "#/$defs/actId",
+      "$comment": "Equals the containing directory's basename. The harness resolves the skill by this name; a mismatch installs a skill nobody can invoke by the name they read."
+    },
+    "verb-phrase": {
+      "type": "string",
+      "pattern": "^[a-z]+ing\\b.*$",
+      "$comment": "The gerund phrase naming the act — 'recalling a term', 'installing claude as an office'. Not decoration and not style: a skill is what an agent DOES, and the gerund is what makes the name an act rather than a thing. This is why the live skills are named as they are."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "What it does and when to use it. The only field the harness shows before the body loads, so it carries the whole triggering decision, written for a blank incumbent with no access to emsenn's judgment."
+    },
+    "preconditions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/predicatePattern"
+      },
+      "$comment": "P — what must hold before invocation is admissible, as predicate patterns over the substrate. Checked by the invocation operator, not by the incumbent remembering. minItems 1: a skill with no stated precondition claims it is admissible everywhere, and nothing that touches the substrate is."
+    },
+    "postconditions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/predicatePattern"
+      },
+      "$comment": "Q — what the skill ensures is present after successful completion. Checked post-invocation. minItems 1: a skill ensuring nothing did nothing."
+    },
+    "witness": {
+      "type": "object",
+      "required": [
+        "records"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "records": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "$comment": "The witness format. Every invocation produces one — which agent invoked the skill, on what scope, with what input, with what output — appended to the event log, so a replay reproduces the invocation and an audit verifies it. Required by the admissibility condition."
+    },
+    "closure-kind": {
+      "enum": [
+        "process",
+        "derivation",
+        "procedure",
+        "inquiry"
+      ],
+      "$comment": "Which of the nuclear quartet's positions the body occupies: sigma (closure against the past) and delta (closure against the future), each at fixed point or open. process = both fixed, byte-identical replay. derivation = sigma open. procedure = delta open, routes. inquiry = both open, non-deterministic by design. Exclusive — an operation that crosses positions has been mis-specified, and the discipline is to split it. Distinct from a phase signature: closure-kind is which closure operators have settled, phase is the settling dynamics."
+    },
+    "provides-capability": {
+      "$ref": "#/$defs/capabilityId",
+      "$comment": "What invoking this skill makes available. Read by eligibility-by-capabilities at dispatch."
+    },
+    "requires-capabilities": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/capabilityId"
+      },
+      "$comment": "The capabilities the invoker must hold. Checked against the dispatchable's held set; this is where the skill layer and the capability layer actually meet."
+    },
+    "requires-skills": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/actId"
+      },
+      "$comment": "Composition — skills this skill calls."
+    },
+    "input-shape": {
+      "type": "string",
+      "minLength": 1
+    },
+    "output-shape": {
+      "type": "string",
+      "minLength": 1
+    },
+    "script": {
+      "type": "string",
+      "pattern": "^scripts/[^\\s]+$",
+      "$comment": "The body's entrypoint, relative to the skill directory. Repo-relative or absolute paths are refused: the whole directory copies on install, so a path reaching outside it names a file the incumbent will not have."
+    },
+    "models": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "fuel": {
+      "type": "object",
+      "required": [
+        "cap"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "cap": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "unit": {
+          "enum": [
+            "tokens",
+            "turns",
+            "seconds"
+          ]
+        }
+      },
+      "$comment": "The hard cap. An inquiry is bounded ONLY by the substrate's fuel discipline applied as a hard cap."
+    },
+    "install": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "claude",
+          "codex"
+        ]
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$comment": "A process produces identical output for identical input and contains no conditional: it cannot be bound to an inference model, and its body must be a script, because prose cannot owe that contract.",
+      "if": {
+        "properties": {
+          "closure-kind": {
+            "const": "process"
+          }
+        },
+        "required": [
+          "closure-kind"
+        ]
+      },
+      "then": {
+        "required": [
+          "script"
+        ],
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "models"
+              ]
+            },
+            {
+              "required": [
+                "fuel"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "$comment": "An inquiry is non-deterministic by design and bounded only by fuel.",
+      "if": {
+        "properties": {
+          "closure-kind": {
+            "const": "inquiry"
+          }
+        },
+        "required": [
+          "closure-kind"
+        ]
+      },
+      "then": {
+        "required": [
+          "models",
+          "fuel"
+        ]
+      }
+    },
+    {
+      "$comment": "A derivation produces a typed judgment by fixed rules or reports it could reach none; sigma-open is not delta-open, so it takes no fuel cap.",
+      "if": {
+        "properties": {
+          "closure-kind": {
+            "const": "derivation"
+          }
+        },
+        "required": [
+          "closure-kind"
+        ]
+      },
+      "then": {
+        "required": [
+          "models"
+        ],
+        "not": {
+          "required": [
+            "fuel"
+          ]
+        }
+      }
+    }
+  ],
+  "$comment-absences": "No duty key, no office key, no position key: a skill does not name what bears it. An office's provides-skill list and its deontic profile are where the relation lives — an agent's provided set is 'the union of its directly-listed skills plus the skills its offices' duties qualify it to invoke.' No contract key: the preconditions, postconditions, and witness ARE the contract, declared here because the admissibility condition requires them on the skill entity itself. No registry key: the substrate is the registry — 'there is no separate registry, no compiled list of available skills, no service layer that mediates skill discovery.'",
+  "$defs": {
+    "actId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "capabilityId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(\\.[a-z0-9]+)*$"
+    },
+    "predicatePattern": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "x-provenance": {
+    "recorded-by": "claude-session",
+    "recorded-on": "2026-07-15"
+  }
+}

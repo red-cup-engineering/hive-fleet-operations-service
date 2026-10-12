@@ -1,0 +1,77 @@
+{
+  "name": "@red-cup-engineering/hive-fleet-operations-service",
+  "version": "0.4.10",
+  "type": "module",
+  "description": "Hive wallet-fleet operations using chain-confirmed evidence.",
+  "files": [
+    "aagaard.config.json",
+    "content/text/documents",
+    "scripts",
+    "src",
+    "lib"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "bin": {
+    "hive-fleet-opportunity-feed": "scripts/opportunity-feed.mjs"
+  },
+  "scripts": {
+    "check": "node --input-type=module -e 'await import(\"./src/index.mjs\")' && node --check src/serve.mjs",
+    "test": "node --test --test-concurrency=1 test/*.test.mjs",
+    "serve": "node src/serve.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs",
+    "./serve": "./src/serve.mjs",
+    "./package.json": "./package.json",
+    "./collect-colony-activity": "./src/collect-colony-activity.mjs",
+    "./contract-fleet-observation": "./src/contract-fleet-observation.mjs",
+    "./opportunity-feed": "./src/opportunity-feed.mjs",
+    "./hive-engine-exit-tightness": "./scripts/hive-engine-exit-tightness.mjs",
+    "./capital-allocation": "./src/core/capitalAllocation.mjs",
+    "./analysis/intelligence": "./src/analysis/intelligence.mjs",
+    "./analysis/incentives": "./src/analysis/incentives.mjs",
+    "./signer": "./src/core/signer.mjs",
+    "./strategy": "./src/core/accountStrategy.mjs",
+    "./operations": "./src/operations.mjs"
+  },
+  "dependencies": {
+    "@red-cup-engineering/hive-computing-service": "workspace:*",
+    "@red-cup-engineering/activitypub-services-section": "workspace:*",
+    "@red-cup-engineering/cbor-services-section": "workspace:*",
+    "@red-cup-engineering/computer-code-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/semiotic-eavt-services-section": "workspace:*",
+    "@red-cup-engineering/computer-data-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/computer-system-engine": "workspace:*",
+    "@red-cup-engineering/computer-web-server": "workspace:*",
+    "@red-cup-engineering/cryptographic-computer-data-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/dcity-services-section": "workspace:*",
+    "@red-cup-engineering/dcrops-services-section": "workspace:*",
+    "@red-cup-engineering/feltos": "workspace:*",
+    "@red-cup-engineering/gaming": "workspace:*",
+    "@red-cup-engineering/hashkings-services-section": "workspace:*",
+    "@red-cup-engineering/hive-blockchain-client-service": "workspace:*",
+    "@red-cup-engineering/holozing-services-section": "workspace:*",
+    "@red-cup-engineering/http-services-section": "workspace:*",
+    "@red-cup-engineering/javascript-node-services-section": "workspace:*",
+    "@red-cup-engineering/json-schema-services-section": "workspace:*",
+    "@red-cup-engineering/json-services-section": "workspace:*",
+    "@red-cup-engineering/key-management-services-section": "workspace:*",
+    "@red-cup-engineering/metrologic": "workspace:*",
+    "@red-cup-engineering/oauth-services-section": "workspace:*",
+    "@red-cup-engineering/organizing": "workspace:*",
+    "@red-cup-engineering/splinterlands-services-section": "workspace:*",
+    "@red-cup-engineering/terracore-services-section": "workspace:*",
+    "@red-cup-engineering/uri-services-section": "workspace:*",
+    "@red-cup-engineering/witness-journal-document-service": "workspace:*",
+    "@red-cup-engineering/workerbee-services-section": "workspace:*",
+    "@red-cup-engineering/hive-fleet-observation-service": "workspace:*",
+    "@red-cup-engineering/computer-content-address-engineering-services-section": "workspace:*",
+    "@red-cup-engineering/exact-number-data-service": "workspace:*"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "sovereign-state-enterprise"
+  ]
+}

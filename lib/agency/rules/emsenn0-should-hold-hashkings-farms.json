@@ -1,0 +1,9 @@
+{
+  "id": "emsenn0-should-hold-hashkings-farms",
+  "statement": "emsenn0 SHOULD NOT sell or transfer HashKings HKFARM NFTs without a material buy order or comparable sale.",
+  "subject": ["hive:emsenn0"],
+  "action": ["hive:custom_json"],
+  "when": { "input.decoded": { "somewhere": { "symbol": "HKFARM" } } },
+  "because": "The farms sit idle while HashKings is parked; they are held for value, not dumped.",
+  "x-provenance": { "recorded-by": "claude-opus-5-5", "recorded-on": "2026-09-26", "source": "the fleet guard code these rules restate, surveyed by the game-play automation session" }
+}

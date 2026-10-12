@@ -1,0 +1,31 @@
+{
+  "kind": "metroplat.contract",
+  "id": "hive-fleet-custody-observation-service",
+  "precondition": {
+    "id": "qualified-treasury-demand-received",
+    "description": "A sovereign consumer supplies a named intended treasury use and asks Aagaard to bind one offer to its latest settled fleet tick."
+  },
+  "move": {
+    "id": "project-one-fleet-custody-observation",
+    "domain": "activitystreams-service-solicitation",
+    "codomain": "hive-fleet-custody-observation-or-refusal",
+    "partial": false,
+    "deterministic": true,
+    "effects": ["provider-local-write"]
+  },
+  "postcondition": {
+    "id": "observation-settled",
+    "description": "Aagaard returns an aggregate and account-level observation derived from the exact source-tick digest and writes only its own exchange, receipt, book, CloudEvent, and EAVT evidence. No key is read and no chain act is attempted."
+  },
+  "consideration": {
+    "type": "QualifiedDemandContribution",
+    "amount": 1,
+    "unit": "qualified-treasury-demand",
+    "description": "The consumer contributes one attributable sovereign demand and intended-use signal that Aagaard may use as evidence of a real customer relation; it is not money, a token, or an allocation currency."
+  },
+  "disputeResolution": {
+    "firstStep": "the parties compare their exact receipt, source-tick digest, fulfillment digest, and separate books",
+    "independentObservation": "either party may procure finance-and-market-services-section/bilateral-transaction-observation-service",
+    "unresolvedAuthorityDispute": "general-counsel service required; none is claimed by this contract"
+  }
+}

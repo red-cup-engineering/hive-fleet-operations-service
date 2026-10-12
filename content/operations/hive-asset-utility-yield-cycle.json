@@ -1,0 +1,167 @@
+{
+  "schema": "aagaard.hive-asset-utility-yield-cycle.v1",
+  "asOf": "2026-07-22T12:08:56.445Z",
+  "cycle": {
+    "globalStep": 31,
+    "angle": "asset-utility-yield",
+    "status": "completed-with-bounded-acquisition"
+  },
+  "protectedAndProductivePositions": [
+    {
+      "account": "michael561",
+      "asset": "ZINGALPHA#1831",
+      "observedAt": "2026-07-22T11:52:46.838Z",
+      "officialInventoryCount": 1,
+      "decision": "preserve-unopened",
+      "mechanicalGuard": "all known open, transfer, delegate, list, sale, burn, and ambiguous mutation carriers refuse this exact NFT"
+    },
+    {
+      "account": "michael561",
+      "asset": "ZING",
+      "observedAt": "2026-07-22T11:52:46.838Z",
+      "liquid": "0.000",
+      "staked": "26561.616",
+      "pendingReward": "0.000",
+      "decision": "preserve-remaining-stake; refuse-empty-claim"
+    },
+    {
+      "account": "michael561",
+      "asset": "WORKERBEE",
+      "observedAt": "2026-07-22T11:52:45.913Z",
+      "delegatedToPh1102": "3.66758",
+      "beeLiquid": "0.00000025",
+      "beeStaked": "0.00050253",
+      "settledPoolDistributions": 0,
+      "decision": "preserve-delegation-await-first-weekly-settlement"
+    },
+    {
+      "account": "emsenn0",
+      "asset": "EDSI",
+      "observedAt": "2026-07-22T11:52:50.000Z",
+      "quantity": "89.568",
+      "historicalNativeHiveObserved": "9.514 HIVE",
+      "historicalAnnualizedRunRate": "11.626333 HIVE",
+      "completeDisplayedExit": "89.59192000 SWAP.HIVE",
+      "decision": "hold-productive-position-and-monitor"
+    },
+    {
+      "account": "emsenn0",
+      "asset": "SPI",
+      "observedAt": "2026-07-22T11:52:50.000Z",
+      "quantity": "13.06",
+      "historicalNativeHiveObserved": "1.091 HIVE",
+      "historicalAnnualizedRunRate": "1.872000 HIVE",
+      "completeDisplayedExit": "26.12000000 SWAP.HIVE",
+      "decision": "hold; refuse-current-ask-because-immediate-principal-loss-gate-fails"
+    },
+    {
+      "scope": "six-account-fleet",
+      "asset": "HBD-savings",
+      "observedAt": "2026-07-22T11:52:50.000Z",
+      "savingsBalance": "0.000 HBD",
+      "liquidHbdByAccount": {
+        "sigmund-vexler": "0.131",
+        "help-fund": "0.468",
+        "emsenn0": "0.418",
+        "essiebee": "0.000",
+        "marshian": "0.091",
+        "michael561": "0.006"
+      },
+      "decision": "no-savings-touch-admitted-because-no-savings-position-exists"
+    }
+  ],
+  "acquisitionPilot": {
+    "account": "michael561",
+    "asset": "EDSI",
+    "quantity": "1.000",
+    "transactionId": "367fc841d6488f9f0fc22ddea72794192648aeda",
+    "hiveBlock": 108355741,
+    "hiveEngineBlock": 61310914,
+    "spentSwapHive": "1.01430025",
+    "maximumAuthorizedSwapHive": "1.01555000",
+    "remainingSwapHive": "70.68131404",
+    "preExecutionEvidence": {
+      "marketStateDigest": "sha256:61ff83ebddc3e0eb7b69fb8b06300e42b38f16457c9b94c2e9b231f2eea71545",
+      "marketProviderCount": 3,
+      "expectedDisplayedCostSwapHive": "1.01430025",
+      "immediateDisplayedExitSwapHive": "1.00400000",
+      "immediateDrawdownBps": 113,
+      "fleetExposureGrowthBps": 111,
+      "historicalAnnualNativeHivePerPurchase": "0.129804",
+      "incomeRetentionBps": 5000,
+      "feeBoundedHaircuttedAnnualOutputSwapHive": "0.06300000",
+      "haircuttedHistoricalYieldBps": 620,
+      "minimumRequiredYieldBps": 500
+    },
+    "settlementEvidence": {
+      "hiveConfirmationProviders": 3,
+      "hiveEngineConfirmationProviders": 2,
+      "effectStateProviders": 3,
+      "openOrderRemaining": false,
+      "durableCategory": "aagaard.income-token-acquisition-event",
+      "durableEventId": "urn:aagaard:income-token-acquisition:RskMwKsTEBgwtV64dYudrKR8FuB7rKPkZIykEWTOFnA"
+    },
+    "postAcquisitionMeasurement": {
+      "observedAt": "2026-07-22T12:08:56.445Z",
+      "realizedNativeHiveDistributions": "0.000 HIVE",
+      "completeDisplayedExitSwapHive": "1.00400000",
+      "exitStateDigest": "sha256:488124274bf7704480fb903ec4898600b1ae1ec929c26eb24508ebd0dbe82cc1",
+      "profitStatus": "unproven-until-native-hive-distribution"
+    }
+  },
+  "formalAdmission": {
+    "formulae": {
+      "expectedCost": "C(q,A)=sum_i min(max(q-sum_{j<i}q_j,0),q_i)*p_i",
+      "completeExit": "E(q,B)=sum_i min(max(q-sum_{j<i}q_j,0),q_i)*p_i",
+      "drawdownBps": "D=max(C_limit-E,0)*10000/C_limit",
+      "exposureGrowthBps": "X=q*10000/Q_fleet",
+      "haircuttedYieldBps": "Y=(floor(r*q/Q_h*retention)-ceil(fee))*10000/C_limit"
+    },
+    "hardGates": [
+      "three contract providers agree on the complete market and fleet state",
+      "no ask seller belongs to the six-account fleet",
+      "maximum escrow is at most 1.02000000 SWAP.HIVE and at most 150 bps of liquid capital",
+      "at least 70.00000000 SWAP.HIVE remains after maximum escrow",
+      "fleet EDSI exposure grows by at most 200 bps",
+      "displayed bids completely exit the pilot within 500 bps drawdown",
+      "the 50-percent-haircut fee-bounded historical yield is at least 500 bps",
+      "the dedicated signer accepts no changed public envelope"
+    ],
+    "interpretationLimits": [
+      "historical distributions do not guarantee future income",
+      "HIVE and SWAP.HIVE are not assumed commensurate",
+      "deployed deposit mechanics do not prove reserves or a market peg",
+      "displayed exit depth is not a future fill guarantee"
+    ]
+  },
+  "procurement": [
+    {
+      "lot": "urn:aagaard:work-lot:cycle31-income-token-pilot:20260722",
+      "status": "no-candidate-accepted",
+      "residue": "an A2A RMN operation must carry exactly one application/rmn+cbor raw part"
+    },
+    {
+      "lot": "urn:aagaard:work-lot:cycle31-income-token-execution-review:20260722-v2",
+      "status": "no-candidate-accepted",
+      "residue": "Agent Card has no valid signature"
+    }
+  ],
+  "decision": {
+    "capitalMutation": "acquired-exactly-1.000-EDSI",
+    "reason": "A small supported by evidence productive-token experiment passed every hard gate while preserving the protected and already productive positions and nearly all liquid trading capital.",
+    "newRealizedYield": {
+      "HIVE": "0.000",
+      "ZING": "0.000",
+      "BEE": "0.00000000"
+    },
+    "newRealizedProfitSwapHive": null,
+    "credentialAccess": true,
+    "chainMutation": true
+  },
+  "verification": {
+    "testsPassed": 244,
+    "testsFailed": 0,
+    "staticCheck": "passed",
+    "jsonCheck": "passed"
+  }
+}

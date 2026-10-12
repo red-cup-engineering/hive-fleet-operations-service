@@ -1,0 +1,4 @@
+import AagaardSplinterlandsProofs.StrategyRecommendation
+
+#print axioms Aagaard.Splinterlands.Recommendation.certificate_properties
+#print axioms Aagaard.Splinterlands.Recommendation.settled_of_recommendation

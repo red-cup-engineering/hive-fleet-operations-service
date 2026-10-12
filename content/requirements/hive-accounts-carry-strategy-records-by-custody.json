@@ -1,0 +1,67 @@
+{
+  "id": "hive-accounts-carry-strategy-records-by-custody",
+  "name": "Each Hive account carries a strategy record, and emsenn0's custody is posting-key only",
+  "kind": "requirement",
+  "raised-by": "emsenn",
+  "asks": "\"`emsenn0` we only have posting keys for. PLEASE PLAESE you should literally give NO FUCKS about the specific accounts, except that they should have json rules or something about our strategies for each account.\" (2026-09-25); \"it's troubling that so little of what I tell you about HIVE stuff makes it into durable notes, operations, skills, anything that actually shapes how you act as operator of this code, services, sites, etc.\"",
+  "met-when": [
+    {
+      "cell": "hive-accounts-carry-strategy-records-by-custody:record-held",
+      "target": "held",
+      "command": "sh -c 'ls lib/emsenn/services/561-group/services/engineering-services-section/services/computer-engineering-services-section/services/computer-systems-engineering-services-section/services/computer-blockchain-system-services-section/services/hive-engineering-services-section/services/hive-fleet-operations-service/content/text/documents/articles/notes/2026/10/10/2026-10-10-note-on-hive-accounts-by-custody-and-strategy-record.md >/dev/null 2>&1'",
+      "expected-exit": 0
+    }
+  ],
+  "tier": "routine",
+  "x-provenance": {
+    "recorded-by": "claude (Red Cup Engineer Senior, pass education-media)",
+    "recorded-on": "2026-10-10",
+    "customer": "urn:leader:emsenn",
+    "utterances": [
+      "ni:///sha-256;DX7hBqRavmuxDmbtEtUgvri6WO1ZobgBOhzwFAOubeQ"
+    ],
+    "basis": "EARS rendering. No credential or key appears in the record; it states only which kind of authority the Group holds for emsenn0.",
+    "board-opening": {
+      "speech-act": "request",
+      "need": "The Hive fleet's operator acts from per-account strategy records and custody facts held in the corpus.",
+      "scope": [
+        "section:engineering-services-section"
+      ],
+      "requirements": [
+        {
+          "id": "R1",
+          "says": "The Hive fleet records shall hold, for each fleet account, a strategy record in rule form that states the Group's strategy for the account.",
+          "class": "functional",
+          "moscow": "must",
+          "rationale": "\"json rules or something about our strategies for each account\"."
+        },
+        {
+          "id": "R2",
+          "says": "The Hive fleet records shall state that the Group holds only posting keys for emsenn0.",
+          "class": "constraint",
+          "moscow": "must",
+          "rationale": "\"`emsenn0` we only have posting keys for.\""
+        },
+        {
+          "id": "R3",
+          "says": "The Hive fleet operator skills shall direct action from an account's strategy record and custody and shall not direct action from the account's voting capacity.",
+          "class": "functional",
+          "moscow": "must",
+          "rationale": "\"You keep going 'wow emsenn0 can vote so much' I give no fucks\"."
+        },
+        {
+          "id": "R4",
+          "says": "The Hive fleet operations section shall hold each statement of the Leader about Hive as a note, an operation or a skill that shapes the operator's action.",
+          "class": "quality",
+          "moscow": "must",
+          "rationale": "\"so little of what I tell you about HIVE stuff makes it into durable notes, operations, skills\"."
+        }
+      ]
+    },
+    "sign-cell": {
+      "type": "emsenn/schema/requirement",
+      "mark": "ni:///sha-256;1qCVxvzL35e8SgVBuQl5i_MSzVi6bl_qcsnlZUwZNdM",
+      "cell": "ni:///sha-256;YYFI-ptboTmiFzzVgQiKtBQhby7yv-n_yZtDqs2ZASY"
+    }
+  }
+}

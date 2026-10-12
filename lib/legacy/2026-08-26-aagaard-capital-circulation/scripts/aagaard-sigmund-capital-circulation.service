@@ -1,0 +1,27 @@
+[Unit]
+Description=Aagaard Sigmund bounded capital-circulation cycle via cold-red-gate
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/emsenn/aagaard-capital-circulation
+Environment=AAGAARD_COLD_RED_GATE_LOCAL_SIGNER=1
+ExecStart=/usr/bin/flock -n /home/emsenn/aagaard-capital-circulation/data/runtime/sigmund-capital-circulation.lock /home/emsenn/.nvm/versions/node/v24.16.0/bin/node scripts/automatic-arbitrage-cycle.mjs --cold-red-gate-signer --execute-one
+TimeoutStartSec=180
+StandardOutput=journal
+StandardError=journal
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectKernelLogs=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictRealtime=true
+LockPersonality=true
+RemoveIPC=true
+ReadWritePaths=/home/emsenn/aagaard-capital-circulation/data
+UMask=0077

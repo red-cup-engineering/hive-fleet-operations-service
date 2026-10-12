@@ -1,0 +1,32 @@
+import { claimsOf, FLEET_DATA_DIR } from "./core/journal.mjs";
+import { semanticId } from "@red-cup-engineering/computer-content-address-engineering-services-section/semiotic-content-address";
+
+export const AAGAARD_ACTIVITY_PROVIDER = "urn:ame:aagaard:economic-political-pulse-provider";
+const COLONY_ACTOR = "urn:ame:bare-cedar-fog-colony";
+
+function decimalPart(value, unit) { const match = String(value ?? "").match(new RegExp(`^(-?(?:0|[1-9]\\d*)(?:\\.\\d+)?) ${unit}$`, "u")); if (!match) throw new TypeError(`Aagaard balance lacks exact ${unit} unit`); return match[1]; }
+function sumDecimals(values) { const parsed = values.map((value) => { const negative = value.startsWith("-"); const [whole, fraction = ""] = value.replace(/^-/, "").split("."); return { negative, whole, fraction }; }); const scale = Math.max(0, ...parsed.map((value) => value.fraction.length)); const total = parsed.reduce((sum, value) => sum + (value.negative ? -1n : 1n) * BigInt(`${value.whole}${value.fraction.padEnd(scale, "0")}`), 0n); const sign = total < 0n ? "-" : ""; const absolute = (total < 0n ? -total : total).toString().padStart(scale + 1, "0"); if (!scale) return `${sign}${absolute}`; const fraction = absolute.slice(-scale).replace(/0+$/u, ""); return `${sign}${absolute.slice(0, -scale)}${fraction ? `.${fraction}` : ""}`; }
+function total(accounts, select) { return accounts.reduce((sum, account) => sum + Number(select(account) ?? 0), 0); }
+
+/**
+ * Projects settled Aagaard fleet ticks into a colony activity pulse.
+ * @param {{window: {fromExclusive: string, toInclusive: string}, recordedAt: string, dataDir?: string}} input Activity window and the fleet's data directory.
+ * @returns {Promise<object>} Provider-authored activity pulse with observed economic and political evidence.
+ * @throws {Error} When the provider has no typed Aagaard fleet tick.
+ */
+export async function collectAagaardColonyActivity({ window, recordedAt, dataDir = FLEET_DATA_DIR }) {
+  const documents = claimsOf(dataDir, "aagaard.fleet-tick").filter((record) => record?.ts).map((record) => ({ id: semanticId(record), tick: record })).sort((left, right) => left.tick.ts.localeCompare(right.tick.ts));
+  const latestDocument = documents.at(-1); if (!latestDocument) throw new Error("Aagaard has no typed fleet tick in its journal");
+  const latest = latestDocument.tick; const from = Date.parse(window.fromExclusive); const to = Date.parse(window.toInclusive);
+  const intervalDocuments = documents.filter(({ tick }) => Date.parse(tick.ts) > from && Date.parse(tick.ts) <= to); const ticks = intervalDocuments.map(({ tick }) => tick);
+  const flowEvidence = intervalDocuments.map(({ id }) => id); const events = [];
+  if (ticks.length) {
+    const accounts = ticks.flatMap((tick) => tick.accounts ?? []); const occurredAt = ticks.map((tick) => tick.ts).sort().at(-1);
+    const tradesPlanned = total(accounts, (account) => account.trading?.tradesPlanned); const tradesExecuted = total(accounts, (account) => account.trading?.tradesExecuted); const liquidityExecuted = total(accounts, (account) => account.trading?.lpExecuted); const votesPlanned = total(accounts, (account) => account.voting?.votesPlanned); const votesBroadcast = total(accounts, (account) => account.voting?.votesBroadcast);
+    events.push({ id: semanticId({ fromExclusive: window.fromExclusive, toInclusive: window.toInclusive, domain: "economy", tickTimestamps: ticks.map((tick) => tick.ts) }), occurredAt, domain: "economy", kind: "aagaard-fleet-economic-interval", summary: `Aagaard completed ${ticks.length} fleet ticks: ${tradesPlanned} trades were proposed, ${tradesExecuted} trades executed, and ${liquidityExecuted} liquidity moves executed.`, outcome: tradesExecuted || liquidityExecuted ? "succeeded" : "observed", quantities: [{ label: "Aagaard fleet ticks", amount: String(ticks.length), unit: "ticks", displayOrder: 600 }, { label: "Trades proposed", amount: String(tradesPlanned), unit: "actions", displayOrder: 601 }, { label: "Trades executed", amount: String(tradesExecuted), unit: "actions", displayOrder: 602 }, { label: "Liquidity moves executed", amount: String(liquidityExecuted), unit: "actions", displayOrder: 603 }], evidence: flowEvidence });
+    events.push({ id: semanticId({ fromExclusive: window.fromExclusive, toInclusive: window.toInclusive, domain: "politics", tickTimestamps: ticks.map((tick) => tick.ts) }), occurredAt, domain: "politics", kind: "aagaard-fleet-political-interval", summary: `Aagaard proposed ${votesPlanned} Hive votes and broadcast ${votesBroadcast}; proposed votes are not executions.`, outcome: votesBroadcast ? "succeeded" : "observed", quantities: [{ label: "Hive votes proposed", amount: String(votesPlanned), unit: "votes", displayOrder: 610 }, { label: "Hive votes broadcast", amount: String(votesBroadcast), unit: "votes", displayOrder: 611 }], evidence: flowEvidence });
+  }
+  const accounts = latest.accounts ?? []; const observedAt = latest.ts; const status = Date.parse(observedAt) <= from ? "stale" : "observed"; const stateEvidence = latestDocument.id;
+  const hive = sumDecimals(accounts.map((account) => decimalPart(account.trading?.hive, "HIVE"))); const hbd = sumDecimals(accounts.map((account) => decimalPart(account.trading?.hbd, "HBD")));
+  return { type: "ColonyActivityPulseEnvelope", providerActor: AAGAARD_ACTIVITY_PROVIDER, settlementActor: "urn:ame:aagaard", colonyActor: COLONY_ACTOR, window, recordedAt, events, stocks: [{ id: "fleet-liquid-hive", observedAt, domain: "economy", label: "Observed fleet liquid HIVE", amount: hive, unit: "HIVE", status, displayOrder: 700, evidence: [stateEvidence] }, { id: "fleet-liquid-hbd", observedAt, domain: "economy", label: "Observed fleet liquid HBD", amount: hbd, unit: "HBD", status, displayOrder: 701, evidence: [stateEvidence] }, { id: "fleet-accounts", observedAt, domain: "economy", label: "Observed Hive fleet accounts", amount: String(accounts.length), unit: "accounts", status, displayOrder: 702, evidence: [stateEvidence] }], unsupportedDomains: ["formations", "contracts", "work", "a2a", "activity-streams", "git-io", "evm", "deployments", "operations"], refusals: [{ domain: "economy", reason: "Fleet balances are provider observations, not custody title; revenue and spend are unsupported by this contract.", evidence: [stateEvidence] }, { domain: "economy", reason: "No cross-currency or cross-chain total is produced without an exact rate claim and source period.", evidence: [stateEvidence] }] };
+}

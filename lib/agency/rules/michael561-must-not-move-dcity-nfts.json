@@ -1,0 +1,29 @@
+{
+  "id": "michael561-must-not-move-dcity-nfts",
+  "statement": "michael561 MUST NOT transfer, list or sell a dCity CITY NFT.",
+  "subject": [
+    "hive:michael561"
+  ],
+  "action": [
+    "hive:custom_json"
+  ],
+  "when": {
+    "input.decoded": {
+      "somewhere": {
+        "symbol": "CITY",
+        "contractAction": {
+          "in": [
+            "transfer",
+            "sell"
+          ]
+        }
+      }
+    }
+  },
+  "because": "dCity is closed; its recovery exit liquidates SIM, and the CITY NFTs are held.",
+  "x-provenance": {
+    "recorded-by": "claude-opus-5-5",
+    "recorded-on": "2026-09-26",
+    "source": "the fleet guard code these rules restate, surveyed by the game-play automation session"
+  }
+}

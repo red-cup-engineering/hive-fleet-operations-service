@@ -1,0 +1,316 @@
+{
+  "schema": "aagaard.hive-asset-utility-ledger.v1",
+  "asOf": "2026-07-22T12:08:56.445Z",
+  "valuationAsset": "SWAP.HIVE",
+  "valuationRule": "Only complete displayed executable bid depth is an immediate-exit value; an ask is a reacquisition cost; neither is realized profit. Native HIVE distributions are carried separately and are not divided by SWAP.HIVE exit value without independent commensurability evidence.",
+  "positions": [
+    {
+      "account": "michael561",
+      "asset": "ZINGALPHA#1831",
+      "kind": "nonfungible-access-and-collection-asset",
+      "quantity": "1",
+      "utility": [
+        "closed Alpha Vial collection rewards",
+        "scarce Alpha-edition option on a provably fair contents bundle"
+      ],
+      "decision": "preserve-closed-and-owned",
+      "reason": "Opening burns the irreplaceable vial and replaces it with a stochastic item bundle; neither the bundle's realized utility nor a dominance proof is presently established.",
+      "mechanicalGuard": "src/core/protectedAssets.mjs refuses opening, transfer, delegation, listing, sale, burn, and ambiguous ZINGALPHA mutations.",
+      "freshEvidence": {
+        "officialInventoryCount": 1,
+        "officialInventoryIds": [1831],
+        "lastObservedDisposition": "preserved-unopened",
+        "observedAt": "2026-07-22T11:52:46.838Z"
+      }
+    },
+    {
+      "account": "michael561",
+      "asset": "ZING",
+      "kind": "fungible-game-and-reward-token",
+      "quantity": {
+        "liquid": "0.000",
+        "staked": "26561.616",
+        "pendingUnstake": "35409.432"
+      },
+      "utility": [
+        "staked balance accrues HoloZing stake rewards",
+        "game-economy inventory for HoloZing"
+      ],
+      "decision": "keep-the-remaining-stake-productive-and-let-the-existing-unlock-complete",
+      "reason": "The user does not require the ZING position, while the retained 26561.616 stake remains productive. Cancelling the already-started unlock would re-lock trading capital without a demonstrated superiority proof.",
+      "unlockSchedule": {
+        "transactionId": "232ea0e1cd1e64e01783b436f0488d8af2627f8d",
+        "installments": 4,
+        "installmentQuantity": "8852.358",
+        "releaseTimesUtc": [
+          "2026-07-29T04:04:03Z",
+          "2026-08-05T04:04:03Z",
+          "2026-08-12T04:04:03Z",
+          "2026-08-19T04:04:03Z"
+        ]
+      },
+      "latestClaim": {
+        "quantityStaked": "4.542",
+        "transactionId": "b0aa98c936dd5b1a23a4589c985adfd56a0a5deb",
+        "hiveEngineBlock": 61303995,
+        "status": "claimed-confirmed"
+      },
+      "latestPendingRewardObservation": {
+        "observedAt": "2026-07-22T11:52:46.838Z",
+        "quantity": "0.000",
+        "decision": "refuse-claim-below-1.000-ZING-policy-minimum",
+        "providersAgreed": true
+      },
+      "market": {
+        "bestBid": "0.00156980",
+        "bestAsk": "0.00161600",
+        "stakedPlusPendingAtUnprovenTopBid": "97.28215115"
+      }
+    },
+    {
+      "account": "emsenn0",
+      "asset": "EDSI",
+      "kind": "fungible-income-and-backing-share",
+      "quantity": "89.568",
+      "utility": [
+        "weekly native HIVE distributions from the EDS income pool",
+        "economic participation in the EDS project's productive Hive Power and backing"
+      ],
+      "decision": "hold-productive-position-and-monitor",
+      "reason": "Three Hive witnesses establish recent recurring native-HIVE income and two Hive Engine witnesses establish a complete displayed exit near 1 SWAP.HIVE per EDSI. The existing position is already material; no additional concentration or sale dominates preserving its cashflow and exit option on present evidence.",
+      "realizedDistributionEvidence": {
+        "durableCategory": "aagaard.income-token-distribution-event",
+        "eventsRecorded": 41,
+        "lifetimeHiveObserved": "9.514",
+        "paymentsObservedIn2026": 29,
+        "totalHiveObservedIn2026": "6.449",
+        "latestPaymentAt": "2026-07-20T23:02:24.000Z",
+        "latestPayment": "0.224 HIVE",
+        "latestReportedHolding": "89.568",
+        "latestTwelveHistoricalAnnualizedRunRate": "11.626333 HIVE",
+        "runRateStatus": "historical-not-guaranteed"
+      },
+      "market": {
+        "fullPositionExitCertifiedAt": "2026-07-22T10:24:45.896Z",
+        "fullPositionExitStateDigest": "sha256:aa1137bb993f8d739db2a694894539f4f509e3c473ce52d14621e437bc22af04",
+        "fullPositionBidValue": "89.57450000 SWAP.HIVE",
+        "bestBid": "1.00200000",
+        "exitFloor": "1.00000000",
+        "volumeWeightedAverageBid": "1.00007257",
+        "levelsConsumed": 2,
+        "completeExit": true
+      },
+      "comparison": {
+        "yieldOnExitValueBps": null,
+        "reason": "native HIVE and SWAP.HIVE are not assumed commensurate"
+      }
+    },
+    {
+      "account": "emsenn0",
+      "asset": "EDSM",
+      "kind": "staked-income-token-miner",
+      "quantity": {
+        "liquid": "0.000",
+        "staked": "5.000"
+      },
+      "utility": [
+        "each staked EDSM is specified to mint 2 EDSI per year",
+        "expands the productive EDSI position without consuming the EDSI income stream"
+      ],
+      "decision": "preserve-stake-and-monitor-minting",
+      "reason": "The stake is productive, has a seven-day unstaking cooldown, and has no meaningful displayed bid exit. Unstaking would interrupt utility without creating an executable liquidity path.",
+      "expectedOutput": {
+        "annualEdsi": "10.000",
+        "status": "token-term-expectation-not-realized-income"
+      },
+      "market": {
+        "meaningfulBid": false,
+        "ask": null,
+        "unstakingCooldownDays": 7,
+        "releaseTransactions": 1
+      }
+    },
+    {
+      "account": "michael561",
+      "asset": "EDSI",
+      "kind": "fungible-income-and-backing-share-pilot",
+      "quantity": "1.000",
+      "utility": [
+        "tests whether a small actively selected productive token position realizes future native-HIVE distributions",
+        "retains a complete displayed SWAP.HIVE exit while the experiment is measured"
+      ],
+      "decision": "hold-pilot-until-native-hive-distribution-or-explicit-review",
+      "reason": "The one-token pilot passed exact liquidity, reserve, concentration, drawdown, historical-income haircut, and self-cross gates. Its future income is still unproven and will be recognized only from beneficiary-bound native-HIVE transfers.",
+      "acquisition": {
+        "transactionId": "367fc841d6488f9f0fc22ddea72794192648aeda",
+        "hiveBlock": 108355741,
+        "hiveEngineBlock": 61310914,
+        "quantity": "1.000",
+        "spent": "1.01430025 SWAP.HIVE",
+        "maximumAuthorizedSpend": "1.01555000 SWAP.HIVE",
+        "durableEventId": "urn:aagaard:income-token-acquisition:RskMwKsTEBgwtV64dYudrKR8FuB7rKPkZIykEWTOFnA"
+      },
+      "postAcquisitionObservation": {
+        "observedAt": "2026-07-22T12:08:56.445Z",
+        "realizedDistributions": "0.000 HIVE",
+        "completeDisplayedExit": "1.00400000 SWAP.HIVE",
+        "exitStateDigest": "sha256:488124274bf7704480fb903ec4898600b1ae1ec929c26eb24508ebd0dbe82cc1",
+        "decision": "manual-review-until-first-settled-distribution"
+      },
+      "mechanicalGuard": "The one-shot signer admits only michael561 buying exactly 1.000 EDSI at a 1.01555000 SWAP.HIVE limit; it rejects every other account, symbol, quantity, price, expiry, lane, and extra field."
+    },
+    {
+      "account": "emsenn0",
+      "asset": "EDS",
+      "kind": "discontinued-legacy-token",
+      "quantity": "72.24",
+      "utility": [],
+      "decision": "preserve-as-inert-legacy-artifact; do-not-buy-or-sell",
+      "reason": "Current token metadata marks EDS discontinued and explicitly says not to buy or sell because EDSI replaced it; the displayed book supplies no executable bid. No value is imputed.",
+      "market": {
+        "meaningfulBid": false,
+        "immediateExitValue": null
+      }
+    },
+    {
+      "account": "emsenn0",
+      "asset": "SPI",
+      "kind": "fungible-managed-fund-share",
+      "quantity": "13.06",
+      "utility": [
+        "weekly HIVE dividends",
+        "economic participation in SPinvest's managed asset portfolio"
+      ],
+      "decision": "hold-and-monitor-distributions",
+      "reason": "The position demonstrably pays HIVE and the 2.00000000/5.99000000 book is too wide for a value-preserving exit or add without a separate NAV proof.",
+      "realizedDistributionEvidence": {
+        "durableCategory": "aagaard.income-token-distribution-event",
+        "eventsRecorded": 39,
+        "lifetimeHiveObserved": "1.091",
+        "paymentsObservedIn2026": 31,
+        "totalHiveObservedIn2026": "0.829",
+        "latestPaymentAt": "2026-07-20T22:17:24.000Z",
+        "latestPayment": "0.021 HIVE",
+        "latestMemo": "Dividends for holding 13.06 SPI tokens.",
+        "latestTwelveHistoricalAnnualizedRunRate": "1.872000 HIVE",
+        "runRateStatus": "historical-not-guaranteed"
+      },
+      "market": {
+        "bestBid": "2.00000000",
+        "bestBidQuantity": "100.00",
+        "bestAsk": "5.99000000",
+        "bestAskQuantity": "7.00",
+        "fullPositionBidValue": "26.12000000",
+        "fullPositionExitCertifiedAt": "2026-07-22T10:24:45.890Z",
+        "fullPositionExitStateDigest": "sha256:4d7c42ac3cad7e99c49e0a80758f9a429753a1379ffef49b6b2e3d67adad489e",
+        "completeExit": true
+      },
+      "comparison": {
+        "yieldOnExitValueBps": null,
+        "reason": "native HIVE and SWAP.HIVE are not assumed commensurate"
+      }
+    },
+    {
+      "account": "michael561",
+      "asset": "ARCHMAGE",
+      "kind": "fungible-service-access-pass",
+      "quantity": "0",
+      "utility": [
+        "one-account access to the hosted Archmage Splinterlands bot",
+        "standard-pass service fee of 35 percent of SPS earnings"
+      ],
+      "decision": "do-not-cross-the-current-ask; recover-only-at-or-below-40-SWAP.HIVE-when-a-benchmark-session-is-scheduled",
+      "reason": "The pass overlaps Aagaard's own automation work, and immediate recovery costs 15 SWAP.HIVE more than the sale proceeds. A future pass can still be useful as a competing strategy benchmark, but not at the present spread without a scheduled experiment.",
+      "history": {
+        "acquiredAt": "2024-12-27T23:38:24Z",
+        "acquisitionCost": "24.31000000 SWAP.HIVE",
+        "soldAt": "2026-07-22T03:58:51Z",
+        "saleProceeds": "40.00000000 SWAP.HIVE",
+        "grossHistoricalSpread": "15.69000000 SWAP.HIVE",
+        "saleTransactionId": "20ce1498427bd577425a5bae548ef15b9852c098"
+      },
+      "market": {
+        "bestBid": "35.00000000",
+        "bestAsk": "55.00000000",
+        "immediateRecoveryCost": "55.00000000 SWAP.HIVE",
+        "premiumOverSaleProceeds": "15.00000000 SWAP.HIVE"
+      }
+    },
+    {
+      "account": "michael561",
+      "asset": "WORKERBEE",
+      "kind": "fungible-mining-and-governance-token",
+      "quantity": {
+        "liquid": "0.00000",
+        "delegatedToPh1102": "3.66758"
+      },
+      "utility": [
+        "mines BEE through the potential BEE:WORKERBEE lottery",
+        "pooling reduces small-holder payout variance and participates in operator-distributed bonuses"
+      ],
+      "decision": "productive-delegation-active",
+      "transaction": {
+        "transactionId": "116191387fe483bdc065149da024414630cc96af",
+        "hiveBlock": 108349023,
+        "hiveEngineBlock": 61304290,
+        "status": "yield-delegation-confirmed"
+      },
+      "lockTerms": {
+        "undelegationCooldownDays": 7,
+        "unstakingCooldownDays": 63,
+        "unstakeInstallments": 9
+      },
+      "expectedBaseYield": {
+        "formula": "quantity / total mining power * 10 BEE per hourly lottery * 168 lotteries per week",
+        "weeklyBeeFloor": "0.02652469",
+        "annualBeeFloor": "1.37928405",
+        "annualBeeFullDepthBidProceeds": "0.70650676 SWAP.HIVE",
+        "annualBeeExitLevels": 1,
+        "fullWorkerBeeImmediateExitValue": "3.13416735 SWAP.HIVE",
+        "workerBeeExitLevels": 11,
+        "workerBeeExitFloor": "0.10002000",
+        "annualYieldOnImmediateExitValueBps": 2254,
+        "status": "expectation-not-realized-profit"
+      },
+      "latestObservation": {
+        "observedAt": "2026-07-22T11:52:45.913Z",
+        "delegatedQuantity": "3.66758",
+        "recipient": "ph1102",
+        "poolActive": true,
+        "poolTotalPower": "232294.53479",
+        "pendingReleaseRows": 0,
+        "providersAgreed": true,
+        "decision": "preserve-delegation-await-first-weekly-settlement"
+      },
+      "realizedPoolDistributionEvidence": {
+        "durableCategory": "aagaard.workerbee-pool-distribution-event",
+        "delegationCreatedAt": "2026-07-22T06:31:42.000Z",
+        "beeLiquid": "0.00000025",
+        "beeStaked": "0.00050253",
+        "settledDistributionCount": 0,
+        "newRealizedBee": "0.00000000",
+        "historyProvidersAgreed": 3,
+        "expectedYieldIsRealizedYield": false
+      },
+      "mechanicalGuard": "The signer admits only michael561, no more than 10.00000 WORKERBEE, self-stake followed by an equal delegation to ph1102; every standalone or differently targeted stake/delegation is refused."
+    }
+  ],
+  "evidence": {
+    "hiveProviders": [
+      "https://api.hive.blog",
+      "https://api.openhive.network",
+      "https://api.deathwing.me"
+    ],
+    "hiveEngineContractProviders": [
+      "https://api.hive-engine.com/rpc/contracts",
+      "https://herpc.dtools.dev/contracts"
+    ],
+    "currentProductSources": [
+      "https://archmage.app/faq/",
+      "https://archmage.app/",
+      "https://hive.blog/hive/@eddie-earner/edsi-updates-whats-been-happening-and-hows-things-are-going",
+      "https://hive.blog/hive-131131/@holozing/holozingwilds-public-alpha-testing",
+      "https://hive-engine.github.io/engine-docs/actions/"
+    ]
+  }
+}

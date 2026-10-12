@@ -1,0 +1,12 @@
+{
+  "id": "hive-wallets-must-not-stake-hbd",
+  "statement": "Hive wallets MUST NOT stake HBD.",
+  "subject": ["hive:*"],
+  "action": ["hive:transfer_to_savings", "hive:custom_json"],
+  "when": [
+    { "input.amount": { "matches": "\\sHBD$" } },
+    { "input.decoded": { "somewhere": { "contractAction": "stake", "contractPayload.symbol": { "matches": "HBD" } } } }
+  ],
+  "because": "HBD stays liquid in the fleet: moved to savings or staked it is locked for days.",
+  "x-provenance": { "recorded-by": "claude-opus-5-5", "recorded-on": "2026-09-26", "source": "the founder's example rule, 2026-09-26" }
+}

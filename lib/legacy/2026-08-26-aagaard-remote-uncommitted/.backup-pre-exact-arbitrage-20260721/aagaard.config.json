@@ -1,0 +1,66 @@
+{
+  "name": "aagaard",
+  "live": true,
+  "enabled": ["voting", "trading", "incentive"],
+  "cadenceSeconds": 900,
+  "hive": {
+    "enabled": true,
+    "nodes": [
+      "https://api.hive.blog",
+      "https://api.deathwing.me",
+      "https://rpc.mahdiyari.info"
+    ],
+    "timeoutMs": 6000,
+    "perSourceLimit": 20
+  },
+  "hiveEngine": {
+    "enabled": true,
+    "nodes": [
+      "https://api.hive-engine.com/rpc/contracts",
+      "https://herpc.dtools.dev/contracts"
+    ],
+    "timeoutMs": 6000,
+    "balanceLimit": 500,
+    "marketLimit": 50,
+    "poolLimit": 500,
+    "symbols": ["DEC", "SPS", "STARBITS", "SIM", "BUDS", "PIZZA"]
+  },
+  "accounts": [
+    {
+      "account": "sigmund-vexler",
+      "archetype": "alpha-hunter",
+      "feeds": ["trending"],
+      "tradingLive": true,
+      "tokens": { "DEC": "12.5", "SPS": "3.2" }
+    },
+    {
+      "account": "help-fund",
+      "archetype": "patron-steward",
+      "feeds": ["hive-167922", "finance", "dev"],
+      "tradingLive": true,
+      "tokens": { "SIM": "50" }
+    },
+    {
+      "account": "emsenn0",
+      "archetype": "curator",
+      "feeds": ["following", "trending"]
+    },
+    {
+      "account": "essiebee",
+      "archetype": "gardener",
+      "feeds": ["gaming", "hive-140217"],
+      "tokens": { "STARBITS": "1000" }
+    },
+    {
+      "account": "marshian",
+      "archetype": "scout",
+      "feeds": ["art", "writing", "photography"]
+    },
+    {
+      "account": "michael561",
+      "archetype": "archivist",
+      "feeds": ["following", "blog:emsenn0"],
+      "tradingLive": true
+    }
+  ]
+}

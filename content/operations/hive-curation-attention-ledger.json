@@ -1,0 +1,152 @@
+{
+  "schema": "aagaard.hive-curation-attention-ledger.v1",
+  "asOf": "2026-07-22T11:43:33.999Z",
+  "cycle": {
+    "globalStep": 30,
+    "angle": "curation-attention",
+    "status": "completed-with-economic-settlement-pending"
+  },
+  "settledHistoryRefresh": {
+    "observedAt": "2026-07-22T11:38:35.381Z",
+    "accountsScanned": 6,
+    "requestedAccountHistoryRowsPerAccount": 1000,
+    "newSettlementEventsAppended": 765,
+    "accounts": [
+      {
+        "account": "emsenn0",
+        "rewardsInWindow": 347,
+        "newEvents": 345,
+        "settlementsObserved": 356,
+        "realizedHistoricalReward": "2989.621476 VESTS"
+      },
+      {
+        "account": "michael561",
+        "rewardsInWindow": 429,
+        "newEvents": 420,
+        "settlementsObserved": 430,
+        "realizedHistoricalReward": "1040.577482 VESTS"
+      },
+      {
+        "account": "sigmund-vexler",
+        "rewardsInWindow": 0
+      },
+      {
+        "account": "help-fund",
+        "rewardsInWindow": 0
+      },
+      {
+        "account": "essiebee",
+        "rewardsInWindow": 0
+      },
+      {
+        "account": "marshian",
+        "rewardsInWindow": 0
+      }
+    ],
+    "interpretation": "These VESTS are bounded historical chain settlements, not cycle-30 gains. No admitted VESTS-to-HBD or VESTS-to-HIVE valuation exists."
+  },
+  "freshCandidateField": {
+    "observedAt": "2026-07-22T11:36:56.081Z",
+    "accountsObserved": 6,
+    "accountsWithoutOneVotePlan": [
+      "sigmund-vexler",
+      "help-fund",
+      "essiebee",
+      "marshian"
+    ],
+    "resourceCreditRefusals": [
+      {
+        "account": "michael561",
+        "candidate": "emsenn0/your-hive-engine-balance-is-not-your-exit-value",
+        "weightBps": 741,
+        "currentRc": "168653358",
+        "requiredRc": "200142732",
+        "eligibleAt": "2026-07-22T12:21:27.938Z"
+      }
+    ],
+    "admitted": {
+      "account": "emsenn0",
+      "author": "ecency",
+      "permlink": "streak-freeze-is-here-miss",
+      "weightBps": 5000,
+      "manaBps": 10000,
+      "projectedManaBps": 9900,
+      "manaFloorBps": 8000,
+      "strategySignal": 282.969,
+      "strategySignalUnit": "aagaard.curation-strategy-signal.v1",
+      "rewardPredictionVests": null,
+      "rewardPredictionHbd": null,
+      "pendingPostPayout": "7.561 HBD",
+      "payoutAt": "2026-07-29T10:04:09.000Z",
+      "currentRc": "1043163393172",
+      "requiredRc": "200142732",
+      "postStateAndRcProviderCount": 3
+    }
+  },
+  "execution": {
+    "transactionId": "f225b13c2396cc99e3d3f126936a43032651cced",
+    "block": 108355241,
+    "transactionConfirmationProviderCount": 3,
+    "voteVisibilityProviderCount": 3,
+    "credentialLocation": "cold-red-gate",
+    "credentialRole": "posting",
+    "localCredentialPresent": false,
+    "remoteCredentialMode": "0600",
+    "predictionId": "urn:aagaard:curation-prediction:WzuojZDC6f9n0p_N3yT4dNKd04cYwJSWuz8OGg_ithk",
+    "actionEventId": "urn:aagaard:curation-action:ZdaC6eLNHXxnkitRDTTp4KUdhT7vMA2neeKXCeMY-Z0",
+    "economicSettlement": "pending-curation-reward",
+    "expectedSettlementOperation": "curation_reward",
+    "expectedSettlementAsset": "VESTS",
+    "realizedCycleReward": null,
+    "retryAllowed": false
+  },
+  "capabilityGrowth": {
+    "coldSigningBridge": "scripts/cold-red-gate-curation-broadcast.mjs",
+    "actionSettlement": "src/core/curationActionSettlement.mts",
+    "constraints": [
+      "The bridge is hard-bound to one account, role, lane, target, operation, and weight.",
+      "Remote post viability and twice-average RC reserve are checked before the key file is opened.",
+      "The action record requires two distinct transaction confirmations at one block and two distinct visibility witnesses.",
+      "A strategy signal never becomes a VESTS or HBD profit prediction."
+    ]
+  },
+  "outstandingPredictions": [
+    {
+      "account": "emsenn0",
+      "author": "taniagonzalez",
+      "permlink": "engesp-the-week-wakes-up-and-im-right-there-with-it",
+      "transactionId": "6d18c478410a341f970d7456f8e0347f293be128",
+      "settlement": "pending"
+    },
+    {
+      "account": "emsenn0",
+      "author": "taniagonzalez",
+      "permlink": "engesp-a-wednesday-of-work-and-green-trails",
+      "transactionId": "19e14957fd564267a807557a9e405f16b9ba142f",
+      "settlement": "pending"
+    },
+    {
+      "account": "emsenn0",
+      "author": "ecency",
+      "permlink": "streak-freeze-is-here-miss",
+      "transactionId": "f225b13c2396cc99e3d3f126936a43032651cced",
+      "settlement": "pending"
+    }
+  ],
+  "procurement": {
+    "admissionLot": "urn:aagaard:work-lot:cycle30-curation-admission:20260722",
+    "reviewLot": "urn:aagaard:work-lot:cycle30-cold-curation-review:20260722",
+    "status": "residue",
+    "reason": "The inference market failed at its A2A RMN carrier boundary; no external candidate was accepted."
+  },
+  "profitRecognition": {
+    "newRealizedReward": "0.000000 VESTS",
+    "newRealizedProfitHbd": null,
+    "reason": "The vote is confirmed but Hive economically settles curation only at payout."
+  },
+  "verification": {
+    "staticCheck": "passed",
+    "testsPassed": 237,
+    "testsFailed": 0
+  }
+}

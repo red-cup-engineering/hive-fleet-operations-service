@@ -1,0 +1,166 @@
+{
+  "kind": "aagaard.strategy-product-assay",
+  "id": "hive-engine-exit-tightness-v1",
+  "status": "five-report-hbd-pilot-live-distribution-waiting-on-rc-no-paid-requests-no-revenue",
+  "owner": "561-group/rsc-quiescent/aagaard",
+  "assayedAt": "2026-07-22",
+  "customerProblem": "Free Hive wallets mark thin Hive Engine positions from a latest or best price, while a holder needs to know how much of a named liquid quantity the complete displayed bid book can actually absorb, at which weighted price, and whether independent public providers agree on the underlying state.",
+  "customerPromise": "For one public Hive account, one Hive Engine symbol, and one immediately liquid quantity, return either an witnessed full-depth gross SWAP.HIVE exit calculation or a typed refusal naming provider contest, insufficient witnesses, truncated depth, or locked inventory.",
+  "formulae": {
+    "grossDepthProceeds": "E(q,B)=sum_i min(max(q-sum_{j<i} q_j,0),q_i)*p_i",
+    "coverage": "C(q,B)=min(q,sum_i q_i)/q",
+    "topQuoteMarkGap": "G(q,B)=q*p_1-E(q,B)",
+    "knowledge": "FOUR: true means at least two declared providers support one exact position and live book; both means incompatible states are positively witnessed; neither means independent evidence is insufficient; no valuation is emitted for both or neither."
+  },
+  "request": {
+    "account": "canonical public Hive account",
+    "symbol": "one Hive Engine token other than SWAP.HIVE",
+    "quantity": "canonical nonnegative token quantity; omission selects the currently liquid balance"
+  },
+  "response": [
+    "exact liquid, staked, delegated-out, pending-unstake, and pending-undelegation compartments",
+    "staking, delegation, unstaking, undelegation, and release-count terms",
+    "complete-depth gross proceeds, coverage, VWAP, marginal floor, and levels consumed",
+    "best-price mark and its exact gap from complete-depth proceeds",
+    "provider state digests and FOUR knowledge state",
+    "explicit limits: displayed depth is not future execution; SWAP.HIVE is not asserted equal to HIVE, HBD, or USD"
+  ],
+  "priorArtAdopted": [
+    {
+      "source": "src/contract-fleet-observation.mjs",
+      "adoption": "Keep solicitation, exact terms, provider-authored evidence, and performance receipt distinct; the local probe does not pretend the payment gateway exists."
+    },
+    {
+      "source": "services/hive-engine-account-history-evidence-service/src/service.mjs",
+      "adoption": "Treat endpoint exhaustion and public observations as bounded evidence, not as cost basis, tax treatment, or intrinsic price."
+    },
+    {
+      "source": "services/hive-engine-token-swap-hive-market-partition-evidence-service/src/service.mjs",
+      "adoption": "Make provider contest and retention limits typed outcomes instead of filling gaps with zero or a chosen fair value."
+    },
+    {
+      "source": "scripts/workerbee-yield.mjs",
+      "adoption": "Integrate complete displayed depth rather than multiplying an entire position by a shallow top bid."
+    },
+    {
+      "source": "content/text/documents/articles/notes/2026/07/18/2026-07-18-sell-certified-tightness-the-union-trade-doctrine.md",
+      "adoption": "Sell the witnessed boundary and honest refusal rather than repackaging freely visible balances."
+    }
+  ],
+  "currentMarketAssay": {
+    "freeSubstitutes": [
+      {
+        "name": "Hive Keychain portfolio mode",
+        "capability": "multi-account token summaries and account value",
+        "source": "https://hive.blog/keychain/@keychain/hive-keychain-v32-portfolio-and-account-value"
+      },
+      {
+        "name": "Signet",
+        "capability": "Hive Engine balances, stake/delegation compartments, price charts, and USD portfolio value",
+        "source": "https://hive.blog/hive-139531/@beggars/introducing-signet-a-new-kind-of-hive-wallet-that-is-100percent-open-source"
+      },
+      {
+        "name": "HivePulse",
+        "capability": "Hive Engine portfolio valuation and token actions",
+        "source": "https://hive.blog/hive-139531/@hdev/hivepulse-v190--the-action-update-firefox-fyp-and-more"
+      }
+    ],
+    "demandEvidence": [
+      {
+        "observation": "A current Hive user reports low liquidity, large spreads, and positions that can take weeks to exit.",
+        "source": "https://hive.blog/hive-167922/@asgharali/hive-engine-needs-better-liquidity"
+      },
+      {
+        "observation": "A current active trader manually exports open-order HTML to a spreadsheet because the interface does not total it.",
+        "source": "https://hive.blog/burn/@buynburn/the-best-way-to-improve-hive-engine-is-for-people-to-use-the-engine"
+      },
+      {
+        "observation": "A live analytics discussion demonstrates how thin-pool dimensions and cumulative volume can be misread as price or 24-hour volume.",
+        "source": "https://hive.blog/@leothreads/leothread-2026-02-21-17-31"
+      }
+    ],
+    "differentiation": "Not another wallet or mark-to-last-price dashboard: a content-addressable, witnessed, quantity-specific answer about executable displayed bid depth and lock state, including a priced refusal when evidence is contested."
+  },
+  "commercialExperiment": {
+    "pilotSku": "one-symbol-exit-tightness",
+    "priceHypothesis": "0.250 HBD per report for five invoice-first manual slots; exact x402 on Base remains a later distribution option only after Hive-native willingness-to-pay is observed",
+    "pricingStatus": "publicly-offered-at-0.250-HBD-no-request-yet",
+    "settlementProvider": "For the five-report assay, require a separately confirmed native Hive HBD transfer after an invoice and bind it to the delivered report digest; if demand survives, contract the existing sovereign x402-services-section rather than copying protocol authority into Aagaard.",
+    "sellerGateway": "No broad gateway is funded before one paid request. The public Hive post supplies discovery and exact invoice-first terms; a read-only three-provider monitor distinguishes comments from invoices, payments, delivery, and revenue.",
+    "revenueRecognition": "zero until an outside payment is independently settled and joined to the exact delivered report digest",
+    "launchEvidence": {
+      "account": "emsenn0",
+      "permlink": "your-hive-engine-balance-is-not-your-exit-value",
+      "transactionId": "e58adf8e5e64b6c50f277fc92cc9080aefd69de7",
+      "hiveBlock": 108350542,
+      "bodySha256": "c3b7a052484898dabf17c766663e9971222a9c42642527a4037bdabfa7176003",
+      "publicationStatus": "confirmed-by-three-Hive-providers-and-durably-recorded",
+      "initialDemandObservation": {
+        "observedAt": "2026-07-22T07:52:10.515Z",
+        "interestRequests": 0,
+        "invoicesIssued": 0,
+        "settledPayments": 0,
+        "reportsDelivered": 0,
+        "revenue": "0.000 HBD",
+        "pendingAuthorPayout": "0.001 HBD",
+        "pendingAuthorPayoutRecognizedAsRevenue": false
+      },
+      "latestDemandObservation": {
+        "observedAt": "2026-07-22T10:31:28.574Z",
+        "requestProvidersAgreed": 2,
+        "incomingHbdTransferProvidersAgreed": 3,
+        "interestRequests": 0,
+        "invoicesIssued": 0,
+        "settledPayments": 0,
+        "reportsDelivered": 0,
+        "revenue": "0.000 HBD",
+        "activeVotes": 4,
+        "pendingAuthorPayout": "0.009 HBD",
+        "incomingTransfersSincePublication": 0,
+        "pendingAuthorPayoutRecognizedAsRevenue": false
+      },
+      "distributionPlan": {
+        "observedAt": "2026-07-22T10:37:10.718Z",
+        "decision": "wait-for-rc-regeneration",
+        "selectedAccount": "michael561",
+        "targetFollowers": 21,
+        "requiredRc": "339139544",
+        "currentRc": "126426380",
+        "maximumRc": "5089858976",
+        "eligibleAt": "2026-07-22T15:38:04.718Z",
+        "formula": "required RC is twice the live average custom_json cost; regeneration time is ceil((required-current)*432000/max)",
+        "providerAgreement": [
+          "https://api.deathwing.me",
+          "https://api.hive.blog",
+          "https://api.openhive.network"
+        ],
+        "stateDigest": "sha256:38a750b6b2aa6c17c6bb0e4c3e6d30b7af1e7e4c2b75acc8a3697776b3c80f95",
+        "refusedAlternatives": "The author cannot provide marginal self-distribution; every other RC-ready fleet account has fewer than the ten-follower minimum.",
+        "credentialAccess": false,
+        "chainMutation": false,
+        "executionBoundary": "scripts/product-pilot-distribute.mjs",
+        "liveBadIncumbentProof": "An execute request with an intentionally nonexistent key returned resource-credit-wait without credential access or chain mutation."
+      }
+    },
+    "successRule": "At least one non-fleet buyer accepts an invoice, settles exactly 0.250 HBD, receives the exact report, and the payment is joined to its digest.",
+    "stopRule": "After the post payout window, stop or reframe the pilot if it has no qualifying external request; do not build the x402 gateway from views, votes, or pending author payout alone."
+  },
+  "claimsExcluded": [
+    "No promise that displayed orders remain available or that an actual order fills.",
+    "No fair value, intrinsic value, cost basis, profit, income, tax, or investment recommendation.",
+    "No equivalence claim between SWAP.HIVE and native HIVE, HBD, USD, or USDC.",
+    "No credential access, custody, signing, broadcast, order placement, or asset movement."
+  ],
+  "implementation": {
+    "calculus": "src/core/exitTightness.mts",
+    "readOnlyProbe": "scripts/hive-engine-exit-tightness.mjs",
+    "pilotArticle": "content/text/documents/articles/notes/2026/07/22/2026-07-22-your-hive-engine-balance-is-not-your-exit-value.md",
+    "publicationBoundary": "scripts/publish-exit-tightness-pilot.mjs",
+    "remoteKeyIsolation": "scripts/cold-red-gate-product-pilot-broadcast.mjs",
+    "demandMonitor": "scripts/monitor-exit-tightness-pilot.mjs",
+    "distributionPlanner": "scripts/plan-product-pilot-distribution.mjs",
+    "distributionOperator": "scripts/product-pilot-distribute.mjs",
+    "distributionSettlement": "src/core/productPilotSettlement.mts",
+    "tests": ["test/exitTightness.test.mts", "test/exitTightnessPilotPost.test.mts", "test/productDistribution.test.mts", "test/productPilotDistributionExecution.test.mts"]
+  }
+}

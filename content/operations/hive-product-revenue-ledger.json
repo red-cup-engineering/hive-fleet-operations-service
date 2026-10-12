@@ -1,0 +1,118 @@
+{
+  "schema": "aagaard.hive-product-revenue-ledger.v1",
+  "asOf": "2026-07-22T10:37:16.602Z",
+  "cycle": {
+    "globalStep": 27,
+    "angle": "product-revenue",
+    "status": "completed-with-distribution-wait"
+  },
+  "offer": {
+    "sku": "one-symbol-exit-tightness",
+    "account": "emsenn0",
+    "permlink": "your-hive-engine-balance-is-not-your-exit-value",
+    "price": "0.250 HBD",
+    "maximumPaidReports": 5,
+    "invoiceBeforePayment": true,
+    "transactionId": "e58adf8e5e64b6c50f277fc92cc9080aefd69de7",
+    "hiveBlock": 108350542,
+    "bodySha256": "c3b7a052484898dabf17c766663e9971222a9c42642527a4037bdabfa7176003",
+    "publicationStatus": "confirmed-and-durably-recorded"
+  },
+  "commercialFunnel": {
+    "observedAt": "2026-07-22T10:31:28.574Z",
+    "requestKnowledge": "true",
+    "requestEvidenceProviders": [
+      "https://api.openhive.network",
+      "https://api.deathwing.me"
+    ],
+    "unavailableRequestProvider": "https://api.hive.blog",
+    "interestRequests": 0,
+    "invoicesIssued": 0,
+    "settledBuyerPayments": 0,
+    "reportsDelivered": 0,
+    "revenue": "0.000 HBD",
+    "activeVotes": 4,
+    "pendingAuthorPayout": "0.009 HBD",
+    "pendingAuthorPayoutRecognizedAsRevenue": false,
+    "incomingHbdTransfersAfterPublication": {
+      "count": 0,
+      "evidenceProviders": [
+        "https://api.hive.blog",
+        "https://api.openhive.network",
+        "https://api.deathwing.me"
+      ]
+    }
+  },
+  "distribution": {
+    "planObservedAt": "2026-07-22T10:37:10.718Z",
+    "decision": "wait-for-rc-regeneration",
+    "selectedAccount": "michael561",
+    "targetFollowers": 21,
+    "currentRc": "126426380",
+    "maximumRc": "5089858976",
+    "averageCustomJsonRc": "169569772",
+    "requiredRc": "339139544",
+    "eligibleAt": "2026-07-22T15:38:04.718Z",
+    "formulae": {
+      "required": "R_required=2*R_average(custom_json)",
+      "regeneration": "t=ceil((R_required-R_current)*432000/R_max)"
+    },
+    "evidenceProviders": [
+      "https://api.deathwing.me",
+      "https://api.hive.blog",
+      "https://api.openhive.network"
+    ],
+    "stateDigest": "sha256:38a750b6b2aa6c17c6bb0e4c3e6d30b7af1e7e4c2b75acc8a3697776b3c80f95",
+    "refusedAlternatives": "emsenn0 is the author and cannot add marginal self-distribution; every other RC-ready fleet account has fewer than the ten-follower minimum.",
+    "executePathAssay": {
+      "keyFile": "intentionally-nonexistent",
+      "result": "resource-credit-wait",
+      "credentialAccess": false,
+      "chainMutation": false
+    }
+  },
+  "newCapability": {
+    "obligation": "A safe distribution plan must cross only one matching signer and settlement boundary, and low RC must refuse before key access.",
+    "planner": "scripts/plan-product-pilot-distribution.mjs",
+    "operator": "scripts/product-pilot-distribute.mjs",
+    "signerLaw": "src/core/productDistribution.mts#assertExactProductPilotReblog",
+    "settlement": "src/core/productPilotSettlement.mts#recordProductPilotDistribution",
+    "admittedMutation": "michael561 may reblog only emsenn0/your-hive-engine-balance-is-not-your-exit-value with posting authority after the fresh audience and two-times-average-RC gate.",
+    "settlementRequirements": [
+      "canonical Hive transaction id",
+      "two providers confirm the exact custom_json",
+      "two providers expose the target in michael561's blog",
+      "pending and confirmed receipts append idempotently",
+      "distribution recognizes 0.000 HBD revenue"
+    ]
+  },
+  "procurement": [
+    {
+      "lot": "urn:aagaard:work-lot:cycle27-product-distribution-admission:20260722",
+      "status": "no-candidate-accepted",
+      "residue": "an A2A RMN operation must carry exactly one application/rmn+cbor raw part"
+    },
+    {
+      "lot": "urn:aagaard:work-lot:cycle27-product-distribution-review:20260722",
+      "status": "no-candidate-accepted",
+      "residue": "an A2A RMN operation must carry exactly one application/rmn+cbor raw part"
+    }
+  ],
+  "settlement": {
+    "interestRequests": 0,
+    "invoicesIssued": 0,
+    "buyerPaymentsSettled": 0,
+    "reportsDelivered": 0,
+    "distributionBroadcast": false,
+    "revenue": "0.000 HBD",
+    "credentialAccess": false,
+    "chainMutation": false,
+    "nextEligibleDistributionAt": "2026-07-22T15:38:04.718Z"
+  },
+  "verification": {
+    "testsPassed": 219,
+    "testsFailed": 0,
+    "staticCheck": "passed",
+    "jsonCheck": "passed"
+  }
+}

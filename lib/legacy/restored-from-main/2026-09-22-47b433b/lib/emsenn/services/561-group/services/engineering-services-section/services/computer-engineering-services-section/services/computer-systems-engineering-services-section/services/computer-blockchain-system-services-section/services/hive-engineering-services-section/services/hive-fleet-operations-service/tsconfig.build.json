@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "noCheck": true,
+    "allowJs": true,
+    "checkJs": false,
+    "rewriteRelativeImportExtensions": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src/**/*.mts", "src/**/*.ts", "src/**/*.mjs"],
+  "exclude": ["test/**/*.mts", "src/**/*.d.mts", "src/**/*.d.ts"]
+}

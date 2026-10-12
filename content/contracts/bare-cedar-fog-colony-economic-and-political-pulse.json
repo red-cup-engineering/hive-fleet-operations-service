@@ -1,0 +1,8 @@
+{
+  "type": "AagaardEconomicPoliticalPulseContract",
+  "id": "urn:ame:aagaard:contract:bare-cedar-fog-colony-economic-and-political-pulse-v1",
+  "provider": "urn:ame:aagaard:economic-political-pulse-provider",
+  "customer": "urn:ame:bare-cedar-fog-colony:colony-report-team",
+  "scope": "Issue interval flows from provider-owned fleet ticks and point-in-time HIVE/HBD stocks with source freshness and custody limitations.",
+  "forbids": ["network refresh", "broadcast", "asset movement", "cross-chain inference", "balance-as-custody-title", "missing-currency conversion"]
+}

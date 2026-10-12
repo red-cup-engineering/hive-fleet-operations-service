@@ -1,0 +1,67 @@
+{
+  "id": "michael561-must-not-sell-the-holozing-alpha-vial",
+  "statement": "michael561 MUST NOT sell, transfer, list, delegate, open or burn the HoloZing Alpha Vial (ZINGALPHA #1831).",
+  "subject": [
+    "hive:michael561"
+  ],
+  "action": [
+    "hive:custom_json"
+  ],
+  "when": [
+    {
+      "input.decoded": {
+        "somewhere": {
+          "symbol": "ZINGALPHA",
+          "id": {
+            "in": [
+              "1831",
+              1831
+            ]
+          }
+        }
+      }
+    },
+    {
+      "input.decoded": {
+        "somewhere": {
+          "symbol": "ZINGALPHA",
+          "nfts": {
+            "contains": "1831"
+          }
+        }
+      }
+    },
+    {
+      "input.decoded": {
+        "somewhere": {
+          "symbol": "ZINGALPHA",
+          "ids": {
+            "contains": "1831"
+          }
+        }
+      }
+    },
+    {
+      "input.decoded": {
+        "somewhere": {
+          "symbol": "ZINGALPHA",
+          "id": {
+            "exists": false
+          },
+          "nfts": {
+            "exists": false
+          },
+          "ids": {
+            "exists": false
+          }
+        }
+      }
+    }
+  ],
+  "because": "The Alpha Vial is a treasury asset held closed, not inventory. An action naming ZINGALPHA without an instance id could reach it, so it applies too.",
+  "x-provenance": {
+    "recorded-by": "claude-opus-5-5",
+    "recorded-on": "2026-09-26",
+    "source": "the founder's example rule, 2026-09-26; the invariant protectedAssets.mjs carried"
+  }
+}

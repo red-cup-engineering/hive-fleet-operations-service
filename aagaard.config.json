@@ -1,0 +1,193 @@
+{
+  "name": "aagaard",
+  "live": true,
+  "enabled": [
+    "voting",
+    "trading",
+    "incentive"
+  ],
+  "cadenceSeconds": 900,
+  "hive": {
+    "enabled": true,
+    "nodes": [
+      "https://api.hive.blog",
+      "https://api.deathwing.me",
+      "https://rpc.mahdiyari.info"
+    ],
+    "timeoutMs": 6000,
+    "perSourceLimit": 20
+  },
+  "hiveEngine": {
+    "enabled": true,
+    "nodes": [
+      "https://api.hive-engine.com/rpc",
+      "https://herpc.dtools.dev"
+    ],
+    "timeoutMs": 6000,
+    "balanceLimit": 500,
+    "marketLimit": 200,
+    "poolLimit": 500,
+    "symbols": [
+      "DEC",
+      "SPS",
+      "STARBITS",
+      "STARPRO",
+      "SIM",
+      "BUDS",
+      "PIZZA"
+    ]
+  },
+  "curation": {
+    "nodes": [
+      "https://api.hive.blog",
+      "https://api.openhive.network"
+    ],
+    "hiveEngineNode": "https://api.hive-engine.com/rpc",
+    "tags": [
+      {
+        "name": "LEO",
+        "tag": "leofinance",
+        "symbol": "LEO"
+      },
+      {
+        "name": "POB",
+        "tag": "proofofbrain",
+        "symbol": "POB"
+      },
+      {
+        "name": "CENT",
+        "tag": "cent",
+        "symbol": "CENT"
+      },
+      {
+        "name": "WAIV",
+        "tag": "waivio",
+        "symbol": "WAIV"
+      },
+      {
+        "name": "BASE",
+        "tag": "hive",
+        "symbol": null
+      }
+    ],
+    "postsPerTag": 20,
+    "dailyManaBudgetPercent": 20,
+    "maxDailyBudgetPercent": 20,
+    "minWeight": 100,
+    "maxWeight": 3000,
+    "dustPendingPayoutThresholdHbd": "0.02",
+    "dustWeight": 100,
+    "preferredTags": [
+      "proofofbrain",
+      "waivio"
+    ],
+    "neverVoteAuthors": [],
+    "curationWindowSeconds": 0,
+    "curationWindowToleranceSeconds": 150,
+    "journalRoot": "/home/emsenn/561-group/hive-curation-cycle-journal"
+  },
+  "accounts": [
+    {
+      "account": "sigmund-vexler",
+      "archetype": "alpha-hunter",
+      "feeds": [
+        "trending"
+      ],
+      "tradingLive": true,
+      "capSwapHiveMilli": 1000,
+      "tokens": {
+        "DEC": "12.5",
+        "SPS": "3.2"
+      },
+      "drafts": [
+        "spectral"
+      ],
+      "lanes": [
+        "arbitrage"
+      ]
+    },
+    {
+      "account": "help-fund",
+      "archetype": "patron-steward",
+      "feeds": [
+        "hive-167922",
+        "finance",
+        "dev"
+      ],
+      "tradingLive": true,
+      "capSwapHiveMilli": 1000,
+      "tokens": {
+        "SIM": "50"
+      },
+      "drafts": [
+        "liquidity"
+      ]
+    },
+    {
+      "account": "emsenn0",
+      "archetype": "curator",
+      "feeds": [
+        "following",
+        "trending"
+      ],
+      "keys": [
+        "posting"
+      ],
+      "lanes": [
+        "curation"
+      ]
+    },
+    {
+      "account": "essiebee",
+      "archetype": "gardener",
+      "feeds": [
+        "gaming",
+        "hive-140217"
+      ]
+    },
+    {
+      "account": "marshian",
+      "archetype": "scout",
+      "feeds": [
+        "art",
+        "writing",
+        "photography"
+      ]
+    },
+    {
+      "account": "michael561",
+      "archetype": "archivist",
+      "feeds": [
+        "following",
+        "blog:emsenn0"
+      ],
+      "tradingLive": true,
+      "capSwapHiveMilli": 1000,
+      "stakeTokens": [
+        "LEO",
+        "ALIVE",
+        "CENT",
+        "VYB",
+        "POB",
+        "CTP",
+        "MUSIC",
+        "WAIV",
+        "POSH",
+        "PXL",
+        "GAMER"
+      ],
+      "delegateTo": {
+        "ALIVE": "aliveandthriving"
+      },
+      "lanes": [
+        "arbitrage",
+        "workerbee-yield",
+        "games",
+        "income-token-acquisition",
+        "holozing-rewards",
+        "splinterlands",
+        "curation"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+---
+title: "README"
+description: "Verify against the current live Splinterlands Terms of Service (fetch the ToS as published now, cite section text) whether automated card-market operations — buying, selling, and renting cards, in CREDITS, DEC, or on-chain — are permitted when match play and team selection remain non-automated, and "
+date-created: 2026-07-24
+kind: realized-work-order
+tags:
+  - lmt
+  - realized-fulfillment
+status: verify-fulfilled
+declared-by: leader-movement-team/realize-fulfilled-work-products
+---
+# README
+
+## Demand
+
+Verify against the current live Splinterlands Terms of Service (fetch the ToS as published now, cite section text) whether automated card-market operations — buying, selling, and renting cards, in CREDITS, DEC, or on-chain — are permitted when match play and team selection remain non-automated, and report the exact lawful boundary (which operations, which currencies, any rate or account limits); Aagaard currently treats Splinterlands as observation-only with a roster-purchase script spending only in-game CREDITS, and the Leader asks specifically whether automated card buying/selling can be a lawful lane.
+
+## Fulfillment
+
+The Splinterlands Terms of Service prohibit automated card-market operations when match play and team selection remain non-automated; only human account holders may execute automated transactions on the marketplace, which may only be executed via the in-game interface.
+
+ Splinterlands Terms of Service Section 1.A.5: "You must not use automated software or programs ('bots') to buy or sell Cards, nor may you use automated software or programs to participate in gameplay."
+
+ Splinterlands Terms of Service Section 1.A.6: "You agree that you will interact with the Service through the interface provided by us, and not through any third-party software, script, or service."
+
+Therefore, automated card buying or selling is only lawful if it is executed via the in-game interface, or if match play and team selection are automated; otherwise, automated transactions are prohibited under the Terms of Service.
+
+Note that Section 1.D.4 of the Splinterlands Terms of Service allows the Service (Splinterlands, Inc.) to add "Additional Terms" to the Terms of Service; it is the responsibility of users and potential users to verify current Terms of Service and compliance with rules and regulations. The most up-to-date version of the Terms of Service may be found at https://www.splinterlands.com/tos.
+
+---
+
+Realized from work order `wo-readme-md-splinterlands-card-market-aeae67187ef6` (class verify, source manual), fulfilled by groq-inference-team (model llama-3.1-8b-instant). This document is a direct realization of that order's own evidence.response -- not a fresh derivation.

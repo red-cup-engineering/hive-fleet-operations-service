@@ -1,0 +1,250 @@
+[
+  {
+    "id": "essiebee:operations:2026-07-18",
+    "account": "essiebee",
+    "kind": "post",
+    "topic": "operations",
+    "title": "essiebee operations note",
+    "body": "Autonomous operations summary for essiebee. Prepared as a locked draft.",
+    "tags": [
+      "hive",
+      "automation",
+      "aagaard"
+    ],
+    "composedAt": "2026-07-18T04:21:03.009Z",
+    "approvedForBroadcast": false
+  },
+  {
+    "id": "marshian:operations:2026-07-18",
+    "account": "marshian",
+    "kind": "post",
+    "topic": "operations",
+    "title": "marshian operations note",
+    "body": "Autonomous operations summary for marshian. Prepared as a locked draft.",
+    "tags": [
+      "hive",
+      "automation",
+      "aagaard"
+    ],
+    "composedAt": "2026-07-18T04:21:03.009Z",
+    "approvedForBroadcast": false
+  },
+  {
+    "id": "michael561:operations:2026-07-18",
+    "account": "michael561",
+    "kind": "post",
+    "topic": "operations",
+    "title": "michael561 operations note",
+    "body": "Autonomous operations summary for michael561. Prepared as a locked draft.",
+    "tags": [
+      "hive",
+      "automation",
+      "aagaard"
+    ],
+    "composedAt": "2026-07-18T04:21:03.009Z",
+    "approvedForBroadcast": false
+  },
+  {
+    "id": "emsenn0:operations:2026-07-18",
+    "account": "emsenn0",
+    "kind": "post",
+    "topic": "operations",
+    "title": "emsenn0 operations note",
+    "body": "Autonomous operations summary for emsenn0. Prepared as a locked draft.",
+    "tags": [
+      "hive",
+      "automation",
+      "aagaard"
+    ],
+    "composedAt": "2026-07-18T04:21:03.009Z",
+    "approvedForBroadcast": false
+  },
+  {
+    "id": "help-fund:operations:2026-07-18",
+    "account": "help-fund",
+    "kind": "post",
+    "topic": "operations",
+    "title": "help-fund operations note",
+    "body": "Autonomous operations summary for help-fund. Prepared as a locked draft.",
+    "tags": [
+      "hive",
+      "automation",
+      "aagaard"
+    ],
+    "composedAt": "2026-07-18T04:21:03.009Z",
+    "approvedForBroadcast": false
+  },
+  {
+    "id": "help-fund:he-liquidity:2026-07-18",
+    "account": "help-fund",
+    "kind": "post",
+    "topic": "he-liquidity",
+    "title": "Hive-Engine liquidity report - 2026-07-18",
+    "body": "# Hive-Engine liquidity report - 2026-07-18\n\nAutomated read of liquidity within and between Hive and Hive-Engine venues.\n\n## Order books\n- HIVE/HBD at internal: mid 0.04807546021603529, spread 9bps, depth 3117633.00/2324313.00, imbalance 14.6%\n- DEC/SWAP.HIVE at hive-engine: mid 0.0049805349999999995, spread 97bps, depth 103127943.92/1902757.53, imbalance 96.4%\n- SPS/SWAP.HIVE at hive-engine: mid 0.05704677, spread 0bps, depth 50642433.85/0.00, imbalance 100.0%\n- VOUCHER/SWAP.HIVE at hive-engine: mid 0.25789999, spread 0bps, depth 0.00/5314.09, imbalance -100.0%\n- WIT/SWAP.HIVE at hive-engine: mid 0.0002576, spread 0bps, depth 20009295.15/0.00, imbalance 100.0%\n- LPR/SWAP.HIVE at hive-engine: mid 7.7e-7, spread 0bps, depth 0.00/217103182.20, imbalance -100.0%\n- PGM/SWAP.HIVE at hive-engine: mid 8e-8, spread 0bps, depth 421258.33/0.00, imbalance 100.0%\n- GLITTER/SWAP.HIVE at hive-engine: mid 0.01020001, spread 0bps, depth 0.00/22.53, imbalance -100.0%\n- SHEKEL/SWAP.HIVE at hive-engine: mid 0.00049, spread 0bps, depth 0.00/88.00, imbalance -100.0%\n- GROWTH/SWAP.HIVE at hive-engine: mid 0.01637401, spread 4427bps, depth 123661.06/65.63, imbalance 99.9%\n- TOOFUCKEH/SWAP.HIVE at hive-engine: mid 0.01008725, spread 0bps, depth 0.00/8139.93, imbalance -100.0%\n- LIMITLESS/SWAP.HIVE at hive-engine: mid 0.00059202, spread 1756bps, depth 261970.59/245695.22, imbalance 3.2%\n\n## AMM pools\n- SWAP.HIVE:DEC: implied 200.10549246, TVL proxy 107744544.11, fee 25bps\n- STARBITS:SWAP.HIVE: implied 0.00000182, TVL proxy 1770.08, fee 25bps\n- SWAP.HIVE:VOUCHER: implied 4.12023164, TVL proxy 511419.51, fee 25bps\n- SWAP.HIVE:SWAP.STATE: implied 10341.15312885, TVL proxy 1720844.74, fee 25bps\n- SWAP.HIVE:MEME: implied 2537.86487161, TVL proxy 1237195.00, fee 25bps\n- SWAP.HIVE:VOTE: implied 2212.71187329, TVL proxy 820673.41, fee 25bps\n- SWAP.HIVE:LVL: implied 123688.12191990, TVL proxy 49362010.46, fee 25bps\n- WOO:SWAP.HIVE: implied 0.00017291, TVL proxy 7579.23, fee 25bps\n- SWAP.HIVE:PIMP: implied 182.05364687, TVL proxy 2016490.07, fee 25bps\n- SWAP.HIVE:BEE: implied 1.91501512, TVL proxy 1552351.35, fee 25bps\n- SWAP.HIVE:YOLO: implied 6940.98570890, TVL proxy 25127109.65, fee 25bps\n- SWAP.HIVE:SCRAP: implied 8793.06847662, TVL proxy 30043270.59, fee 25bps\n\n## Cross-venue corridors\n_no corridors observed_\n\nTotal observed liquidity proxy: 619439032.22 quote units.\n\nPrepared automatically for human review. Posting remains locked.",
+    "tags": [
+      "hive-engine",
+      "liquidity",
+      "defi",
+      "analysis",
+      "hive"
+    ],
+    "composedAt": "2026-07-18T04:21:03.009Z",
+    "approvedForBroadcast": false
+  },
+  {
+    "id": "sigmund-vexler:operations:2026-07-18",
+    "account": "sigmund-vexler",
+    "kind": "post",
+    "topic": "operations",
+    "title": "sigmund-vexler operations note",
+    "body": "Autonomous operations summary for sigmund-vexler. Prepared as a locked draft.",
+    "tags": [
+      "hive",
+      "automation",
+      "aagaard"
+    ],
+    "composedAt": "2026-07-18T04:21:03.009Z",
+    "approvedForBroadcast": false
+  },
+  {
+    "id": "sigmund-vexler:hive-spectral:2026-07-18",
+    "account": "sigmund-vexler",
+    "kind": "post",
+    "topic": "hive-spectral",
+    "title": "The spectral state of Hive - 2026-07-18",
+    "body": "# The spectral state of Hive - 2026-07-18\n\nA locked draft from the wallet's curation arena. The reward field is read as a potential over the sampled attention graph.\n\n## Mispricing field\n- Posts sampled: 20\n- Mispricing energy: 2097.88\n- Components: 6 (fragmented, durable alpha)\n\n## Spectral decay\n- Fiedler value: 0.028379257594541248\n- Lambda max: 12.207991265722189\n- Mispricing half-life: 24.424429647281265\n\n## Capturable sinks\n- hivegc/hive-gaming-community-daily-curation-project-07172026: deficit 43.61 in hive-140217\n- rimurutempest/major-changes-to-sunflower-land: deficit 10.924 in hive-167922\n- thecrazygm/moon-has-moved-to-finland: deficit 5.338 in hive-140217\n- wiseagent/movie-review-the-odyssey-2026-mrp232vz: deficit 4.616 in hive-110713\n- cryptoandcoffee/caught-one-criminal-but-still-looking-for-another-one-24g: deficit 3.735 in hive-178138\n- ecency.waves/waves-20260717smpn7a: deficit 3.015 in hive-125125\n- cryptoandcoffee/monkey-gland-sauce-as-promised-cy8: deficit 2.257 in hive-178138\n- peak.snaps/snap-container-1784324880: deficit 1.86 in hive-124838\n\n## Co-vote cycles\n- b1: 2126\n- cycle density: 13.805194805194805\n- jeffjagoe / roelandp: overlap 12\n- ganjafarmer / roelandp: overlap 12\n- dickturpin / roelandp: overlap 12\n- dickturpin / ganjafarmer: overlap 12\n- ganjafarmer / jeffjagoe: overlap 11\n- kevinwong / roelandp: overlap 10\n- dickturpin / jeffjagoe: overlap 10\n- dickturpin / underground: overlap 10\n\n## Bridges\n- detlev/beersaturday-471-winners\n- cryptoandcoffee/monkey-gland-sauce-as-promised-cy8\n- cryptoandcoffee/caught-one-criminal-but-still-looking-for-another-one-24g\n- rimurutempest/major-changes-to-sunflower-land\n- hivegc/hive-gaming-community-daily-curation-project-07172026\n- wiseagent/movie-review-the-odyssey-2026-mrp232vz\n\nPrepared automatically for human review. Posting remains locked.",
+    "tags": [
+      "hive",
+      "mathematics",
+      "spectral",
+      "analysis",
+      "curation"
+    ],
+    "composedAt": "2026-07-18T04:21:03.009Z",
+    "approvedForBroadcast": false
+  },
+  {
+    "id": "sigmund-vexler:operations:2026-07-19",
+    "account": "sigmund-vexler",
+    "kind": "post",
+    "topic": "operations",
+    "title": "sigmund-vexler operations note",
+    "body": "Autonomous operations summary for sigmund-vexler. Prepared as a locked draft.",
+    "tags": [
+      "hive",
+      "automation",
+      "aagaard"
+    ],
+    "composedAt": "2026-07-19T03:23:55.261Z",
+    "approvedForBroadcast": false
+  },
+  {
+    "id": "sigmund-vexler:hive-spectral:2026-07-19",
+    "account": "sigmund-vexler",
+    "kind": "post",
+    "topic": "hive-spectral",
+    "title": "The spectral state of Hive - 2026-07-19",
+    "body": "# The spectral state of Hive - 2026-07-19\n\nA locked draft from the wallet's curation arena. The reward field is read as a potential over the sampled attention graph.\n\n## Mispricing field\n- Posts sampled: 20\n- Mispricing energy: 3064.839\n- Components: 3 (fragmented, durable alpha)\n\n## Spectral decay\n- Fiedler value: 0.037812028218622354\n- Lambda max: 12.59161679647903\n- Mispricing half-life: 18.3313938240047\n\n## Capturable sinks\n- worldmappin/travel-digest-2982: deficit 28.755 in hive-163772\n- ericvancewalton/how-much-are-18-million-reads-worth: deficit 28.535 in story\n- sam.chess/hivechess-s2r26: deficit 26.555 in hive-157286\n- cryptoandcoffee/the-nations-championship-has-too-many-weak-teams-79i: deficit 17.725 in hive-115814\n- gtg/how-to-lose-all-your-peers-in-one-block-a-witness-update: deficit 12.294 in hive-160391\n- tattoodjay/saturday-views-from-the-harbor-walk: deficit 11.401 in hive-194913\n- agmoore/they-cloned-tyrone-a-review: deficit 8.289 in hive-110713\n- cryptoandcoffee/the-coti-bag-keeps-growing-7rw: deficit 7.525 in hive-167922\n\n## Co-vote cycles\n- b1: 2161\n- cycle density: 12.78698224852071\n- discovereurovelo / roelandp: overlap 11\n- ranchorelaxo / roelandp: overlap 10\n- roelandp / team: overlap 9\n- kaykunoichi / team: overlap 9\n- roelandp / uwelang: overlap 9\n- kaykunoichi / roelandp: overlap 8\n- netaterra / roelandp: overlap 8\n- roelandp / steemitboard: overlap 8\n\n## Bridges\n- grindle/raganu-kalnas-lithuania\n- gabrielatravels/the-largest-poppy-field-in-olt-romania-or-lets-travel-together-362\n- cryptoandcoffee/the-coti-bag-keeps-growing-7rw\n- cryptoandcoffee/the-nations-championship-has-too-many-weak-teams-79i\n\nPrepared automatically for human review. Posting remains locked.",
+    "tags": [
+      "hive",
+      "mathematics",
+      "spectral",
+      "analysis",
+      "curation"
+    ],
+    "composedAt": "2026-07-19T03:23:55.261Z",
+    "approvedForBroadcast": false
+  },
+  {
+    "id": "emsenn0:operations:2026-07-19",
+    "account": "emsenn0",
+    "kind": "post",
+    "topic": "operations",
+    "title": "emsenn0 operations note",
+    "body": "Autonomous operations summary for emsenn0. Prepared as a locked draft.",
+    "tags": [
+      "hive",
+      "automation",
+      "aagaard"
+    ],
+    "composedAt": "2026-07-19T03:23:55.261Z",
+    "approvedForBroadcast": false
+  },
+  {
+    "id": "michael561:operations:2026-07-19",
+    "account": "michael561",
+    "kind": "post",
+    "topic": "operations",
+    "title": "michael561 operations note",
+    "body": "Autonomous operations summary for michael561. Prepared as a locked draft.",
+    "tags": [
+      "hive",
+      "automation",
+      "aagaard"
+    ],
+    "composedAt": "2026-07-19T03:23:55.261Z",
+    "approvedForBroadcast": false
+  },
+  {
+    "id": "marshian:operations:2026-07-19",
+    "account": "marshian",
+    "kind": "post",
+    "topic": "operations",
+    "title": "marshian operations note",
+    "body": "Autonomous operations summary for marshian. Prepared as a locked draft.",
+    "tags": [
+      "hive",
+      "automation",
+      "aagaard"
+    ],
+    "composedAt": "2026-07-19T03:23:55.261Z",
+    "approvedForBroadcast": false
+  },
+  {
+    "id": "help-fund:operations:2026-07-19",
+    "account": "help-fund",
+    "kind": "post",
+    "topic": "operations",
+    "title": "help-fund operations note",
+    "body": "Autonomous operations summary for help-fund. Prepared as a locked draft.",
+    "tags": [
+      "hive",
+      "automation",
+      "aagaard"
+    ],
+    "composedAt": "2026-07-19T03:23:55.261Z",
+    "approvedForBroadcast": false
+  },
+  {
+    "id": "help-fund:he-liquidity:2026-07-19",
+    "account": "help-fund",
+    "kind": "post",
+    "topic": "he-liquidity",
+    "title": "Hive-Engine liquidity report - 2026-07-19",
+    "body": "# Hive-Engine liquidity report - 2026-07-19\n\nAutomated read of liquidity within and between Hive and Hive-Engine venues.\n\n## Order books\n- HIVE/HBD at internal: mid 0.04375, spread 11bps, depth 328898.00/4586167.00, imbalance -86.6%\n- DEC/SWAP.HIVE at hive-engine: mid 0.00506015, spread 0bps, depth 103031272.49/0.00, imbalance 100.0%\n- SPS/SWAP.HIVE at hive-engine: mid 0.05805515, spread 150bps, depth 50641286.78/165742.13, imbalance 99.3%\n- STARBITS/SWAP.HIVE at hive-engine: mid 0.000001985, spread 1763bps, depth 724677111.00/292254196.00, imbalance 42.5%\n- SIM/SWAP.HIVE at hive-engine: mid 0.00004844, spread 0bps, depth 0.00/2156578.36, imbalance -100.0%\n- BUDS/SWAP.HIVE at hive-engine: mid 0.00018494, spread 0bps, depth 0.00/667127.30, imbalance -100.0%\n- PIZZA/SWAP.HIVE at hive-engine: mid 0.036825005, spread 1100bps, depth 10253066.25/9562.20, imbalance 99.8%\n- VOUCHER/SWAP.HIVE at hive-engine: mid 0.25789999, spread 0bps, depth 0.00/5314.09, imbalance -100.0%\n- STAR/SWAP.HIVE at hive-engine: mid 0.0001, spread 0bps, depth 0.00/3389.81, imbalance -100.0%\n- SWAP.STATE/SWAP.HIVE at hive-engine: mid 2e-8, spread 0bps, depth 2000000.00/0.00, imbalance 100.0%\n- BIT/SWAP.HIVE at hive-engine: mid 1e-8, spread 0bps, depth 0.00/59821708483.60, imbalance -100.0%\n- PEPE/SWAP.HIVE at hive-engine: mid 0.0000012, spread 0bps, depth 0.00/16112205.81, imbalance -100.0%\n\n## AMM pools\n- SWAP.HIVE:SPS: implied 17.21505192, TVL proxy 17020309.50, fee 25bps\n- SWAP.HIVE:SIM: implied 20787.32601715, TVL proxy 260454334.84, fee 25bps\n- SWAP.HIVE:VOUCHER: implied 4.10821569, TVL proxy 510674.59, fee 25bps\n- SWAP.HIVE:SWAP.STATE: implied 10265.10991491, TVL proxy 1714513.89, fee 25bps\n- SWAP.HIVE:POSH: implied 3.88533074, TVL proxy 10602.87, fee 25bps\n- SWAP.HIVE:MEME: implied 2601.41608719, TVL proxy 1252675.31, fee 25bps\n- SWAP.HIVE:VOTE: implied 2353.89826433, TVL proxy 846483.33, fee 25bps\n- SWAP.HIVE:CENT: implied 926.45849389, TVL proxy 22139132.61, fee 25bps\n- WOO:SWAP.HIVE: implied 0.00017045, TVL proxy 7525.51, fee 25bps\n- SWAP.HIVE:PIMP: implied 181.45808456, TVL proxy 2013432.77, fee 25bps\n- HH:SWAP.HIVE: implied 0.00001905, TVL proxy 217.75, fee 25bps\n- SWAP.GIFU:SWAP.HIVE: implied 0.00004489, TVL proxy 14.47, fee 25bps\n\n## Cross-venue corridors\n- YOLO: pool:SWAP.HIVE:YOLO -> hive-engine, divergence 27757847bps, net 27757822bps\n- WOO: pool:WOO:SWAP.HIVE -> hive-engine, divergence 3919bps, net 3894bps\n- POSH: pool:SWAP.HIVE:POSH -> hive-engine, divergence 2491bps, net 2466bps\n- VOTE: pool:SWAP.HIVE:VOTE -> hive-engine, divergence 2324bps, net 2299bps\n- DRIP: pool:SWAP.HIVE:DRIP -> hive-engine, divergence 880bps, net 855bps\n- MEME: pool:SWAP.HIVE:MEME -> hive-engine, divergence 633bps, net 608bps\n- PIMP: pool:SWAP.HIVE:PIMP -> hive-engine, divergence 627bps, net 602bps\n- LIMITLESS: hive-engine -> pool:LIMITLESS:SWAP.HIVE, divergence 163bps, net 138bps\n\nTotal observed liquidity proxy: 64194772919.30 quote units.\n\nPrepared automatically for human review. Posting remains locked.",
+    "tags": [
+      "hive-engine",
+      "liquidity",
+      "defi",
+      "analysis",
+      "hive"
+    ],
+    "composedAt": "2026-07-19T03:23:55.261Z",
+    "approvedForBroadcast": false
+  },
+  {
+    "id": "essiebee:operations:2026-07-19",
+    "account": "essiebee",
+    "kind": "post",
+    "topic": "operations",
+    "title": "essiebee operations note",
+    "body": "Autonomous operations summary for essiebee. Prepared as a locked draft.",
+    "tags": [
+      "hive",
+      "automation",
+      "aagaard"
+    ],
+    "composedAt": "2026-07-19T03:23:55.261Z",
+    "approvedForBroadcast": false
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "id": "michael561-must-not-move-workerbee-through-the-yield-path",
+  "statement": "michael561 MUST NOT unstake, undelegate, transfer or sell WORKERBEE or BEE.",
+  "subject": ["hive:michael561"],
+  "action": ["hive:custom_json"],
+  "when": { "input.decoded": { "somewhere": { "contractAction": { "in": ["unstake", "undelegate", "transfer", "sell"] }, "contractPayload.symbol": { "in": ["WORKERBEE", "BEE"] } } } },
+  "because": "The WORKERBEE delegation earns BEE; the yield path only stakes and delegates.",
+  "x-provenance": { "recorded-by": "claude-opus-5-5", "recorded-on": "2026-09-26", "source": "the fleet guard code these rules restate, surveyed by the game-play automation session" }
+}

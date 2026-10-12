@@ -1,0 +1,17 @@
+name = "AagaardSplinterlandsProofs"
+defaultTargets = ["AagaardSplinterlandsProofs"]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+
+[[require]]
+name = "Obsmetrologia"
+path = "../../../../../../../../../../../../science-services-section/services/information-science-services-section/services/math-services-section/services/obsmetrological-services-section/lib/obsmetrologia"
+
+[[require]]
+name = "ObsmetrologiaComputing"
+path = "../../../../../../../../../../../../science-services-section/services/engineering-science-services-section/services/computer-science-services-section/lib/obsmetrologia-computing"
+
+[[lean_lib]]
+name = "AagaardSplinterlandsProofs"

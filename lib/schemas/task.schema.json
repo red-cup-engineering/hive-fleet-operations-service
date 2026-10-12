@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "emsenn/schema/task",
+  "$comment": "A unit of work organised around a goal. The goal is what makes it a task: without one there is activity, but no task, because nothing says where it ends. It terminates — the goal is achieved, or becomes impossible, or is released. That is what makes a task the ephemeral thing and a duty the standing one, and it is why duties are discharged OVER tasks: the duty stands while task after task is raised against it, each ending, none of them ending the duty. A task holds subtasks, or work-items, or both, and at least one of something — but subtasks are tasks, so the descent has to stop somewhere: every branch bottoms out in work-items, and those in work-units, which are atomic. A tree of subtasks that never reaches a work-unit is a plan to plan. The stopping point is practical rather than formal — decompose while the chance of failure times the cost of failure is worth the trouble, and stop when it is not.",
+  "type": "object",
+  "required": [
+    "name",
+    "goal",
+    "discharges"
+  ],
+  "additionalProperties": false,
+  "anyOf": [
+    {
+      "required": [
+        "subtasks"
+      ]
+    },
+    {
+      "required": [
+        "work-items"
+      ]
+    }
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "What the task is called, as it is said."
+    },
+    "goal": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "$comment": "What counts as done, as commands a machine runs. Prose is refused: a goal that cannot fail is a goal nobody can grade, and a worker handed one will substitute a task it can finish for the task it was given. At least one, because a task whose goal nobody stated has no boundary and is not a task."
+    },
+    "discharges": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "$comment": "The duty this task is raised against. Names a duty and must resolve to one: a task discharging nothing is work nobody owed, which is a real thing that happens and is worth naming as what it is rather than filing as a duty."
+    },
+    "subtasks": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "$comment": "The tasks it breaks into. Each is a task in its own right, with its own goal — that is what lets the decomposition go down as far as the stakes warrant. A task may have these, or work-items, or both."
+    },
+    "work-items": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "$comment": "The work-items it holds directly — the trackable entries, the things that actually get done. A task may have these, or subtasks, or both, but somewhere down every branch there must be these, and they must reach work-units: work-items are where a task stops being a container and starts being work."
+    },
+    "plan": {
+      "type": "string",
+      "minLength": 1,
+      "$comment": "The order and conditions the subtasks and work-items run under — in sequence, on a condition, at the same time, or until something holds. Not always known in advance; it may be filled in as earlier ones finish and more is known."
+    },
+    "x-provenance": {
+      "type": "object"
+    }
+  },
+  "$comment-absences": "No worker or assignee: who does it belongs to the dispatch, not to the task, and a task that named its worker could not be handed to anyone else. No status, and no achieved, failed or abandoned key: a task terminates one of those three ways and which one is a readout — run the goal. A task that could assert its own completion is marking its own homework, which is the entire thing the goal exists to prevent.",
+  "x-source": {
+    "derived-from": "task.md — a goal-directed unit of work, decomposable into subtasks, terminating when the goal is achieved, failed, or abandoned; Annett and Duncan's p x c stopping rule. work-item.md — a work-item is an element of a task."
+  },
+  "x-provenance": {
+    "recorded-by": "claude/configuration-manager",
+    "recorded-on": "2026-07-15"
+  },
+  "title": "task"
+}
