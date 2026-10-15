@@ -54,7 +54,6 @@
     "@red-cup-engineering/hive-blockchain-client-service": "workspace:*",
     "@red-cup-engineering/holozing-services-section": "workspace:*",
     "@red-cup-engineering/http-services-section": "workspace:*",
-    "@red-cup-engineering/javascript-node-services-section": "workspace:*",
     "@red-cup-engineering/json-schema-services-section": "workspace:*",
     "@red-cup-engineering/json-services-section": "workspace:*",
     "@red-cup-engineering/key-management-services-section": "workspace:*",
@@ -68,7 +67,8 @@
     "@red-cup-engineering/workerbee-services-section": "workspace:*",
     "@red-cup-engineering/hive-fleet-observation-service": "workspace:*",
     "@red-cup-engineering/computer-content-address-engineering-services-section": "workspace:*",
-    "@red-cup-engineering/exact-number-data-service": "workspace:*"
+    "@red-cup-engineering/exact-number-data-service": "workspace:*",
+    "@red-cup-engineering/javascript-node-operation-engineering-services-section": "workspace:*"
   },
   "sideEffects": false,
   "keywords": [
