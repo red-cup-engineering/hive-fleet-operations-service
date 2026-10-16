@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { certifyExactTriangleAssay } from "../src/core/triangleAssay.mjs";
 import { EngineClient } from "@red-cup-engineering/hive-blockchain-client-service/engine.mjs";
-import { runJavascriptNodeOperation } from "@red-cup-engineering/javascript-node-operation-engineering-services-section/operation";
+import { runJavascriptNodeOperation } from "@red-cup-engineering/javascript-node-operation-service";
 import { oneRow } from "../src/core/hiveScriptSupport.mjs";
 import { accountsWithLane } from "../src/core/accountStrategy.mjs";
 
