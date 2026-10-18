@@ -5,8 +5,7 @@
   "description": "Hive wallet-fleet operations using chain-confirmed evidence.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/red-cup-engineering/computer-systems-engineering-services-section.git",
-    "directory": "services/computer-blockchain-system-services-section/services/hive-engineering-services-section/services/hive-fleet-operations-service"
+    "url": "git+https://github.com/red-cup-engineering/hive-fleet-operations-service.git"
   },
   "files": [
     "aagaard.config.json",
