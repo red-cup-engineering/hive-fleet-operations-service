@@ -1,0 +1,26 @@
+{
+  "id": "host-paths-are-parameters-not-package-config",
+  "kind": "requirement",
+  "recorded-by": "Claude Code session (Cold Red Gate close-out)",
+  "recorded-on": "2026-10-30",
+  "asks": "Change upstream stuff to be fixed, don't keep trying to align chains of patches.",
+  "context": "Version 0.4.12 ships aagaard.config.json with \"journalRoot\": \"/home/emsenn/561-group/hive-curation-cycle-journal\". On Cold Red Gate that host's state moved to /home/emsenn/cold-red-gate/sites/cold-red-gate.561.group/data/state/hive-curation-cycle-journal on 2026-10-30, and the installed curator recreated the old directory and kept writing there, splitting the journal. A library cannot know where a host keeps its data.",
+  "met-when": [
+    {
+      "cell": "host-paths-are-parameters-not-package-config:journal-root-from-host",
+      "target": "held",
+      "says": "The curation cycle journal root (and any other mutable data root) is read from the host's declaration, an environment variable such as HIVE_CURATION_JOURNAL_ROOT set by the host's unit, and the packaged configuration holds no host path.",
+      "leader-words": "Change upstream stuff to be fixed",
+      "owner": "src/core/accountStrategy.mjs, aagaard.config.json",
+      "inference": true
+    },
+    {
+      "cell": "host-paths-are-parameters-not-package-config:refuse-missing-root",
+      "target": "held",
+      "says": "Without a declared journal root the curator refuses to start rather than creating a directory at a default path.",
+      "leader-words": "don't keep trying to align chains of patches",
+      "owner": "src/core/accountStrategy.mjs",
+      "inference": true
+    }
+  ]
+}
