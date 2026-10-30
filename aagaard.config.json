@@ -83,8 +83,7 @@
     ],
     "neverVoteAuthors": [],
     "curationWindowSeconds": 0,
-    "curationWindowToleranceSeconds": 150,
-    "journalRoot": "/home/emsenn/561-group/hive-curation-cycle-journal"
+    "curationWindowToleranceSeconds": 150
   },
   "accounts": [
     {
