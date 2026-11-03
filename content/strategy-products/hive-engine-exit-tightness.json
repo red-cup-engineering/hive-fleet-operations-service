@@ -85,7 +85,7 @@
     "pilotSku": "one-symbol-exit-tightness",
     "priceHypothesis": "0.250 HBD per report for five invoice-first manual slots; exact x402 on Base remains a later distribution option only after Hive-native willingness-to-pay is observed",
     "pricingStatus": "publicly-offered-at-0.250-HBD-no-request-yet",
-    "settlementProvider": "For the five-report assay, require a separately confirmed native Hive HBD transfer after an invoice and bind it to the delivered report digest; if demand survives, contract the existing sovereign x402-services-section rather than copying protocol authority into Aagaard.",
+    "settlementProvider": "For the five-report assay, require a separately confirmed native Hive HBD transfer after an invoice and bind it to the delivered report digest; if demand survives, contract the existing sovereign x402-computer-networks-engineering-services-section rather than copying protocol authority into Aagaard.",
     "sellerGateway": "No broad gateway is funded before one paid request. The public Hive post supplies discovery and exact invoice-first terms; a read-only three-provider monitor distinguishes comments from invoices, payments, delivery, and revenue.",
     "revenueRecognition": "zero until an outside payment is independently settled and joined to the exact delivered report digest",
     "launchEvidence": {
